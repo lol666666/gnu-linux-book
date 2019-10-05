@@ -1,0 +1,22 @@
+\part{虚拟化部分}
+\label{part:virtualization}
+
+虚拟化的主要目标是在一台主机上运行多个操作系统，以便充分利用大型机上昂
+贵的计算资源。随着x86处理器的性能提升以及应用的普及，虚拟化技术的发展也
+开始进入到x86架构领域。特别是到20世纪90年代末期，VMware等虚拟化软件厂商
+为x86平台上虚拟化技术应用开辟了道路，提供了以VMM（Virtual Machine
+  Monitor）为中心，对PC服务器平台虚拟化的软件解决方案。纯软件解决方案在
+性能方面的瓶颈后来又进一步催生出了半虚拟化技术和硬件虚拟化技术，最终
+Intel的VT（Virtualization Technology，虚拟化技术）和AMD的SVM（Secure
+  Virtual Machine，安全虚拟机）技术均在硬件级提供了对虚拟化的支持。虚拟
+化技术被列为2009年度最值得关注的IT技术之首，足可见虚拟化技术在目前企业
+计算和应用领域的重要性。
+
+% kvm章节
+\input{body/chapter14_kvm}
+
+% docker章节
+\input{body/chapter14_docker}
+
+% OpenStack章节
+\input{body/chapter14_openstack}

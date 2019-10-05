@@ -1,0 +1,30 @@
+.PS
+define vm { [
+    box dashed wid 0.4 ht 0.4 rad 0.05 "$1"
+    box dashed wid 0.4 ht 0.13 rad 0.05 "OS" with .s at last box .s
+] }
+
+define layer {
+    box wid 2.5 ht 0.2 rad 0.1 "$1"
+}
+
+V1: vm(VM1)
+move 0.125
+V2: vm(VM2)
+move same
+V3: vm(VM3)
+move same
+V4: vm(...)
+move same
+V5: vm(VMN)
+
+move to V1.sw - 0,0.15
+
+L1: layer(Hypervisor)
+move to L1.s - 0,0.05
+down
+L2: layer(Operation System)
+move to L2.s - 0,0.05
+down
+L3: layer(Hardware)
+.PE

@@ -1,0 +1,27 @@
+\section{正则表达式}
+
+Regular expression\index{Regular Expression} (abbreviated regex or
+regexp) is a sequence of characters that forms a search pattern,
+mainly for use in pattern matching with strings, or string matching,
+i.e. "find and replace"\-like operations.
+
+正则表达式就是由一系列特殊字符组成的字符串, 其中每个特殊字符都被称为元
+字符, 这些元字符并不表示为它们字面上的含义, 而会被解释为一些特定的含义.
+具个例子, 比如引用符号, 可能就是表示某人的演讲内容, 同上, 也可能表示为
+我们下面将要讲到的符号的元-含义. 正则表达式其实是由普通字符和元字符共同
+组成的集合, 这个集合用来匹配(或指定)模式.
+
+一个正则表达式会包含下列一项或多项:
+
+\begin{enumerate}[itemsep=0pt,parsep=0pt]
+\item 一个字符集. 这里所指的字符集只包含普通字符, 这些字符只表示它们的
+  字面含义. 正则表达式的最简单形式就是只包含字符集, 而不包含元字符.
+\item 锚. 锚指定了正则表达式所要匹配的文本在文本行中所处的位置. 比如,
+  \^, 和\$就是锚.
+\item 修饰符. 它们扩大或缩小(修改)了正则表达式匹配文本的范围. 修饰符包
+  含星号, 括号, 和反斜杠.
+\end{enumerate}
+
+\subsection{正则表达式语法}
+
+\subsection{一些实例}

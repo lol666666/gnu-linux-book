@@ -1,0 +1,23 @@
+.PS
+scale = 2.54
+
+define port { [
+       Port: box wid $1 ht $2 $3 "$4"
+       ]
+}
+
+Master: box wid 5.5 ht 2 rad 0.2;
+
+"master" at Master.n below;
+
+Port4505: [ port(2,1,"Publish Port",4505) ] with .se at Master.s - (0.25,0);
+Port4506: [ port(2,1,"Return Port",4506) ] with .sw at Master.s + (0.25,0);
+
+Minion1: [ box wid 1.5 ht 1 rad 0.1 "minion1" ] with .nw at Master.sw - (0,1.5);
+Minion2: [ box wid 1.5 ht 1 rad 0.1 "minion2" ] with .ne at Master.se - (0,1.5);
+
+line -> from 1/3 <Port4505.sw,Port4505.se> to 1/3 <Minion1.nw,Minion1.ne>;
+line -> from 1/3 <Port4505.se,Port4505.sw> to 1/3 <Minion2.nw,Minion2.ne>;
+line -> from 2/3 <Minion1.nw,Minion1.ne> to 1/3 <Port4506.sw,Port4506.se> dashed;
+line -> from 2/3 <Minion2.nw,Minion2.ne> to 2/3 <Port4506.sw,Port4506.se> dashed;
+.PE

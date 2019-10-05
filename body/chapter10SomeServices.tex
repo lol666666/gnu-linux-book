@@ -1,0 +1,488 @@
+\part{基本服务篇}
+
+本章介绍几种常见的服务。这里不注重概念的介绍，概念只做简短的描述，主要
+介绍如何实施及实现这些服务。
+
+\chapter{常用基本服务的搭建}
+
+\input{body/chapter10_dhcp}
+
+\input{body/chapter10_dns}
+
+\input{body/chapter10_ftp}
+
+\input{body/chapter10_nfs}
+
+\input{body/chapter10_kickstart}
+
+\section{Samba}
+
+\input{body/chapter10_apache}
+
+\input{body/chapter10_nginx}
+
+\input{body/chapter10_lamp}
+
+\input{body/chapter10_nagios}
+
+\chapter{多网卡绑定bonding}
+
+Linux bonding提供将多个网络接口设备捆绑为单个网络接口设置来使用，用于网
+络负载均衡及网络冗余。
+
+以太网平衡设备即使用两个或两个以上的网络接口模拟一个虚拟的网络接口用以
+外部网络连接。这多个真实网络接口可以连接在同一交换设备或多个交换设备上，
+以达到多通路高可用性。在所有真实网络接口中可以指定其中某些真实网络接口
+活跃，其他真实网络接口在活跃的真实网络接口故障时接管网络传输；也可以指
+定所有真实网络接口活跃，分担全部网络传输带宽。
+ 
+通道绑定(Channel bonding)需要服务器至少拥有2个以太网卡，当使用绑定功能
+的时候，bonding模块会使用第一个实际网卡的MAC地址来通信，在侦测到这个网
+卡失败以后，它会把这个MAC地址指定到另一块网卡上。
+
+\section{bonding的几种模式}
+
+bonding只能提供链路监测，即从主机到交换机的链路是否接通。如果只是交换机
+对外的链路down掉了，而交换机本身并没有故障，那么bonding会认为链路没有问
+题而继续使用。
+ 
+miimon是用来进行链路监测的。 比如:miimon=100，那么系统每100ms监测一次链
+路连接状态，如果有一条线路不通就转入另一条线路；mode的值表示工作模式，
+他共有0，1，2，3，4，5，6七种模式，作者遇到的场景是使用的1，0，6三种，
+其他场景适合哪些模式作者也不清楚。
+ 
+mode=1，表示fault-tolerance (active-backup)提供网络冗余功能，工作方式是
+主备模式，也就是说默认情况下只有一块网卡工作，另一块做备份。
+ 
+mode=0，表示load balancing (round-robin)为负载均衡模式，两块网卡都工作，
+但是与网卡相连的交换机必须做特殊配置（ 这两个端口应该采取聚合方式），因
+为做bonding的这两块网卡是使用同一个MAC地址。
+ 
+mode=6，表示load balancing (round-robin)为负载均衡方式，两块网卡都工作，
+但是该模式下无需配置交换机，因为做bonding的这两块网卡是使用不同的MAC地
+址。
+ 
+\section{RHEL下配置bonding}
+
+华为RH1288服务器共有8块网卡，eth0与eth1做bond0，对应管理网
+段172.16.25.X，主备模式；eth2与eth3做bond1，此网段暂没有配置IP信息，主
+备模式；eth4与eth5做bond2，对应存储网段10.10.2.X，主备模式。
+
+编辑/etc/modprobe.d/dist.conf文件，在文件末尾添加如下几行，开
+启bonding功能\footnote{这是RHEL6U4的系统，如果是RHEL5系列的机器，配置文
+  件则为/etc/modprobe.conf}。
+
+\begin{verbatim}
+# vim /etc/modprobe.d/dist.conf
+alias bond0 bonding
+options bond0 mode=1 miimon=100
+
+alias bond1 bonding
+options bond1 mode=1 miimon=100
+
+alias bond2 bonding
+options bond2 mode=1 miimon=100
+\end{verbatim}
+
+编辑虚拟网络接口配置文件bond0，
+
+\begin{verbatim}
+# vim /etc/sysconfig/network-scripts/ifcfg-bond0
+DEVICE=bond0
+ONBOOT=yes
+BOOTPROTO=none
+NETWORK=
+IPADDR=
+NETMASK=
+GATEWAY=
+USERCTL=no
+\end{verbatim}
+
+分别编辑eth0与eth1网络接口文件ifcfg-eth0与ifcfg-eth1，
+
+\begin{verbatim}
+# vim /etc/sysconfig/network-scripts/ifcfg-eth0
+DEVICE=eth0
+BOOTPROTO=none
+TYPE=Ethernet
+ONBOOT=yes
+USERCTL=no
+MASTER=bond0 
+SLAVE=yes
+
+# vim /etc/sysconfig/network-scripts/ifcfg-eth1
+DEVICE=eth1
+BOOTPROTO=none
+TYPE=Ethernet
+ONBOOT=yes
+USERCTL=no
+MASTER=bond0 
+SLAVE=yes
+\end{verbatim}
+
+由于该机器对应的交换机接口为VLAN 210，所以，需要在bond0接口上配置VLAN。
+
+\begin{verbatim}
+# vconfig add bond0 210
+\end{verbatim}
+
+这样就产生了一个bond0.210的虚拟网络接口，这样就可以启用该接口，并配
+置IP信息，
+
+\begin{verbatim}
+# ifconfig bond0.210 up
+# vim /etc/sysconfig/network-scripts/ifcfg-bond0.210
+DEVICE=bond0.210
+BOOTPROTO=none
+ONBOOT=yes
+USERCTL=no
+IPADDR=172.16.25.93
+NETMASK=255.255.255.0
+GATEWAY=172.16.25.254
+VLAN=yes
+\end{verbatim}
+
+查看上面已配置的VLAN信息，
+
+\begin{verbatim}
+# cat /proc/net/vlan/config
+VLAN Dev name	 | VLAN ID
+Name-Type: VLAN_NAME_TYPE_RAW_PLUS_VID_NO_PAD
+bond0.210      | 210  | bond0
+
+# cat /proc/net/vlan/bond0.210 
+bond0.210  VID: 210	 REORDER_HDR: 1  dev->priv_flags: 1
+         total frames received         4663
+          total bytes received       224809
+      Broadcast/Multicast Rcvd          38
+
+      total frames transmitted          228
+       total bytes transmitted         44140
+            total headroom inc           0
+           total encap on xmit            0
+Device: bond0
+INGRESS priority mappings: 0:0  1:0  2:0  3:0  4:0  5:0  6:0 7:0
+EGRESS priority mappings:
+\end{verbatim}
+
+\section{SuSE下配置bonding}
+
+bond0配置：
+
+\begin{verbatim}
+# cat /etc/sysconfig/network/ifcfg-bond0
+DEVICE='bond0'
+ONBOOT='yes'
+BOOTPROTO='static'
+IPADDR='0.0.0.0/24'   
+STARTMODE='auto'
+BONDING_MASTER='yes'
+BONDING_MODULE_OPTS='mode=1 miimon=100'
+BONDING_SLAVE0='eth0'
+BONDING_SLAVE1='eth1'
+USERCONTROL='no'
+\end{verbatim}
+
+br0配置：
+
+\begin{verbatim}
+# cat /etc/sysconfig/network/ifcfg-br0
+BOOTPROTO='static'
+BRIDGE='yes'
+BRIDGE_FORWARDDELAY='0'
+BRIDGE_PORTS='bond1'
+BRIDGE_STP='off'
+IPADDR='0.0.0.0/24'    	##管理网ip
+STARTMODE='auto'
+USERCONTROL='no'
+
+# cat /etc/sysconfig/network/ifcfg-vlan0     ##为网卡打Vlan Tag
+BOOTPROTO='static'
+ETHERDEVICE='br0'
+IPADDR='145.240.21.11/24'
+STARTMODE='auto'
+USERCONTROL='no'
+VLAN_ID='210'                       ##上联核心交换机端口的Vlan号
+
+# cat /proc/net/vlan/config         ##验证Vlan是否设置成功
+VLAN Dev name | VLAN ID
+Name-Type: VLAN_NAME_TYPE_RAW_PLUS_VID_NO_PAD
+vlan0         | 210 | br0
+\end{verbatim}
+
+\section{单网卡多IP配置}
+\label{sec:SingleCardMultiIP}
+
+% \chapter{LVM硬盘管理及扩容}
+
+% LVM是 Logical Volume Manager(逻辑卷管理)的简写，它由Heinz Mauelshagen在
+% Linux 2.4内核上实现。LVM将一个或多个硬盘的分区在逻辑上集合，相当于一个
+% 大硬盘来使用，当硬盘的空间不够使用的时候，可以继续将其它的硬盘的分区加
+% 入其 中，这样可以实现磁盘空间的动态管理，相对于普通的磁盘分区有很大的灵
+% 活性。
+ 
+% 与传统的磁盘与分区相比，LVM为计算机提供了更高层次的 磁盘存储。它使系统
+% 管理员可以更方便的为应用与用户分配存储空间。在LVM管理下的存储卷可以按需
+% 要随时改变大小与移除(可能需对文件系统工具进行升 级)。LVM也允许按用户组
+% 对存储卷进行管理，允许管理员用更直观的名称(如"sales'、 'development')代
+% 替物理磁盘名(如'sda'、'sdb')来标识存储卷。
+ 
+% 如图所示LVM模型：
+ 
+% 由四个磁盘分区可以组成一个很大的空间，然后在这些空间上划分一些逻辑分区，
+% 当一个逻辑分区的空间不够用的时候，可以从剩余空间上划分一些空间给空间不
+% 够用的分区使用。
+
+% \chapter{使用U盘安装Gnu系统}
+
+% 使用U盘安装系统在某些时候还是很方便的，其安装速度也是蛮给力的。为什么会
+% 有本章内容呢？主要是小白在装机中发现有的机器不带光驱，而且身边也没有移
+% 动光驱可用，并且也不能从网络启动来安装系统。由于这些诸多限制，小白就想
+% 可不可以使用U盘安装呢？网上搜索了一下，果然可以，而且安装速度比光驱快！
+% 下面就介绍一下如何使用U盘来安装Gnu/Linux系统。
+
+% \section{准备工作}
+
+% \begin{enumerate}[itemsep=0pt,parsep=0pt]
+% \item 4G以上的优盘，格式化成FAT32
+% \item 镜像编辑软件UltraISO
+% \item Gnu/Linux镜像文件
+% \end{enumerate}
+
+% \section{制作启动盘}
+
+% \begin{enumerate}[itemsep=0pt,parsep=0pt]
+% \item 启动软件后打开Linux ISO文件
+% \item 点击“工具”，“加载到虚拟光驱”，点击“加载”
+% \item 打开“我的电脑”找到虚拟光驱的盘符 
+% \item 找到“boot.ISO”文件，双击打开
+% \item 点击“启动”，“写入硬盘镜像”
+% \item 选择你的U盘，写入方式：USB-HDD+，点击“写入”，开始写入引导文件到
+%   U盘
+% \item 等待一会儿，消息栏提示“刻录成功”，引导文件写入完毕
+% \item 确认是否写入成功和盘符是否选对：打开“我的电脑”，可移动存储栏里
+%   出现 以：“Red Hat Ent”命名的盘符，代表写入成功
+% \end{enumerate}
+
+% \section{开始安装Gnu/Linux}
+
+% 在安装过程中，需要选择Grub安装位置时，需要注意一下，我们要把Grub安装到
+% 系统盘中，默认是安装在U盘里的，这时可以修改之以继续安装。如果这一步没有
+% 修改，也没有关系，等系统安装完毕重启时，不要拔掉U盘。一切就绪进入系统后，
+% 可以使用grub-install命令重新安装Grub到指定的盘中。
+
+\chapter{RAID技术}
+
+RAID技术有各种级别之分，包括RAID0、RAID1、RAID2、RAID3、RAID4、RAID5、
+RAID5E、RAID5EE、RAID6、RAID10等。作者接触最多的是RAID0、RAID1、RAID5及
+RAID10这些RAID级别，其他级别在实际工作当中并没有见到，这里就不在介绍。
+
+\section{RAID基础知识}
+
+RAID最初是1987年在加利福尼亚大学进行的一个科研项目，后来由伯克利分校的
+D.A. Patterson教授在1988年正式提出。
+
+RAID是Redundant Array of Inexpensive Disks的缩写，直译为“廉价冗余磁盘阵
+列”，最初是为了组合多块小容量的廉价磁盘来代替大容量的昂贵磁盘，同时希望
+在磁盘失效时不会对数据造成影响而开发出的一种磁盘存储技术。
+
+后来随着磁盘研发技术的不断提升，硬盘容量越来越大，成本却不断下降，所以
+RAID中“Inexpensive（廉价）”一词已经失去意义，于是将这个词用
+“Independent（独立）”来替代，RAID就成了”独立冗余磁盘阵列“，也简称为”磁
+盘阵列“，但这只是名称的变化，实质性的内容并没有改变。
+
+\subsection{RAID解决了什么问题}
+
+通俗地说，RAID就是通过将多个磁盘按照一定的形式和方案组织起来，通过这样
+的形式能够获取比单个磁盘更高的速度、更好的稳定性、更大的存储能力的存储
+解决方案，我们不必关心磁盘阵列究竟由多少块磁盘组成，使用中整个整列就如
+同一块磁盘一样。所以，RAID技术能够为计算机系统提供以下三个方面的优异性
+能：
+
+\begin{enumerate}[itemsep=0pt,parsep=0pt]
+\item 提供更大的存储空间
+\begin{quote}
+  使用RAID技术，就可以把多块磁盘组成一个更大的存储空间供我们使用。比如，
+  利用RAID0技术把5块1TB的硬盘组织起来，能够提供5TB的存储空间。
+\end{quote}
+
+\item 提供更快的传输速度
+\begin{quote}
+  著名的摩尔定律告诉我们，CPU的性能每隔18个月就会提高一倍，可见其速度增
+  长之快。然而，机械硬盘作为计算机中最重要的存储设备，在容量飞速增长的
+  同时，速度却提高缓慢，已经成为计算机速度发展的瓶颈。
+
+  如果采用RAID技术，可以让很多机械硬盘同时传输数据，而这些硬盘在逻辑上
+  又表现为一块硬盘，所以使用RAID可以达到单个磁盘几倍、甚至N多倍的速率。
+  也就是说，RAID技术可以通过在多个磁盘上同时存储和读取数据的方式来大幅
+  提高存储系统的数据吞吐量。
+\end{quote}
+
+\item 提高更高的安全性
+\begin{quote}
+RAID可以通过数据校验提供容错功能，在很多RAID模式中都有较为完备的冗余措
+施，甚至是直接相互的镜像备份，从而大大提高来RAID系统的容错性，让系统的
+稳定性更好、安全性更高。
+\end{quote}
+\end{enumerate}
+
+\section{RAID实现方式}
+
+\subsection{RAID0数据组织原理}
+
+RAID0是无冗余、无校验的磁盘阵列，实现RAID0，至少需要两个以上硬盘，它将
+两个以上的硬盘合并成一块，数据同时分散在每块磁盘中，因为带宽加倍，所以
+读写速度加倍，RAID0的理论速度是单块硬盘的N倍，但是由于数据并不是保存在
+一个硬盘上，而是分成数据块保存在不同的硬盘上，所以安全性也下降N倍，只要
+任何一块磁盘损坏就会丢失所有数据。
+
+RAID0是最简单的一种RAID形式，目的是把多块物理盘连接在一起形成一个容量更
+大的存储设备，RAID0逻辑盘的容量等于物理盘的容量乘以成员盘的数目。
+
+原理图
+
+RAID0只是单纯地提高读写性能，并没有数据的可靠性提供保证，而且其中的任何
+一个物理盘失效都将影响到所有数据。因此，RAID0不能用于数据安全性要求高的
+场合。
+\subsection{RAID1数据组织原理}
+
+RAID1通过磁盘数据镜像实现数据的冗余，在两块磁盘上产生互为备份的数据，当
+其中一块成员盘出现故障时，系统还可以从另外一块成员盘中读取数据。因此，
+RAID1可以提供更好的冗余性。
+
+RAID1又称为磁盘镜像，需要在两个物理盘共同构建，使用磁盘镜像技术，方法是
+在工作磁盘之外再加一额外的备份磁盘，两个磁盘所存储的数据完全一样，数据
+写入工作磁盘的同时亦写入备份磁盘，也就是将一块物理盘的内容完全复制到另
+一块物理盘上。所以，两块物理盘所构成的RAID1阵列，其容量仅等于一块磁盘的
+容量，其数据分布情况如图所示。
+
+原理图
+
+RAID1是磁盘阵列中单位成本最高的，但提供来很高的数据安全性和可用性。当一
+个物理盘失效时，系统可以自动切换到镜像盘上读写，而不需要重组失效的数据。
+
+RAID1是所有RAID等级中实现成本最高的一种，尽管如此，我们还是选择RAID1来
+保存那些关键性的重要数据。
+
+\subsection{RAID10数据组织原理}
+
+\subsection{RAID5数据组织原理}
+
+\section{MegaRAID Cli工具基本使用}
+\label{sec:MegaraidCmd}
+
+我们都是使用过LSI的Web界面去配置RAID，虽听起来很高大上，但整个配置过程
+是那么的令人蛋疼。配置完成后，我们还要按“Ctrl+Alt+Del”组合键来重启机
+器，步骤虽有些繁琐，但仍能令人接受。MegaRAID Cli工具是在命令行模式下操
+作RAID控制器的，它的优点之一就是做完RAID之后，可以直接使用并不需要重
+启操作系统，而且操作简单方便。
+
+写这一节的目的并不是推荐使用该工具，而是熟悉了原来的配置界面，不愿意再
+学新的东西。若不是同事的提示，还不知有这种很xx的工具，使用起来确实很酷，
+愿意跟大家分享一下使用过程。
+
+要想使用该工具，首先系统上要安装相应的软件包，这里省略安装过程。安装完
+毕之后，工具默认会安装在/opt/MegaRAID/MegaCli的目录下。
+
+本次使用该命令行工具的场景：新到了两块Intel的SATA接口400GB的SSD硬盘，欲
+测其性能。原来的服务器上自带了4块600GB的磁盘并做了RAID10，这四块磁盘分
+别占据了第0、1、2、3这四个硬盘插槽，在第4、第5个插槽放置了SSD盘，操作系
+统使用的是SLES 11.2。下面是具体的操作过程，
+
+\subsection{制作RAID}
+
+\begin{enumerate}[itemsep=0pt,parsep=0pt]
+\item 查看RAID卡的设备号
+\begin{verbatim}
+# cd /opt/MegaRAID/MegaCli
+# ./MegaCli64 -PDList -aAll |grep "Device ID"
+Enclosure Device ID: 252
+Enclosure Device ID: 252 
+Enclosure Device ID: 252
+Enclosure Device ID: 252
+Enclosure Device ID: 252
+Enclosure Device ID: 252
+\end{verbatim}
+
+说明：上面的输出，表示我们有一个RAID卡，因为这些ID是一样的。这个卡下面
+有6个盘，这里的ID号需要记下来，后面做RAID时需要用到。可以把该RAID的ID号
+理解为主设备号。
+	
+\item 查看Slot ID以确认有无错序的情况
+\begin{verbatim}
+# ./MegaCli64 -PDList -aAll |grep "Slot"  
+Slot Number: 0
+Slot Number: 1
+Slot Number: 2
+Slot Number: 3
+Slot Number: 4
+Slot Number: 5
+\end{verbatim}
+
+说明：这里的Slot Number号需要记下来，后面做RAID时需要用到。可以吧该
+Slot的ID理解为次设备号。
+	
+\item 查看Foreign信息
+\begin{verbatim}
+# ./MegaCli64 -PDList -aAll |grep "Foreign State"
+Foreign State: None
+Foreign State: None 
+Foreign State: None
+Foreign State: None
+Foreign State: Foreign 
+Foreign State: Foreign 
+\end{verbatim}
+
+说明：状态显示为“Foreign”的磁盘，说明是新添加进来的或者是未使用的。这
+两个为“Foreign”状态的正是我们新添加的SSD盘。接下来的操作就是清除这些
+“Foreign”状态的盘。
+	
+\item 清除盘的Foreign信息
+\begin{verbatim}
+# ./MegaCli64 -CfgForeign -Clear -a0
+\end{verbatim}
+	
+\item 新做RAID，在Slot4和Slot5上做RAID0
+\begin{verbatim}
+# ./MegaCli64 -CfgLdAdd -r0 [252:4,252:5] WT Direct -a0
+\end{verbatim}
+\end{enumerate}
+
+说明：如果做RAID1，只需要把r0改为r1即可。
+
+\subsection{删除RAID}
+
+当测试完毕RAID0级别的SSD盘时，要开始测试RAID1级别下Intel SATA SSD的性能。
+所以，之前制作的RAID0要被删除了。在删除之前，我们需要知道被删除的
+Target Id，然后方可删除该组RAID。
+
+查看有多少个RAID级别，找到我们想要删除的Target Id，其中“Target Id：n”，
+n即为第n组RAID。
+
+\begin{verbatim}
+# ./MegaCli64 -LdInfo -Lall -aALL 
+\end{verbatim}
+
+删除阵列，
+\begin{verbatim}
+# ./MegaCli64 -CfgLdDel -L1 -a0
+\end{verbatim}
+	
+附录：名词解释
+磁盘缓存策略：
+\begin{verbatim}
+WT（Write Through）
+WB（Write Back）
+NORA（NO Read Ahead）
+RA（Read Ahead）
+ADRA（Adaptive Read Ahead）
+\end{verbatim}
+
+% \chapter{PCIe SSD}
+% 
+% \section{现有硬盘厂商}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

@@ -1,0 +1,110 @@
+.PS
+h = .1
+dh = .02
+dw = .1
+[
+	Userspacetools: [
+		boxht = 2.5*h; boxwid = 8*dw; boxrad = dh
+		movewid = 2*dh
+		A: box "virsh"; move
+		B: box "virt-manager"; move
+		C: box "virt-viewer"; move
+		D: box "virt-install"; move
+		E: box "other tools"
+	]
+	Userspace: [
+		boxht = 7*h; boxwid = 50*dw; boxrad = 2*dh
+		AA: box
+	] with .c at Userspacetools.c + (0,h/1.8)
+	F: "Userspace Management Tools" at last [].n - (0,h+2*dh)
+
+Libvirt: box ht 4*h wid 25*dw "Libvirt" "(Libvirt API)" with .n at last [].s - (0,3*h)
+
+Hypervisoroutline: [
+	Virtualtype: [
+		boxht = 2*h; boxwid = 12*dw; boxrad = dh
+		movewid = 2*dh
+		A: box "VMware"; move
+		B: box "Xen"; move
+		C: box "KVM"; move
+		D: box "Hyper-V"
+	]
+	Hypervisor: [
+		boxht = 5*h; boxwid = 50*dw; boxrad = 2*dh
+		AA: box
+	] with .c at Virtualtype.c + (0,h/1.8)
+	F: "Hypervisor Layer" at last [].n - (0,h+2*dh)
+] with .n at Libvirt.s - (0,3*h)
+
+XXX: [
+	VMwareoutline: [
+		VMware: [
+			boxht = 3.5*h; boxwid = 5*dw; boxrad = dh
+			movewid = 2*dh
+			VM1: box "Guest 1"; move
+			VM2: box "Guest 2"
+		] with .n at Hypervisoroutline.Virtualtype.A.s - (0,3*h)
+		box dashed ht last [].ht+dw wid last [].wid+dw at last []
+	] 
+	
+	move 5*dh
+	
+	Xenoutline: [
+		Xen: [
+			 boxht = 3.5*h; boxwid = 5*dw; boxrad = dh
+			 movewid = 2*dh
+			 VM1: box "Dom0" "Guest"; move
+			 VM2: box "DomU" "Guest"
+		]
+		box dashed ht last [].ht+dw wid last [].wid+dw at last []
+	]
+
+	move 5*dh
+
+	Kvmoutline: [
+		Kvm: [
+			 boxht = 1.75*h; boxwid = 5*dw; boxrad = dh
+			 movewid = 2*dh
+			 VM1: [
+			 	  Qemu1: box "Qemu"
+			 	  Guest01: box "Guest 1" with .n at Qemu1.s
+			 ]
+			 
+			 move
+			 
+			 VM2: [
+			 	  Qemu1: box "Qemu"
+				  Guest01: box "Guest 2" with .n at Qemu1.s
+			 ]
+		]
+		box dashed ht last [].ht+dw wid last [].wid+dw at last []
+	]
+	
+	move 5*dh
+
+	Hypervoutline: [
+		Hyperv: [
+			boxht = 3.5*h; boxwid = 5*dw; boxrad = dh
+			movewid = 2*dh
+			VM1: box "Guest 1"; move
+			VM2: box "Guest 2"
+		]
+		box dashed ht last [].ht+dw wid last [].wid+dw at last []
+	]
+] with .n at last [].s - (0,3*h)
+
+arrow from Userspacetools.A.s to Libvirt.nw
+arrow from Userspacetools.B.s to 1/2 <Libvirt.nw,Libvirt.n>
+arrow from Userspacetools.C.s to Libvirt.n
+arrow from Userspacetools.D.s to 1/2 <Libvirt.n,Libvirt.ne>
+arrow from Userspacetools.E.s to Libvirt.ne
+
+arrow from Libvirt.s to 3rd [].Hypervisor.n
+
+arrow from Hypervisoroutline.Virtualtype.A.s to XXX.VMwareoutline.VMware.n
+arrow from Hypervisoroutline.Virtualtype.B.s to XXX.Xenoutline.Xen.n
+arrow from Hypervisoroutline.Virtualtype.C.s to XXX.Kvmoutline.Kvm.n
+arrow from Hypervisoroutline.Virtualtype.D.s to XXX.Hypervoutline.Hyperv.n
+
+]
+.PE

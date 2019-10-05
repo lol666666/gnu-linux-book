@@ -1,0 +1,184 @@
+\chapter{LVS+Keepalived负载均衡集群}
+
+LVS(Linux Virtual Server) is a cluster of servers 
+
+The Linux Virtual Server can be used to build scalable network
+services based on a cluster of two or more nodes. The active node of
+the cluster redirects service requests to a collection of server hosts
+that will actually perform the services. Supported features include
+two protocols (TCP and UDP), three packet-forwarding methods (NAT,
+tunneling, and direct routing), and eight load balancing algorithms
+(round robin, weighted round robin, least-connection, weighted
+least-connection, locality-based least-connection, locality-based
+least-connection with replication, destination-hashing, and
+source-hashing).
+
+LVS: ipvsadm/ipvs
+
+When a new connection is requested from a client to a service provided
+by the LVS (e.g. httpd), the director will choose a realserver from
+the client.
+
+From then, all packets from the client will go through the director to
+that particular realserver.
+
+The association between the client and the realserver will last for
+only the life of the tcp connection (or udp exchange).
+
+For the next tcp connection, the director will choose a new realserver
+(which may or may not be the same as the first realserver).
+
+Thus a web browser connecting to a LVS serving a webpage consisting of
+several hits (images, html page), may get each hit from a separate
+realserver.
+
+LVS IP Address Name Conventions
+
+Virtual IP (VIP) address: The IP address the Director uses to offer
+services to client computers
+
+Real IP (RIP) address: The IP address used on the cluster nodes
+
+Director's IP (DIP) address: The IP address the Director uses to
+connect to the D/RIP network
+
+Client computer's IP (CIP) address: The IP address assigned to a
+client computer that it uses as a source IP address for requests sent
+to the cluster
+
+\begin{quote}
+  Basic Properties of LVS-NAT 
+
+1. The cluster nodes need to be on the
+same network (VLAN or subnet) as the Director.
+集群节点必须与调度器在同一个网络中
+
+
+2. The RIP addresses of the cluster nodes are normally private,
+non-routable IP addresses used only for intracluster communication.
+RIP通常是私有地址，仅用于各集群节点间的通信
+
+3. director位于client与real server之间，并负责处理进出的所有通信
+
+4. realserver必须将网关指向DIP
+
+5. 支持端口映射
+
+6. real server可以使用任何操作系统
+
+7. 较大规模应用场景中，director易成为系统瓶颈
+\end{quote}
+
+\begin{quote}
+  1. 集群节点跟director必须在同一物理网络中
+
+  2. RIP可以使用公网地址，实现便捷的远程管理和监控
+
+  3. director仅负责处理入站请求，响应报文则由real server直接发往客户端
+
+  4. real server不能讲网关指向DIP
+
+  5. 不支持端口映射
+
+  real server必须能够隐藏VIP
+\end{quote}
+
+\begin{quote}
+  TUN:
+  1. 集群节点可以跨越Internet
+  2. RIP必须是公网地址
+  3. Director仅处理入站请求，响应报文则由real server直接发往客户端
+  4. real server网关不能指向director
+  5. 只有支持隧道功能的os才能用于real server
+  6. 不支持端口映射
+\end{quote}
+
+\section{LVS调度算法}
+
+Director在接收到来自于Client的请求时，会基于"schedule"从RealServer中选
+择一个响应给Client。ipvs支持以下调度算法：
+
+\begin{enumerate}[itemsep=0pt,parsep=0pt]
+\item 轮询（round robin, rr),加权轮询(Weighted round robin, wrr)
+
+  新的连接请求被轮流分配至各RealServer；算法的优点是其简洁性，它无需记
+  录当前所有连接的状态，所以它是一种无状态调度。轮叫调度算法假设所有服
+  务器处理性能均相同，不管服务器的当前连接数和响应速度。该算法相对简单，
+  不适用于服务器组中处理性能不一的情况，而且当请求服务时间变化比较大时，
+  轮叫调度算法容易导致服务器间的负载不平衡。
+
+\item 最少连接(least connected, lc)， 加权最少连接(weighted least
+  connection, wlc)
+
+  新的连接请求将被分配至当前连接数最少的RealServer；最小连接调度是一种
+  动态调度算法，它通过服务器当前所活跃的连接数来估计服务器的负载情况。
+  调度器需要记录各个服务器已建立连接的数目，当一个请求被调度到某台服务
+  器，其连接数加1；当连接中止或超时，其连接数减一。
+
+\item 基于局部性的最少链接调度（Locality-Based Least Connections
+  Scheduling，lblc）
+
+  针对请求报文的目标IP地址的负载均衡调度，目前主要用于Cache集群系统，因
+  为在Cache集群中客户请求报文的目标IP地址是变化的。这里假设任何后端服务
+  器都可以处理任一请求，算法的设计目标是在服务器的负载基本平衡情况下，
+  将相同目标IP地址的请求调度到同一台服务器，来提高各台服务器的访问局部
+  性和主存Cache命中率，从而整个集群系统的处理能力。LBLC调度算法先根据请
+  求的目标IP地址找出该目标IP地址最近使用的服务器，若该服务器是可用的且
+  没有超载，将请求发送到该服务器；若服务器不存在，或者该服务器超载且有
+  服务器处于其一半的工作负载，则用“最少链接”的原则选出一个可用的服务
+  器，将请求发送到该服务器。
+
+\item 带复制的基于局部性最少链接调度（Locality-Based Least Connections
+  with Replication Scheduling，lblcr）
+
+  也是针对目标IP地址的负载均衡，目前主要用于Cache集群系统。它与LBLC算法
+  的不同之处是它要维护从一个目标IP地址到一组服务器的映射，而 LBLC算法维
+  护从一个目标IP地址到一台服务器的映射。对于一个“热门”站点的服务请求，
+  一台Cache 服务器可能会忙不过来处理这些请求。这时，LBLC调度算法会从所
+  有的Cache服务器中按“最小连接”原则选出一台Cache服务器，映射该“热
+  门”站点到这台Cache服务器，很快这台Cache服务器也会超载，就会重复上述
+  过程选出新的Cache服务器。这样，可能会导致该“热门”站点的映像会出现在
+  所有的Cache服务器上，降低了Cache服务器的使用效率。LBLCR调度算法将“热
+  门”站点映射到一组Cache服务器（服务器集合），当该“热门”站点的请求负
+  载增加时，会增加集合里的Cache服务器，来处理不断增长的负载；当该“热
+  门”站点的请求负载降低时，会减少集合里的Cache服务器数目。这样，该“热
+  门”站点的映像不太可能出现在所有的Cache服务器上，从而提供Cache集群系
+  统的使用效率。LBLCR算法先根据请求的目标IP地址找出该目标IP地址对应的服
+  务器组；按“最小连接”原则从该服务器组中选出一台服务器，若服务器没有
+  超载，将请求发送到该服务器；若服务器超载；则按“最小连接”原则从整个
+  集群中选出一台服务器，将该服务器加入到服务器组中，将请求发送到该服务
+  器。同时，当该服务器组有一段时间没有被修改，将最忙的服务器从服务器组
+  中删除，以降低复制的程度。
+
+\item 目标地址散列调度（Destination Hashing，dh）
+
+  算法也是针对目标IP地址的负载均衡，但它是一种静态映射算法，通过一个散
+  列（Hash）函数将一个目标IP地址映射到一台服务器。目标地址散列调度算法
+  先根据请求的目标IP地址，作为散列键（Hash Key）从静态分配的散列表找出
+  对应的服务器，若该服务器是可用的且未超载，将请求发送到该服务器，否则
+  返回空。
+
+\item 源地址散列调度（Source Hashing，sh）
+
+  算法正好与目标地址散列调度算法相反，它根据请求的源IP地址，作为散列键
+  （Hash Key）从静态分配的散列表找出对应的服务器，若该服务器是可用的且
+  未超载，将请求发送到该服务器，否则返回空。它采用的散列函数与目标地址
+  散列调度算法的相同。除了将请求的目标IP地址换成请求的源IP地址外，它的
+  算法流程与目标地址散列调度算法的基本相似。在实际应用中，源地址散列调
+  度和目标地址散列调度可以结合使用在防火墙集群中，它们可以保证整个系统
+  的唯一出入口。
+\end{enumerate}
+
+
+基于DNS的负载均衡方案性能可能会出现问题。DNS的记录会缓存。
+
+rsync基于文件的同步，效率低。
+
+drbd磁盘镜像，让两个计算机的两块磁盘做镜像，基于块级别的同步，效率高。
+
+\section{安装LVS}
+\label{installLVS}
+
+\subsection{环境准备}
+\label{sec:lvsEnvPrepare}
+

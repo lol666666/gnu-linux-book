@@ -1,0 +1,49 @@
+.PS
+h = .1
+dh = .02
+dw = .1
+
+define container {
+	   boxht = 2.5*h; boxwid = 10*dw; boxrad = 2*dh
+	   movewid = 2*dh
+	   box "$1"
+}
+
+Dockerhost: [
+Dockerprocess: [
+    CDaemon: [
+	   container(Docker Daemon)
+	]
+
+	Container01: [
+	   container(Container 1)
+	] with .c at last [].c - (0,4*h)
+
+	Container02: [
+	   container(Container 2)
+	] with .c at last [].c - (0,4*h)
+
+	Container03: [
+	   container(Container 3)
+    ] with .c at last [].c - (0,4*h)
+
+	Container0n: [
+       container(Container ...)
+    ] with .c at last [].c - (0,4*h)
+]
+    box ht last [].ht+3*dw wid last [].wid+2*dw rad 2*dh at last []
+]
+
+Dockerclient: [
+    Pull: box invis "docker pull"
+	Run: box invis "docker run" with .c at Pull.c - (0,2*dw)
+	Etc: box invis "docker ..." with .c at Run.c - (0,2*dw)
+] with .c at Dockerhost.c - (18*dw,0)
+
+Dockerclientoutline: box ht last [].ht+dw wid last [].wid+2*dw rad 2*dh at last []
+
+Client: "Docker Client" at last [].n + (0,5*dh)
+Host: "Host" at Dockerhost.n + (0,3*dh)
+
+line <-> from Dockerclientoutline.e to Dockerhost.w chop 2*dh
+.PE

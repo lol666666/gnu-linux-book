@@ -1,0 +1,132 @@
+%!PS
+%%BoundingBox: -9 -8 111 244 
+%%HiResBoundingBox: -8.53482 -7.28947 110.21393 243.83717 
+%%Creator: MetaPost 1.999
+%%CreationDate: 2015.07.09:0901
+%%Pages: 1
+%*Font: cmr10 9.96265 9.96265 28:d8ff84000000007dcf398
+%%BeginProlog
+%%EndProlog
+%%Page: 1 1
+ 0 0 0 setrgbcolor
+-7.98134 41.0557 moveto
+(a) cmr10 9.96265 fshow
+newpath 1.5 43.20044 moveto
+1.5 43.59828 1.34193 43.97978 1.06064 44.26108 curveto
+0.77934 44.54237 0.39784 44.70044 0 44.70044 curveto
+-0.39784 44.70044 -0.77934 44.54237 -1.06064 44.26108 curveto
+-1.34193 43.97978 -1.5 43.59828 -1.5 43.20044 curveto
+-1.5 42.8026 -1.34193 42.4211 -1.06064 42.1398 curveto
+-0.77934 41.8585 -0.39784 41.70044 0 41.70044 curveto
+0.39784 41.70044 0.77934 41.8585 1.06064 42.1398 curveto
+1.34193 42.4211 1.5 42.8026 1.5 43.20044 curveto closepath fill
+-8.53482 -3.45926 moveto
+(b) cmr10 9.96265 fshow
+newpath 1.5 0 moveto
+1.5 0.39784 1.34193 0.77934 1.06064 1.06064 curveto
+0.77934 1.34193 0.39784 1.5 0 1.5 curveto
+-0.39784 1.5 -0.77934 1.34193 -1.06064 1.06064 curveto
+-1.34193 0.77934 -1.5 0.39784 -1.5 0 curveto
+-1.5 -0.39784 -1.34193 -0.77934 -1.06064 -1.06064 curveto
+-0.77934 -1.34193 -0.39784 -1.5 0 -1.5 curveto
+0.39784 -1.5 0.77934 -1.34193 1.06064 -1.06064 curveto
+1.34193 -0.77934 1.5 -0.39784 1.5 0 curveto closepath fill
+105.78607 -7.28947 moveto
+(c) cmr10 9.96265 fshow
+newpath 109.5 0 moveto
+109.5 0.39784 109.34193 0.77934 109.06064 1.06064 curveto
+108.77934 1.34193 108.39784 1.5 108 1.5 curveto
+107.60216 1.5 107.22066 1.34193 106.93936 1.06064 curveto
+106.65807 0.77934 106.5 0.39784 106.5 0 curveto
+106.5 -0.39784 106.65807 -0.77934 106.93936 -1.06064 curveto
+107.22066 -1.34193 107.60216 -1.5 108 -1.5 curveto
+108.39784 -1.5 108.77934 -1.34193 109.06064 -1.06064 curveto
+109.34193 -0.77934 109.5 -0.39784 109.5 0 curveto closepath fill
+82.1077 30.13454 moveto
+(d) cmr10 9.96265 fshow
+newpath 91.24251 39.15303 moveto
+91.24251 39.55087 91.08444 39.93237 90.80315 40.21367 curveto
+90.52185 40.49496 90.14035 40.65303 89.74251 40.65303 curveto
+89.34467 40.65303 88.96317 40.49496 88.68187 40.21367 curveto
+88.40057 39.93237 88.24251 39.55087 88.24251 39.15303 curveto
+88.24251 38.75519 88.40057 38.37369 88.68187 38.09239 curveto
+88.96317 37.8111 89.34467 37.65303 89.74251 37.65303 curveto
+90.14035 37.65303 90.52185 37.8111 90.80315 38.09239 curveto
+91.08444 38.37369 91.24251 38.75519 91.24251 39.15303 curveto closepath fill
+ 0 0.5 dtransform truncate idtransform setlinewidth pop [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 43.20044 moveto
+89.74251 39.15303 lineto stroke
+newpath 0 0 moveto
+108 0 lineto stroke
+newpath 44.87126 41.17673 moveto
+54.00002 243.58717 lineto
+54 0 lineto stroke
+newpath -1.99252 21.60022 moveto
+1.99252 21.60022 lineto stroke
+ 0.5 0 dtransform exch truncate exch idtransform pop setlinewidth
+newpath 0 43.20044 moveto
+0 0 lineto stroke
+ 0 0.5 dtransform truncate idtransform setlinewidth pop
+newpath 100.67708 20.41862 moveto
+97.06538 18.73445 lineto stroke
+newpath 108 0 moveto
+89.74251 39.15303 lineto stroke
+newpath 28.61244 141.71957 moveto
+24.76463 142.75647 lineto stroke
+newpath 29.23456 144.02808 moveto
+25.38675 145.06497 lineto stroke
+newpath 0 43.20044 moveto
+54.00002 243.58717 lineto stroke
+newpath 74.04019 140.53412 moveto
+70.11465 139.84778 lineto stroke
+newpath 73.62842 142.88931 moveto
+69.70288 142.20297 lineto stroke
+newpath 89.74251 39.15303 moveto
+54.00002 243.58717 lineto stroke
+newpath 28.42703 119.02443 moveto
+24.5364 119.88692 lineto stroke
+newpath 28.94533 121.36237 moveto
+25.0547 122.22485 lineto stroke
+newpath 29.46278 123.6965 moveto
+25.57216 124.55899 lineto stroke
+newpath 0 0 moveto
+54.00002 243.58717 lineto stroke
+newpath 83.4636 119.88692 moveto
+79.57297 119.02443 lineto stroke
+newpath 82.94531 122.22485 moveto
+79.05469 121.36237 lineto stroke
+newpath 82.42787 124.55899 moveto
+78.53725 123.6965 lineto stroke
+newpath 108 0 moveto
+54.00002 243.58717 lineto stroke
+ 0.5 0 dtransform exch truncate exch idtransform pop setlinewidth
+newpath 2.01012 18.3553 moveto
+1.57631 14.3939 lineto stroke
+ 0 0.5 dtransform truncate idtransform setlinewidth pop
+newpath 3.56516 16.08214 moveto
+2.39436 16.34154 1.19919 16.47249 0 16.47249 curveto stroke
+newpath 102.06546 17.48297 moveto
+103.34637 13.70935 lineto stroke
+newpath 104.43535 16.0799 moveto
+103.26472 15.82028 102.126 15.43376 101.03932 14.92711 curveto stroke
+newpath 101.24869 7.32661 moveto
+103.9501 4.39693 lineto stroke
+newpath 99.38585 5.00557 moveto
+102.83076 3.00227 lineto stroke
+newpath 106.27502 7.78122 moveto
+102.62648 6.97237 100.0299 3.73708 100.0299 0 curveto stroke
+newpath 8.61407 5.00574 moveto
+5.16916 3.00238 lineto stroke
+newpath 6.75131 7.32661 moveto
+4.0499 4.39693 lineto stroke
+newpath 7.9701 0 moveto
+7.9701 3.73708 5.37352 6.97237 1.72498 7.78122 curveto stroke
+newpath 45.2304 49.13867 moveto
+37.26845 49.4978 lineto
+36.90932 41.53586 lineto stroke
+newpath 54 7.9701 moveto
+46.0299 7.9701 lineto
+46.0299 0 lineto stroke
+showpage
+%%EOF

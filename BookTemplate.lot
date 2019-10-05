@@ -1,0 +1,61 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2-1}{\ignorespaces 颜色表\cite {computersystem}\relax }}{16}
+\contentsline {table}{\numberline {2-2}{\ignorespaces yum常用命令选项\relax }}{19}
+\contentsline {table}{\numberline {2-3}{\ignorespaces zypper安装源操作选项\relax }}{21}
+\contentsline {table}{\numberline {2-4}{\ignorespaces zypper工具查选选项\relax }}{21}
+\contentsline {table}{\numberline {2-5}{\ignorespaces zypper软件管理选项\relax }}{22}
+\contentsline {table}{\numberline {2-6}{\ignorespaces grep常用选项\relax }}{24}
+\contentsline {table}{\numberline {2-7}{\ignorespaces free常用选项\relax }}{27}
+\contentsline {table}{\numberline {2-8}{\ignorespaces tar通用选项\relax }}{27}
+\contentsline {table}{\numberline {2-9}{\ignorespaces tar压缩选项\relax }}{28}
+\contentsline {table}{\numberline {2-10}{\ignorespaces tar解压缩选项\relax }}{28}
+\contentsline {table}{\numberline {2-11}{\ignorespaces cut常用选项\relax }}{29}
+\contentsline {table}{\numberline {2-12}{\ignorespaces sort常用选项\relax }}{30}
+\contentsline {table}{\numberline {2-13}{\ignorespaces tcpdump常用选项\relax }}{32}
+\contentsline {table}{\numberline {2-14}{\ignorespaces iptables实验环境\relax }}{36}
+\contentsline {table}{\numberline {2-15}{\ignorespaces sar常用选项\relax }}{40}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3-1}{\ignorespaces vim进入插入模式指令\relax }}{46}
+\contentsline {table}{\numberline {3-2}{\ignorespaces vim方向控制键\relax }}{46}
+\contentsline {table}{\numberline {3-3}{\ignorespaces vim撤销指令按键\relax }}{46}
+\contentsline {table}{\numberline {3-4}{\ignorespaces vim删除指令按键\relax }}{47}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4-1}{\ignorespaces 特殊变量的含义\relax }}{60}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {10-1}{\ignorespaces DNS演示环境机器一览\relax }}{116}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {14-1}{\ignorespaces KeepAlived演示环境机器列表\relax }}{145}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {22-1}{\ignorespaces PXE目录结构\relax }}{190}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {25-1}{\ignorespaces Ansible测试环境\relax }}{197}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {27-1}{\ignorespaces SaltStack测试环境机器列表\relax }}{209}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {31-1}{\ignorespaces Docker演示环境机器一览\relax }}{244}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

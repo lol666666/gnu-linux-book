@@ -1,0 +1,186 @@
+%!PS
+%%BoundingBox: -41 -92 102 51 
+%%HiResBoundingBox: -40.29335 -91.84122 101.17615 50.7986 
+%%Creator: MetaPost 1.999
+%%CreationDate: 2015.07.04:2221
+%%Pages: 1
+%*Font: cmr10 9.96265 9.96265 53:8000244
+%*Font: gbsnu89 9.96265 9.96265 e3:8
+%*Font: gbsnu91 9.96265 9.96265 ca:8
+%*Font: gbsnu7a 9.96265 9.96265 0b:800000000000000000000000000000000008
+%*Font: gbsnu5e 9.96265 9.96265 8f:8c
+%*Font: gbsnu75 9.96265 9.96265 28:8
+%*Font: gbsnu62 9.96265 9.96265 37:8
+%*Font: gbsnu54 9.96265 9.96265 04:8000000000000000000000000000004
+%*Font: gbsnu79 9.96265 9.96265 cd:8
+%*Font: gbsnu53 9.96265 9.96265 05:80000000000000000000000000000000000000000000000000000002
+%*Font: gbsnu7c 9.96265 9.96265 fb:8
+%*Font: gbsnu7e 9.96265 9.96265 df:8
+%*Font: gbsnu4e 9.96265 9.96265 e4:80002
+%*Font: gbsnu51 9.96265 9.96265 fd:8
+%*Font: gbsnu65 9.96265 9.96265 70:800001
+%*Font: gbsnu8c 9.96265 9.96265 03:8
+%*Font: gbsnu68 9.96265 9.96265 38:8
+%*Font: gbsnu5f 9.96265 9.96265 c3:8
+%*Font: gbsnu5c 9.96265 9.96265 42:8
+%*Font: gbsnuff 9.96265 9.96265 1a:8
+%*Font: gbsnu5b 9.96265 9.96265 58:8
+%*Font: gbsnu50 9.96265 9.96265 a8:8
+%*Font: gbsnu7b 9.96265 9.96265 a1:8
+%*Font: gbsnu74 9.96265 9.96265 06:8
+%*Font: gbsnu8f 9.96265 9.96265 db:8
+%*Font: gbsnu8b 9.96265 9.96265 be:8
+%*Font: gbsnu59 9.96265 9.96265 07:8
+%%BeginProlog
+%%EndProlog
+%%Page: 1 1
+ 0 0 0 setrgbcolor
+0 0 moveto
+(Shell) cmr10 9.96265 fshow
+21.0323 0 moveto
+(\343) gbsnu89 9.96265 fshow
+30.9949 0 moveto
+(\312) gbsnu91 9.96265 fshow
+40.9576 0 moveto
+(\013) gbsnu7a 9.96265 fshow
+50.9202 0 moveto
+(\217) gbsnu5e 9.96265 fshow
+ 0 0.5 dtransform truncate idtransform setlinewidth pop [] 0 setdash
+ 1 setlinejoin 10 setmiterlimit
+newpath -39.5586 -3.8963 moveto
+100.4414 -3.8963 lineto
+100.4414 11.51181 lineto
+-39.5586 11.51181 lineto
+ closepath stroke
+-29.33446 -15.4081 moveto
+(\() gbsnu75 9.96265 fshow
+-19.37175 -15.4081 moveto
+(7) gbsnu62 9.96265 fshow
+-9.40915 -15.4081 moveto
+(\013) gbsnu7a 9.96265 fshow
+0.55345 -15.4081 moveto
+(\217) gbsnu5e 9.96265 fshow
+20.47874 -15.4081 moveto
+(\004) gbsnu54 9.96265 fshow
+30.44145 -15.4081 moveto
+(\315) gbsnu79 9.96265 fshow
+40.40405 -15.4081 moveto
+(\224) gbsnu5e 9.96265 fshow
+50.36674 -15.4081 moveto
+(\() gbsnu75 9.96265 fshow
+60.32935 -15.4081 moveto
+(\013) gbsnu7a 9.96265 fshow
+70.29195 -15.4081 moveto
+(\217) gbsnu5e 9.96265 fshow
+80.25465 -15.4081 moveto
+(\005) gbsnu53 9.96265 fshow
+-34.31575 -27.47339 moveto
+(\373) gbsnu7c 9.96265 fshow
+-24.35315 -27.47339 moveto
+(\337) gbsnu7e 9.96265 fshow
+-14.39046 -27.47339 moveto
+(}) gbsnu54 9.96265 fshow
+-4.42786 -27.47339 moveto
+(\344) gbsnu4e 9.96265 fshow
+15.49745 -27.47339 moveto
+(\227) gbsnu7a 9.96265 fshow
+25.46005 -27.47339 moveto
+(\343) gbsnu53 9.96265 fshow
+35.42274 -27.47339 moveto
+(}) gbsnu54 9.96265 fshow
+45.38535 -27.47339 moveto
+(\344) gbsnu4e 9.96265 fshow
+65.31065 -27.47339 moveto
+(\223) gbsnu5e 9.96265 fshow
+75.27335 -27.47339 moveto
+(\375) gbsnu51 9.96265 fshow
+85.23595 -27.47339 moveto
+(p) gbsnu65 9.96265 fshow
+newpath -39.5586 -34.06 moveto
+100.4414 -34.06 lineto
+100.4414 -3.8963 lineto
+-39.5586 -3.8963 lineto
+ closepath stroke
+10.5161 -45.53632 moveto
+(\373) gbsnu7c 9.96265 fshow
+20.4787 -45.53632 moveto
+(\337) gbsnu7e 9.96265 fshow
+30.44139 -45.53632 moveto
+(\003) gbsnu8c 9.96265 fshow
+40.40399 -45.53632 moveto
+(\() gbsnu75 9.96265 fshow
+newpath -39.5586 -49.41711 moveto
+100.4414 -49.41711 lineto
+100.4414 -34.06 lineto
+-39.5586 -34.06 lineto
+ closepath stroke
+10.51616 -60.8603 moveto
+(8) gbsnu68 9.96265 fshow
+20.47876 -60.8603 moveto
+(\303) gbsnu5f 9.96265 fshow
+30.44145 -60.8603 moveto
+(B) gbsnu5c 9.96265 fshow
+40.40405 -60.8603 moveto
+(\032) gbsnuff 9.96265 fshow
+-14.39044 -72.93251 moveto
+(X) gbsnu5b 9.96265 fshow
+-4.42784 -72.93251 moveto
+(\250) gbsnu50 9.96265 fshow
+5.53485 -72.93251 moveto
+(\241) gbsnu7b 9.96265 fshow
+15.49745 -72.93251 moveto
+(\006) gbsnu74 9.96265 fshow
+35.42276 -72.93251 moveto
+(\333) gbsnu8f 9.96265 fshow
+45.38536 -72.93251 moveto
+(\013) gbsnu7a 9.96265 fshow
+55.34805 -72.93251 moveto
+(\241) gbsnu7b 9.96265 fshow
+65.31065 -72.93251 moveto
+(\006) gbsnu74 9.96265 fshow
+-14.39044 -85.00461 moveto
+(\276) gbsnu8b 9.96265 fshow
+-4.42784 -85.00461 moveto
+(\007) gbsnu59 9.96265 fshow
+5.53485 -85.00461 moveto
+(\241) gbsnu7b 9.96265 fshow
+15.49745 -85.00461 moveto
+(\006) gbsnu74 9.96265 fshow
+35.42276 -85.00461 moveto
+(\207) gbsnu65 9.96265 fshow
+45.38536 -85.00461 moveto
+(\366) gbsnu4e 9.96265 fshow
+55.34805 -85.00461 moveto
+(\241) gbsnu7b 9.96265 fshow
+65.31065 -85.00461 moveto
+(\006) gbsnu74 9.96265 fshow
+newpath -39.5586 -91.59122 moveto
+100.4414 -91.59122 lineto
+100.4414 -49.41711 lineto
+-39.5586 -49.41711 lineto
+ closepath stroke
+-30.18811 37.7129 moveto
+(\() gbsnu75 9.96265 fshow
+-20.22551 37.7129 moveto
+(7) gbsnu62 9.96265 fshow
+newpath -5.89233 41.51181 moveto
+-5.89233 47.75685 -13.1182 50.5486 -20.22546 50.5486 curveto
+-27.33273 50.5486 -34.5586 47.75685 -34.5586 41.51181 curveto
+-34.5586 35.26677 -27.33273 32.47502 -20.22546 32.47502 curveto
+-13.1182 32.47502 -5.89233 35.26677 -5.89233 41.51181 curveto closepath stroke
+71.14563 37.7129 moveto
+(\() gbsnu75 9.96265 fshow
+81.10823 37.7129 moveto
+(7) gbsnu62 9.96265 fshow
+newpath 95.4414 41.51181 moveto
+95.4414 47.75685 88.21555 50.5486 81.10828 50.5486 curveto
+74.001 50.5486 66.77515 47.75685 66.77515 41.51181 curveto
+66.77515 35.26677 74.001 32.47502 81.10828 32.47502 curveto
+88.21555 32.47502 95.4414 35.26677 95.4414 41.51181 curveto closepath stroke
+ 1 setlinecap
+newpath -20.22546 32.47502 moveto
+7.10736 11.51181 lineto stroke
+newpath 81.10828 32.47502 moveto
+53.77545 11.51181 lineto stroke
+showpage
+%%EOF

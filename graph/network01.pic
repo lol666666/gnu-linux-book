@@ -1,0 +1,17 @@
+.PS
+boxwid=1;
+boxht=0.2;
+define osi { [
+    box "Application";
+	box "Presention" with .nw at 1st box .sw;
+ 	box "Session" with .nw at 2nd box .sw;
+	box "Translate" with .nw at 3rd box .sw;
+	box "Network" with .nw at 4th box .sw;
+	box "Data Link" with .nw at 5th box .sw;
+	box "Physical" with .nw at 6th box .sw;
+] }
+
+osi();
+move 1.2;
+osi();
+.PE

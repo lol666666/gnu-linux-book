@@ -1,0 +1,144 @@
+\section{lsof命令的使用}
+\label{sec:lsofCmd}
+\index{lsof}
+
+lsof\index{lsof}是“list open files”的缩写，是一个列出当前系统打开文件的
+工具。在linux环境下，任何事物都以文件的形式存在，通过文件不仅仅可以访问
+常规数据，还可以访问网络连接和硬件。所以如传输控制协议 (TCP) 和用户数据
+报协议(UDP) 套接字等，系统在后台都为该应用程序分配了一个文件描述符，无
+论这个文件的本质如何，该文件描述符为应用程序与基础操作系统之间的交互提
+供了通用接口。因为应用程序打开文件的描述符列表提供了大量关于这个应用程
+序本身的信息，因此通过lsof工具能够查看这个列表对系统监测以及排错将是很
+有帮助的。
+
+lsof不加任何选项，默认输出所有活动进程打开的文件。
+
+\begin{verbatim}
+show all connections with -i
+
+# lsof -i
+COMMAND  PID USER   FD   TYPE DEVICE SIZE NODE NAME
+dhcpcd  6061 root   4u   IPv4   4510       UDP *:bootpc
+sshd    7703 root   3u   IPv6   6499       TCP *:ssh (LISTEN)
+sshd    7892 root   3u   IPv6   6757       TCP 10.10.1.5:ssh->192.168.1.5:49901 (ESTABLISHED)
+
+# Get only IPv6 traffic with -i 6
+# lsof -i 6
+
+# show only tcp connections (works the same for udp)
+# lsof -iTCP
+
+# show networking related to a given port using -i :port
+# lsof -i :22
+
+# show connections to a specific host using @host
+# lsof -i@172.16.25.18
+
+# show connections based on the host and the port using @host:port
+# lsof -i@172.16.25.18:22
+
+# Find listening ports
+# find ports that are awaiting connections
+# lsof -i -sTCP:LISTEN
+
+# User Information
+
+# We can also get information on various users and what they're doing
+# on the system, including their activity on the network, their
+# interactions with files, etc.
+
+# show what a given user has open using -u
+# lsof -u postfix
+
+# show what all users are doing except a certain user using -u ^user
+# lsof -u ^postfix
+
+# Kill everything a given user is doing
+# kill -9 `lsof -t -u postfix`
+\end{verbatim}
+
+\subsection{恢复删除的文件}
+
+有一次做研发的一位同事，因为系统根目录空间不足，想释放磁盘空间，结果使
+用find命令找到了单个文件大于1GB的文件，发现/var/log/messages和
+/var/log/warn文件每个都是1.3GB。他的系统根目录空间只有50GB的容量，结果
+把/var/log/messages日志文件及/var/log/warn日志文给删除了。删除之后，却
+没有达到的目的，磁盘使用空间依然是100\%。
+
+殊不知，当进程打开了某个文件时，只要该进程保持打开该文件，即使将其删除，
+它依然存在于磁盘中。这意味着，进程并不知道文件已经被删除，它仍然可以向
+打开该文件时提供给它的文件描述符进行读取和写入。除了该进程之外，这个文
+件是不可见的，因为已经删除了其相应的目录条目。
+
+拿/var/log/messages文件为例，看看如何在故意删除后如何找回来。我们先看一
+下/var/log/messages文件是什么进程打开的。
+
+\begin{verbatim}
+[root@iLiuc ~]# lsof /var/log/messages 
+COMMAND    PID USER   FD   TYPE DEVICE SIZE/OFF    NODE NAME
+syslog-ng 1493 root   10w   REG    8,2 57599903 3080573 /var/log/messages
+\end{verbatim}
+
+该命令的输出表明，/var/log/messages文件由syslog-ng进程打开，当前的进程
+号为1493，用户身份是root，打开的文件描述符为10且该文件处于只写模式，对
+应的TYPE（类型）为REG（常规）文件、磁盘位置、文件大小、索引节点。下面一
+一验证：
+
+\begin{verbatim}
+[root@iLiuc ~]# stat /var/log/messages 
+  File: `/var/log/messages'
+  Size: 57603503  	Blocks: 112632     IO Block: 4096   regular file
+Device: 802h/2050d	Inode: 3080573     Links: 1
+Access: (0640/-rw-r-----)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2015-03-12 15:33:28.000000000 +0800
+Modify: 2015-03-12 16:02:01.000000000 +0800
+Change: 2015-03-12 16:02:01.000000000 +0800
+ Birth: -
+\end{verbatim}
+
+现在，我们可以删除该文件以模拟误删除，
+
+\begin{verbatim}
+[root@iLiuc ~]# rm -f /var/log/messages
+[root@iLiuc ~]# lsof -n |grep '(deleted)'
+syslog-ng 1493  root 10w  REG  8,2 57605375   3080573 /var/log/messages (deleted)
+\end{verbatim}
+
+文件已被删除，看怎么恢复吧！从上面的输出信息可以看出之前打开该文件的进
+程号及文件描述符，有了这两个信息就足够了。接下来，我们去cat一下/proc目
+录中相应的目录中的文件描述符，
+
+\begin{verbatim}
+[root@iLiuc ~]# cat /proc/1493/fd/10 |head
+Oct  9 03:55:32 linux syslog-ng[5747]: syslog-ng starting up; version='2.0.9'
+Oct  9 03:55:32 linux syslog-ng[5747]: syslog-ng starting up; version='2.0.9'
+Oct  9 03:55:32 linux syslog-ng[5747]: syslog-ng starting up; version='2.0.9'
+Oct  9 03:55:32 linux syslog-ng[5747]: syslog-ng starting up; version='2.0.9'
+Oct  9 03:55:32 linux syslog-ng[5747]: syslog-ng starting up; version='2.0.9'
+Oct  9 03:55:32 linux syslog-ng[5747]: syslog-ng starting up; version='2.0.9'
+Oct  9 03:55:32 linux syslog-ng[5747]: syslog-ng starting up; version='2.0.9'
+Oct  9 03:55:32 linux syslog-ng[5747]: syslog-ng starting up; version='2.0.9'
+Oct  9 03:55:32 linux syslog-ng[5747]: syslog-ng starting up; version='2.0.9'
+Oct  9 03:55:32 linux syslog-ng[5747]: syslog-ng starting up; version='2.0.9'
+\end{verbatim}
+
+通过文件描述符查看了相应的数据，那么就可以使用I/O重定向将其复制到文件中，
+如cat /proc/1493/fd/10 > /tmp/messages。此时，可以中止该守护进程（这将
+  删除 FD，从而删除相应的文件），将这个临时文件复制到所需的位置，然后重
+新启动该守护进程。
+
+\begin{verbatim}
+[root@iLiuc ~]# cat /proc/1493/fd/10 > /tmp/messages
+[root@iLiuc ~]# /etc/init.d/syslog stop
+[root@iLiuc ~]# cp /tmp/messages /var/log/messages
+[root@iLiuc ~]# /etc/init.d/syslog start
+[root@iLiuc ~]# wc -l /var/log/messages 
+452113 /var/log/messages
+
+[root@iLiuc ~]# lsof /var/log/messages 
+COMMAND    PID USER   FD   TYPE DEVICE SIZE/OFF    NODE NAME
+syslog-ng 3819 root    4w   REG    8,2 57608271 3080449 /var/log/messages
+\end{verbatim}
+
+我们可以看到，已删除的/var/log/messages文件已回来了！对于许多应用程序，
+尤其是日志文件和数据库，这种恢复删除文件的方法非常有用。

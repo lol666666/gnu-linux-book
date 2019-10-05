@@ -1,0 +1,25 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=mptopdf 2015.6.23)  9 JUL 2015 09:06
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\relax ./mpboxes-49.mps
+ (./mpboxes-49.mps{f:/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+}) [1] 
+Here is how much of TeX's memory you used:
+ 71 strings out of 496714
+ 600 string characters out of 6201230
+ 4020658 words of memory out of 9005865
+ 1718 multiletter control sequences out of 15000+600000
+ 1583 words of font info for 5 fonts, out of 8000000 for 9000
+ 0 hyphenation exceptions out of 8191
+ 10i,3n,7p,113b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
+<f:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><f:
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><f:/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><f:/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><f:/texlive/2015/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on mpboxes-49.pdf (1 page, 46000 bytes).
+PDF statistics:
+ 28 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 7 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,66 @@
+\documentclass[a4paper,11pt]{book}
+\usepackage{ctex}
+\begin{document}
+	要想使用该工具，首先系统上要安装相应的软件包。安装完毕之后，在/opt目录下回多出一个MegaRAID/MegaCli的目录，
+	
+	本次使用该命令行工具的场景：
+	在第4、第5个插槽，新添加了两块Intel P3700 SSD盘，
+	
+	1. 查看RAID卡的设备号
+	\begin{verbatim}
+		# cd /opt/MegaRAID/MegaCli
+		# ./MegaCli64 -PDList -aAll |grep "Device ID"
+	\end{verbatim}
+
+	Enclosure Device ID: 252
+	Enclosure Device ID: 252 
+	Enclosure Device ID: 252
+	Enclosure Device ID: 252
+	Enclosure Device ID: 252
+	Enclosure Device ID: 252
+	说明：上面的输出，表示我们有一个RAID卡，这个卡下面有6个盘。这里的ID号需要记下来，
+	后面做RAID时需要用到。
+	
+	2. 查看Slot ID，有没有错序的情况
+	\begin{verbatim}
+		# ./MegaCli64 -PDList -aAll |grep "Slot"  
+	\end{verbatim}
+
+	Slot Number: 0
+	Slot Number: 1
+	Slot Number: 2
+	Slot Number: 3
+	Slot Number: 4
+	Slot Number: 5
+	说明：这里的Slot Number号需要记下来，后面做RAID时需要用到。
+	
+	3. 查看Foreign信息
+	\begin{verbatim}
+		# ./MegaCli64 -PDList -aAll |grep "Foreign State"
+	\end{verbatim}
+	Foreign State: None
+	Foreign State: None 
+	Foreign State: None
+	Foreign State: None
+	Foreign State: Foreign \# 这是新增加的
+	Foreign State: Foreign \# 这是新增加的
+	
+	4. 清除Foreign信息
+	\begin{verbatim}
+		# ./MegaCli64 -CfgForeign -Clear -a0
+	\end{verbatim}
+	
+	5. 重新做RAID，在Slot4和Slot5上做RAID0
+	\begin{verbatim}
+		# ./MegaCli64 -CfgLdAdd -r0 [252:4,252:5] WT Direct -a0
+	\end{verbatim}
+	说明：如果做RAID1，只需要把r0改为r1即可。
+	
+	附录：名词解释
+	磁盘缓存策略：
+	WT（Write Through）
+	WB（Write Back）
+	NORA（NO Read Ahead）
+	RA（Read Ahead）
+	ADRA（Adaptive Read Ahead）
+\end{document}

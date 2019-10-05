@@ -1,0 +1,51 @@
+% Written by metapost version 1.999
+begingroup save _p,_r,_s,_n; picture _p; _p=nullpicture;
+string _n[];
+vardef _s(expr _t,_f,_m,_x,_y)(text _c)=
+  addto _p also _t infont _f scaled _m shifted (_x,_y) _c; enddef;
+_n0="cmr10";
+_s("Lo",_n0,1.00000,19.0259,6.0772,);
+_s("cal",_n0,1.00000,30.5107,6.0772,);
+_s("rep",_n0,1.00000,46.0081,6.0772,);
+_s("ository",_n0,1.00000,60.1496,6.0772,);
+_s("directory",_n0,1.00000,93.1647,6.0772,);
+_s("/home/ric",_n0,1.00000,5.9776,-5.8779,);
+_s("hard/m",_n0,1.00000,50.0070,-5.8779,);
+_s("ygit/test/.git/",_n0,1.00000,82.9668,-5.8779,);
+setbounds _p to (0,-9.4645)--(151.2664,-9.4645)--
+ (151.2664,14.4458)--(0,14.4458)--cycle;
+_p endgroup
+mpxbreak
+begingroup save _p,_r,_s,_n; picture _p; _p=nullpicture;
+string _n[];
+vardef _s(expr _t,_f,_m,_x,_y)(text _c)=
+  addto _p also _t infont _f scaled _m shifted (_x,_y) _c; enddef;
+_n0="cmr10";
+_s("Lo",_n0,1.00000,54.1166,6.0772,);
+_s("cal",_n0,1.00000,65.6014,6.0772,);
+_s("index",_n0,1.00000,81.0988,6.0772,);
+_s(char12&"le",_n0,1.00000,107.9427,6.0772,);
+_s("/home/ric",_n0,1.00000,5.9776,-5.8779,);
+_s("hard/m",_n0,1.00000,50.0070,-5.8779,);
+_s("ygit/test/.git/index",_n0,1.00000,82.9668,-5.8779,);
+setbounds _p to (0,-9.4645)--(174.7894,-9.4645)--
+ (174.7894,14.4458)--(0,14.4458)--cycle;
+_p endgroup
+mpxbreak
+begingroup save _p,_r,_s,_n; picture _p; _p=nullpicture;
+string _n[];
+vardef _s(expr _t,_f,_m,_x,_y)(text _c)=
+  addto _p also _t infont _f scaled _m shifted (_x,_y) _c; enddef;
+_n0="cmr10";
+_s("Lo",_n0,1.00000,14.0861,6.0772,);
+_s("cal",_n0,1.00000,25.5709,6.0772,);
+_s("w",_n0,1.00000,41.0683,6.0772,);
+_s("orking",_n0,1.00000,47.9868,6.0772,);
+_s("directory",_n0,1.00000,78.7327,6.0772,);
+_s("/home/ric",_n0,1.00000,5.9776,-5.8779,);
+_s("hard/m",_n0,1.00000,50.0070,-5.8779,);
+_s("ygit/test/",_n0,1.00000,82.9668,-5.8779,);
+setbounds _p to (0,-9.4645)--(131.8946,-9.4645)--
+ (131.8946,14.4458)--(0,14.4458)--cycle;
+_p endgroup
+mpxbreak

@@ -1,0 +1,39 @@
+.PS
+
+define shipper {
+	box wid $1 ht $2 rad $3 "Shipper" "LogStash";
+}
+
+[
+	shipper(0.85,0.4,0.02);
+]
+
+[
+	shipper(0.85,0.4,0.02);
+] with .n at last [].s - (0,0.35);
+
+[
+	shipper(0.85,0.4,0.02);
+] with .n at last [].s - (0,0.35);
+
+Broker: circle rad 0.5 "Borker" "Redis" "192.168.20.138" with .w at 2nd [].e + (0.35,0);
+
+move right 0.35;
+
+Indexer: box wid 1.15 ht 0.55 rad 0.02 "Indexer" "LogStash" "192.168.20.139";
+
+move same;
+
+Elastic: box wid 1.15 ht 0.75 rad 0.02 "Search &" "Storage" "ElasticSearch" "192.168.20.139";
+
+move same;
+
+Kibana: box wid 1.15 ht 1.9 rad 0.02 "Web" "Interface" "LogStash" "192.168.20.139";
+
+line -> from 1st [].e to Broker.nw;
+line -> from 2nd [].e to Broker.w;
+line -> from last [].e to Broker.sw;
+line -> from Broker.e to Indexer.w;
+line -> from Indexer.e to Elastic.w;
+line -> from Kibana.w to Elastic.e;
+.PE

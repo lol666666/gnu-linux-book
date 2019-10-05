@@ -1,0 +1,84 @@
+%!PS
+%%BoundingBox: -1 -35 168 15 
+%%HiResBoundingBox: -0.25 -34.4232 167.80882 14.4232 
+%%Creator: MetaPost 1.999
+%%CreationDate: 2015.07.04:1715
+%%Pages: 1
+%*Font: cmr10 9.96265 9.96265 48:8488006c191c4
+%%BeginProlog
+%%EndProlog
+%%Page: 1 1
+ 0 0 0 setrgbcolor 0 0.5 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+42.5196 0 lineto
+42.5196 14.1732 lineto
+0 14.1732 lineto
+ closepath stroke
+0.85016 4.59595 moveto
+(Pla) cmr10 9.96265 fshow
+15.10226 4.59595 moveto
+(yb) cmr10 9.96265 fshow
+26.17195 4.59595 moveto
+(o) cmr10 9.96265 fshow
+31.43005 4.59595 moveto
+(ok) cmr10 9.96265 fshow
+newpath 62.5196 0 moveto
+105.03922 0 lineto
+105.03922 14.1732 lineto
+62.5196 14.1732 lineto
+ closepath stroke
+74.02432 4.59595 moveto
+(Pla) cmr10 9.96265 fshow
+88.27643 4.59595 moveto
+(y) cmr10 9.96265 fshow
+newpath 125.03922 0 moveto
+167.55882 0 lineto
+167.55882 14.1732 lineto
+125.03922 14.1732 lineto
+ closepath stroke
+134.20547 3.68271 moveto
+(Hosts) cmr10 9.96265 fshow
+newpath 62.5196 -34.1732 moveto
+105.03922 -34.1732 lineto
+105.03922 -20 lineto
+62.5196 -20 lineto
+ closepath stroke
+71.54752 -30.54585 moveto
+(T) cmr10 9.96265 fshow
+77.91252 -30.54585 moveto
+(asks) cmr10 9.96265 fshow
+newpath 125.03922 -34.1732 moveto
+167.55882 -34.1732 lineto
+167.55882 -20 lineto
+125.03922 -20 lineto
+ closepath stroke
+128.00647 -30.54585 moveto
+(Mo) cmr10 9.96265 fshow
+142.39697 -30.54585 moveto
+(dules) cmr10 9.96265 fshow
+ 1 setlinecap
+newpath 42.5196 7.08661 moveto
+62.5196 7.08661 lineto stroke
+newpath 62.5196 9.92125 moveto
+56.85036 7.08661 lineto
+62.5196 4.25197 lineto stroke
+newpath 105.03922 7.08661 moveto
+125.03922 7.08661 lineto stroke
+newpath 125.03922 9.92125 moveto
+119.36996 7.08661 lineto
+125.03922 4.25197 lineto stroke
+ 0.5 0 dtransform exch truncate exch idtransform pop setlinewidth
+newpath 83.77942 0 moveto
+83.77942 -20 lineto stroke
+ 0 0.5 dtransform truncate idtransform setlinewidth pop
+newpath 86.61406 -20 moveto
+83.77942 -14.33075 lineto
+80.94478 -20 lineto stroke
+newpath 105.03922 -27.0866 moveto
+125.03922 -27.0866 lineto stroke
+newpath 125.03922 -24.25195 moveto
+119.36996 -27.0866 lineto
+125.03922 -29.92123 lineto stroke
+showpage
+%%EOF

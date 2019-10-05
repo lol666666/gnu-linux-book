@@ -1,0 +1,19 @@
+.PS
+A: box ht 0.8 rad 0.08 "Line 1" "Line 2" "Line 3" "Line 4" "..."
+INFILE: "\fBInput file\fP" with .n at A.s - (0,0.15)
+B: box width 1.8 "Read a Line" with .nw at A.ne + (0.5,0)
+C: box width 1.8 "Execute awk commands" "in the \fBbody\fP block on the line" at B - (0,0.8)
+D: box width 1.8 "\fBRepeat\fP for the next line until" "end of the input file" at C - (0,0.8)
+E: box width 1.8 rad 0.1 "Execute awk commands in" "the \fBEND\fP Block" at D - (0,0.8)
+F: box width 1.8 "Execute awk commands in" "the \fBBEGIN\fP Block" at B + (0,0.8)
+
+L1: line chop 0.01 chop 0.9 from 1st box at 1/3 <A.e,A.ne> to B ->
+
+L2: line down from B to C -> chop
+L3: arrow down from C to D chop
+L4: arrow down from D to E chop
+
+L5: line down 2 from L1 .center
+L6: line right from L5.end to L4.center
+L7: arrow  from F.s to B.n
+.PE

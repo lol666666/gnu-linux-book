@@ -1,0 +1,13 @@
+.PS
+box invis "Java" "Program"
+arrow
+box "Compiler"
+arrow
+Bytecode: box invis "Java" "Byte code" "Program"
+arrow
+Windows: box wid 1 "Java Interpreter" "for Windows"
+Linux: box wid 1 "Java Interpreter" "for Linux" with .s at Windows.n + (0,0.3)
+MacOS: box wid 1 "Java Interpreter" "for MacOS" with .n at Windows.s - (0,0.3)
+arrow from 1/2 <Bytecode.ne,Bytecode.e> to Linux.w
+arrow from 1/2 <Bytecode.se,Bytecode.e> to MacOS.w
+.PE

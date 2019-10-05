@@ -1,0 +1,27 @@
+\chapter{Nginx负载均衡与高可用集群}
+\label{chap:nginxLB}
+
+Nginx的负载均衡功能依赖于\verb|ngx_upstream_module|模块，所支持的代理方
+式有，
+
+\begin{enumerate}[itemsep=0pt,parsep=0pt]
+\item proxy\_pass
+\item fastcgi\_pass
+\item memcached\_pass
+\end{enumerate}
+
+\section{upstream模块介绍}
+\label{sec:upstreamIntro}
+
+
+
+\section{Nginx负载均衡方法介绍}
+
+\section{准备工作}
+\label{sec:nginxPrepare}
+
+\section{Nginx+KeepAlived高可用}
+\label{sec:NginxAndKeepalived}
+
+Nginx负载均衡器总会存在单点故障的问题，所以，有必要对Nginx负载均衡器进
+行高可用配置。

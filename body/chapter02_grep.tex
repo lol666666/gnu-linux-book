@@ -1,0 +1,79 @@
+\section{grep命令的使用}
+\label{sec:grepCmd}
+
+grep\index{grep}(global regular expression pattern的缩写)。其实可以把它
+理解为过滤关键字用的一个程序。具体怎么用，还是看一个实例吧，然后结束本
+节内容。
+
+\subsection{常用选项}
+
+\begin{table}[!htbp]
+  \centering
+  \caption{grep常用选项}
+  \begin{tabular}{l|l}
+    \hline
+    -A NUM  & 打印出紧随匹配的行之后的下文NUM行 \\
+    \hline
+    -B NUM  & 打印出匹配的行之前的上文NUM行 \\
+    \hline
+    -C NUM  & 打印出匹配的行的上下文前后各NUM行 \\
+    \hline
+    -b      & 在输出的每行前面同时打印出当前行在输入文件中的字节偏移量 \\
+    \hline
+    -c      & 显示匹配的行数 \\
+    \hline
+    -f file & 从文件file中获取模式，每行一个 \\
+    \hline
+    -H      & 为每个匹配的文件打印文件名 \\
+    \hline
+    -I      & 不搜索二进制文件 \\
+    \hline
+    -i      & 忽略大小写 \\
+    \hline
+    -l      & 只显示有匹配的文件的文件名 \\
+    \hline
+    -L      & 只显示未匹配的文件的文件名 \\
+    \hline
+    -n      & 输出行号 \\
+    \hline
+    -o      & 只显示匹配字段 \\
+    \hline
+    -q      & quiet静默模式 \\
+    \hline
+    -v      & 只显示不匹配的行 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{一些实例}
+
+去掉文件里的注释行和空白行
+\begin{verbatim}
+# cat filename | grep -v ^$ | grep -v ^# | sudo tee squid.conf
+\end{verbatim}
+
+这里我们使用grep命令及cut命令一起把eth0上的IP给取出来，看操作：
+
+\begin{verbatim}
+  [root@iLiuc ~]# ifconfig eth0
+  eth0 Link encap:Ethernet  HWaddr 5A:B6:4E:85:55:44  
+  inet addr:192.168.18.18  Bcast:192.168.18.255  Mask:255.255.255.0
+  inet6 addr: fe80::58b6:4eff:fe85:5544/64 Scope:Link
+  UP BROADCAST RUNNING MULuTICAST  MTU:1500  Metric:1
+  RX packets:11655331 errors:0 dropped:0 overruns:0 frame:0
+  TX packets:1074797 errors:0 dropped:0 overruns:0 carrier:0
+  collisions:0 txqueuelen:1000 
+  RX bytes:4001012028 (3.7 GiB)  TX bytes:628740073 (599.6 MiB)
+  Interrupt:185
+
+  # 使用grep命令，匹配关键字，缩小范围
+  [root@iLiuc ~]# ifconfig eth0 |grep "inet addr"
+  inet addr:192.168.18.18  Bcast:192.168.18.255  Mask:255.255.255.0
+
+  # 使用cut命令，把范围再次缩小些
+  [root@iLiuc ~]# ifconfig eth0 |grep "inet addr" | cut -d: -f2
+  192.168.18.18  Bcast
+
+  # 是不是快出来了，再使用cut一次，IP地址就出来了
+  [root@iLiuc ~]# 自己写出来吧，我已经写得很多了！
+\end{verbatim}

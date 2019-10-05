@@ -1,0 +1,33 @@
+.PS
+define client {
+	   box wid 0.7 ht 0.35 rad 0.05 "Nagios" "Client"
+}
+
+define server {
+	   box wid 0.7 ht 0.35 rad 0.05 "Nagios" "Server"
+}
+
+Method1: [
+	S1: server
+	move right 0.8
+	C1: client
+	L1: line from S1.e to C1.w ->
+	box invis "SSH" ht 0.18 with .s at L1.c
+]
+
+Method2: [
+	S2: server
+	move right 0.8
+	C2: client
+	L2: line from S2.e to C2.w ->
+	box invis "NRPE" ht 0.18 with .s at L2.c
+] with .c at Method1.c - (0,0.55)
+
+Method3: [
+	S3: server
+	move right 0.8
+	C3: client
+	L3: line from C3.w to S3.e ->
+	box invis "NSCA" ht 0.18 with .s at L3.c
+] with .c at Method2.c - (0,0.55)
+.PE

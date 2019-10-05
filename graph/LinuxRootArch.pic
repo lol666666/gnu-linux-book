@@ -1,0 +1,9 @@
+.PS
+ROOT: box wid 0.4 ht 0.2 rad 0.05 "/"
+move 0.5
+Root: box wid 0.4 ht 0.2 rad 0.05 "root"
+L1: line from ROOT.e to Root.w ->
+move to Root.n + 0,0.2
+MNT: box wid 0.4 ht 0.2 rad 0.05 with .s at Root.n + 0,0.15 "mnt"
+RC: box wid 0.4 ht 0.2 rad 0.05 with .s at MNT.n + 0,0.15 "rc.d"
+.PE

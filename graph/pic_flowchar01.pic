@@ -1,0 +1,38 @@
+.PS
+down;
+C0: connector(1);
+arrow;
+H0: preparation(1,1); "\sf Preparation" at H0.c;
+move to H0.B.s;
+arrow;
+D0: data(1,1); "\sf Data" at D0.c;
+move to D0.B.s;
+arrow;
+P0: process(1,1); "\sf Process" at P0.c;
+move to P0.B.s;
+arrow;
+R0: decision(1,1); "\sf Decision" at R0.c;
+move to R0.B.s;
+arrow;
+T0: terminator(1,1); "\sf Terminator" at T0.c;
+move to R0.B.w;
+left;
+arrow;
+K0: keying(1,1); "\sf Keying" at K0.c;
+move to K0.B.w;
+arrow invis;
+K1: keyboard(1,1); "\sf Keyboard" at K1.c;
+move to K1.B.e;
+right;
+arrow;
+move to K0.B.n;
+line -> dashed up C0.w.y-K0.n.y then right C0.w.x-K0.n.x;
+move to P0.B.e;
+right;
+arrow;
+W0: document(1,1); "\sf Document" at W0.c;
+move to D0.B.e;
+right;
+arrow;
+S0: display(1,1); "\sf Display" at S0.c;
+.PE

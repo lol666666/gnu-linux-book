@@ -1,0 +1,17 @@
+.PS
+[
+		A: [
+		   box dashed wid 0.7 ht 0.75 rad 0.05 "Domain 1"
+		   move 0.2
+		   box dashed wid 0.7 ht 0.75 rad 0.05 "Domain 2"
+		   move same
+		   box dashed wid 0.7 ht 0.75 rad 0.05 "Domain N"
+		]
+
+		B: [
+		   box wid 2.5 ht 0.2 rad 0.1 "Hypervisor"
+  		] with .n at A .s - (0,0.15)
+]
+
+box ht last [].ht+0.45 wid last [].wid+0.3 at last [] + (0,0.05)
+.PE

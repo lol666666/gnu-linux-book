@@ -1,0 +1,22 @@
+.PS
+define container { [
+    box dashed wid 0.7 ht 0.75 rad 0.05 "$1" "Container"
+] }
+
+define layer {
+    box wid 2.5 ht 0.2 rad 0.1 "$1"
+}
+
+V1: container(LXC)
+move 0.2
+V2: container(LXC)
+move same
+V3: container(LXC)
+
+move to V1.sw - 0,0.15
+
+L1: layer(Operation System Kernel)
+move to L1.s - 0,0.05
+down
+L2: layer(Hardware)
+.PE

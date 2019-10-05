@@ -1,0 +1,43 @@
+%!PS
+%%BoundingBox: -71 -4 131 23 
+%%HiResBoundingBox: -70.33435 -3.25 130.16565 22.97632 
+%%Creator: MetaPost 1.999
+%%CreationDate: 2015.07.09:1027
+%%Pages: 1
+%*Font: cmr10 9.96265 9.96265 0b:80000000008001f2709002f6d9f6
+%%BeginProlog
+%%EndProlog
+%%Page: 1 1
+ 0 0 0 setrgbcolor
+0 0 moveto
+(Device) cmr10 9.96265 fshow
+32.2402 0 moveto
+(Driv) cmr10 9.96265 fshow
+51.5014 0 moveto
+(er) cmr10 9.96265 fshow
+ 0 0.5 dtransform truncate idtransform setlinewidth pop [] 0 setdash
+ 1 setlinejoin 10 setmiterlimit
+newpath -70.08435 -3 moveto
+129.91565 -3 lineto
+129.91565 9.8078 lineto
+-70.08435 9.8078 lineto
+ closepath stroke
+-67.08435 12.8078 moveto
+(Blo) cmr10 9.96265 fshow
+-52.00195 12.8078 moveto
+(c) cmr10 9.96265 fshow
+-47.85085 12.8078 moveto
+(k) cmr10 9.96265 fshow
+-39.27196 12.8078 moveto
+(Device) cmr10 9.96265 fshow
+-7.03165 12.8078 moveto
+(In) cmr10 9.96265 fshow
+1.82405 12.8078 moveto
+(terface) cmr10 9.96265 fshow
+newpath -70.08435 9.8078 moveto
+33.90945 9.8078 lineto
+33.90945 22.72632 lineto
+-70.08435 22.72632 lineto
+ closepath stroke
+showpage
+%%EOF

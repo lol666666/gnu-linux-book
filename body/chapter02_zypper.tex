@@ -1,0 +1,306 @@
+\section{zypper命令的使用}
+\label{sec:zypperCmd}
+
+\subsection{zypper本地源的配置}
+\label{subsec:zypperLocalrepo}
+
+SUSE的zypper本地源配置起来跟yum的配置很相似，它们的配置文件有很多相似之
+处。不过，个人觉得zypper这个工具稍微强大些。在SUSE下，可以通过一条
+zypper的命令，即可完成zypper源的配置。
+
+为什么会有本节内容呢？主要是2014年9月26日，Bash爆出了一个漏洞，传闻比
+“心脏出血”漏洞还要猛，不知道是不是真的。以下是网上给出的验证方法，测试
+环境在我的RHEL6 64bit的虚拟机上，
+
+\small{
+\begin{verbatim}
+[root@master ~]# env x='() { :;}; echo vulnerable' bash -c "echo this is a test"
+vulnerable
+this is a test
+\end{verbatim}
+}
+\normalsize
+
+同样，在我的SUSE 11sp2 64bit上运行也是同样的输出，输出内容略。以下几个
+包是SUSE的OEM厂商给出的Bash最新的升级包。
+
+\begin{verbatim}
+funny:~ # unzip CVE-2014-6271.zip 
+Archive:  CVE-2014-6271.zip
+   creating: CVE-2014-6271/
+  inflating: CVE-2014-6271/bash 9740.htm  
+  inflating: CVE-2014-6271/bash-3.2-147.20.1.x86_64.rpm  
+  inflating: CVE-2014-6271/bash-doc-3.2-147.20.1.x86_64.rpm  
+  inflating: CVE-2014-6271/libreadline5-32bit-5.2-147.20.1.x86_64.rpm  
+  inflating: CVE-2014-6271/libreadline5-5.2-147.20.1.x86_64.rpm  
+  inflating: CVE-2014-6271/license_agreement.txt  
+  inflating: CVE-2014-6271/readline-doc-5.2-147.20.1.x86_64.rpm
+\end{verbatim}
+
+接下来的操作是把这些包放到一个目录里，然后把该目录做成系统的一个更新源。
+比如，把解压后的目录放到/opt目录下，然后使用zypper ar添加该zypper源。
+
+\small{
+\begin{verbatim}
+funny:~ # mv CVE-2014-6271 /opt/update
+funny:~ # zypper ar file:///opt/update update
+Adding repository 'update' [done]
+Repository 'update' successfully added
+Enabled: Yes
+Autorefresh: No
+GPG check: Yes
+URI: file:/opt/update
+\end{verbatim}
+}
+\normalsize
+
+接下来，使用zypper lr验证下，
+
+\small{
+\begin{verbatim}
+funny:~ # zypper lr
+# | Alias  | Name   | Enabled | Refresh
+--+--------+--------+---------+--------
+1 | local  | local  | Yes     | Yes    
+2 | update | update | Yes     | No
+\end{verbatim}
+}
+\normalsize
+
+说明我们已成功添加update的源。另外，执行”zypper ar URI alias“后，会在
+/etc/zypp/repo.d/目录下生成alias.repo配置文件。接下来，我们试试zypper
+update命令，看是不是可以真的可以升级？
+
+\small{
+\begin{verbatim}
+funny:~ # zypper update
+Building repository 'update' cache [done]
+Loading repository data...
+Reading installed packages...
+
+The following packages are going to be upgraded:
+  bash bash-doc libreadline5 readline-doc 
+
+The following packages are not supported by their vendor:
+  bash bash-doc libreadline5 readline-doc 
+
+4 packages to upgrade.
+Overall download size: 923.0 KiB. ...
+Continue? [y/n/?] (y): y
+Retrieving package libreadline5-5.2-147.20.1.x86_64 (1/4), ...
+Retrieving package bash-3.2-147.20.1.x86_64 (2/4), ...
+Retrieving package readline-doc-5.2-147.20.1.x86_64 (3/4), ...
+Retrieving package bash-doc-3.2-147.20.1.x86_64 (4/4), ...
+Retrieving package libreadline5-5.2-147.20.1.x86_64 (1/4), ...
+Installing: libreadline5-5.2-147.20.1 [done]
+Retrieving package bash-3.2-147.20.1.x86_64 (2/4), ...
+Installing: bash-3.2-147.20.1 [done]
+Retrieving package readline-doc-5.2-147.20.1.x86_64 (3/4), ...
+Installing: readline-doc-5.2-147.20.1 [done]
+Retrieving package bash-doc-3.2-147.20.1.x86_64 (4/4), ...
+Installing: bash-doc-3.2-147.20.1 [done]
+\end{verbatim}
+}
+\normalsize
+
+以上说明可以进行升级的。接下来，我们使用zypper ps命令，可以查看有哪些终
+端还在使用之前没有升级过的bash，
+
+\small{
+\begin{verbatim}
+funny:/etc/zypp/repos.d # zypper ps
+The following running processes use deleted files:
+
+PID   | PPID  | UID | Login | Command | Files                    
+------+-------+-----+-------+---------+--------------------------
+2663  | 2542  | 0   | root  | bash    | /lib64/libreadline.so.5.2
+      |       |     |       |         | /bin/bash (deleted)      
+22426 | 22423 | 0   | root  | bash    | /lib64/libreadline.so.5.2
+      |       |     |       |         | /bin/bash (deleted)      
+
+You may wish to restart these processes.
+\end{verbatim}
+}
+\normalsize
+
+说明还有bash升级前的两个进程还在运行，我们可以退出这两个终端，再次登入
+系统，再次使用zypper ps命令来查看，就会看到”No processes using deleted
+files found.“的提示。
+
+\subsection{zypper命令选项介绍}
+\label{subsec:zypperCmdopt}
+
+zypper\index{zypper}是SuSE\index{SUSE}系列下面的包管理工具，如同
+\ref{sec:yumCmd}节的yum工具。
+
+zypper的几个重要选项：
+
+\begin{table}[!htbp]
+  \centering
+    \caption{zypper安装源操作选项}
+    \begin{tabular}{ll}
+      \toprule
+      选项           & 说明 \\
+      \midrule
+      repos, lr      & 列出库 \\
+      addrepo, ar    & 添加库 \\
+      renamerepo, nr & 重命名指定的安装源 \\
+      modifyrepo, mr & 修改指定的安装源 \\
+      refresh, ref   & 刷新所有安装源 \\
+      clean          & 清除本地缓存 \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+举例说明，
+
+列出当前有哪些库，
+
+\begin{verbatim}
+# zypper lr
+# | Alias       | Name        | Enabled | Refresh
+--+-------------+-------------+---------+--------
+1 | 6271        | 6271        | Yes     | No     
+2 | 7169        | 7169        | Yes     | No     
+3 | SUSE11SP2   | SUSE11SP2   | Yes     | No     
+4 | cve20150235 | cve20150235 | Yes     | No
+\end{verbatim}
+
+添加本地库，
+
+\begin{verbatim}
+# zypper ar file:///opt/patch/ mypatch
+Adding repository 'mypatch' [done]
+Repository 'mypatch' successfully added
+Enabled: Yes
+Autorefresh: No
+GPG check: Yes
+URI: file:/opt/patch/
+
+# zypper lr
+# | Alias       | Name        | Enabled | Refresh
+--+-------------+-------------+---------+--------
+1 | 6271        | 6271        | Yes     | No     
+2 | 7169        | 7169        | Yes     | No     
+3 | SUSE11SP2   | SUSE11SP2   | Yes     | No     
+4 | cve20150235 | cve20150235 | Yes     | No
+5 | mypatch     | mypatch     | Yes     | No
+\end{verbatim}
+
+zypper的查询选项：
+
+\begin{table}[!htbp]
+  \centering
+    \caption{zypper工具查选选项}
+    \begin{tabular}{ll}
+      \toprule
+      选项              & 说明 \\
+      \midrule
+      search, se        & 安装软件包 \\
+      info, if          & 查看软件包信息 \\
+      packages, pa      & 列出所有可用的软件包 \\
+      patterns, pt      & 列出所有可用的模式 \\
+      products, pd      & 列出所有可用的产品 \\
+      what-provides, wp & 列出能够提供指定功能的软件包 \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+举例说明，
+
+\begin{verbatim}
+# zypper se snmp
+Building repository 'mypatch' cache [done]
+Loading repository data...
+Reading installed packages...
+
+S | Name                | Summary                         | Type      
+--+---------------------+---------------------------------+-----------
+i | libsnmp15           | Shared Libraries from net-snmp  | package   
+  | libsnmp15-32bit     | Shared Libraries from net-snmp  | package   
+i | net-snmp            | SNMP Daemon                     | package   
+  | net-snmp            | SNMP Daemon                     | srcpackage
+  | perl-Net-SNMP       | Net::SNMP Perl Module           | package   
+  | perl-Net-SNMP       | Net::SNMP Perl Module           | srcpackage
+i | perl-SNMP           | Perl-SNMP                       | package   
+  | php5-snmp           | PHP5 Extension Module           | package   
+  | php53-snmp          | PHP5 Extension Module           | package   
+  | rsyslog-module-snmp | SNMP support module for rsyslog | package   
+i | snmp-mibs           | MIB files from net-snmp         | package
+#
+# zypper if net-snmp
+Loading repository data...
+Reading installed packages...
+
+
+Information for package net-snmp:
+
+Repository: SUSE-Linux-Enterprise-Server-11-SP2 11.2.2-1.234
+Name: net-snmp
+Version: 5.4.2.1-8.12.6.1
+Arch: x86_64
+Vendor: SUSE LINUX Products GmbH, Nuernberg, Germany
+Support Level: Level 3
+Installed: Yes
+Status: up-to-date
+Installed Size: 1.0 MiB
+Summary: SNMP Daemon
+Description: 
+This package was originally based on the CMU 2.1.2.1 snmp verbatim.It has been greatly modified, restructured, enhanced, and fixed.It hardly looks the same as anything that CMU has ever released.It was renamed from cmu-snmp to ucd-snmp in 1995 and later renamedfrom ucd-snmp to net-snmp in November 2000.
+#
+\end{verbatim}
+
+zypper软件管理：
+
+\begin{table}[!htbp]
+  \centering
+    \caption{zypper软件管理选项}
+    \begin{tabular}{ll}
+      \toprule
+      选项               & 说明 \\
+      \midrule
+      install, in        & 安装软件包 \\
+      remove, rm         & 删除软件包 \\
+      verify, ve         & 检验软件包依赖关系的完整性 \\
+      update, up         & 更新已安装的软件包到新的版本 \\
+      dist-upgrade, dup  & 整个系统的升级 \\
+      source-install, si & 安装源代码软件包和它们的编译依赖 \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+举例说明，
+
+\begin{verbatim}
+# zypper rm net-snmp
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following packages are going to be REMOVED:
+  net-snmp perl-SNMP 
+
+2 packages to remove.
+After the operation, 1.6 MiB will be freed.
+Continue? [y/n/?] (y): y
+Removing perl-SNMP-5.4.2.1-8.12.6.1 [done]
+Removing net-snmp-5.4.2.1-8.12.6.1 [done]
+#
+# zypper in -y net-snmp
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following NEW packages are going to be installed:
+  net-snmp perl-SNMP 
+
+2 new packages to install.
+Overall download size: 543.0 KiB. After the operation, additional 1.6 MiB will be used.
+Continue? [y/n/?] (y): y
+Retrieving package perl-SNMP-5.4.2.1-8.12.6.1.x86_64 (1/2), 176.0 KiB (609.0 KiB unpacked)
+Retrieving package net-snmp-5.4.2.1-8.12.6.1.x86_64 (2/2), 367.0 KiB (1.0 MiB unpacked)
+Installing: perl-SNMP-5.4.2.1-8.12.6.1 [done]
+Installing: net-snmp-5.4.2.1-8.12.6.1 [done]
+Additional rpm output:
+Updating etc/sysconfig/net-snmp...
+\end{verbatim}

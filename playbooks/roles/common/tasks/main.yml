@@ -1,0 +1,24 @@
+---
+- name: Prepare zyyper repo file
+  template: src=zypper.repo.j2 dest=/etc/zypper/repos.d/suse11sp2.repo
+
+- name: Install net-snmp package
+  zypper: pkg=net-snmp state=latest
+
+- name: Modify snmp configuration file
+  template: src=snmpd.conf.j2 dest=/etc/snmp/snmpd.conf
+
+- name: Modify ntp configuration file
+  template: src=ntp.conf.j2 dest=/etc/ntp.conf
+
+- name: Restart ntp service
+  shell: /etc/init.d/ntp restart
+
+- name: Enable ntp service
+  shell: chkconfig ntp on
+
+- name: Restart snmpd service
+  shell: service snmpd restart
+
+- name: Enable snmpd service
+  shell: chkconfig snmpd on

@@ -1,0 +1,73 @@
+.PS
+scale = 2.54
+
+define hostbox {
+    box wid $1 ht $2 rad $3;
+}
+
+define vmbox {
+    Host: box wid $1 ht $2 rad $3;
+    Nic: box wid 0.8 ht 0.5 with .w at Host.w "$4";
+}
+
+define hostnic {
+    [ box wid $1 ht $2 "$3" ]
+}
+
+define bridgeswitch {
+    Outer: box wid $1 ht $2;
+    move to Outer.s;
+    Port0: [
+    	  hostnic(0.5,0.5,)
+    ] with .s at Outer.s + (0,0.1);
+    
+    Port1: [
+    	  hostnic(0.5,0.5,)
+    ] with .s at Outer.s + (0,0.7);
+    
+    Port2: [
+    	  hostnic(0.5,0.5,)
+    ] with .s at Outer.s + (0,1.3);
+    
+    Port3: [
+          hostnic(0.5,0.5,)
+    ] with .s at Outer.s + (0,1.9);
+    "br1" at Outer.n below;
+}
+
+
+HOST0: hostbox(3,6,0);
+"Host" at HOST0.n below;
+move to HOST0.sw + (0,0.6);
+EM2: hostnic(0.8,0.5,em2);
+move to HOST0.sw + (0,1.5);
+EM1: hostnic(0.8,0.5,em1);
+move to HOST0.sw + (0,4);
+bridgeswitch(1.0,3,);
+
+VM1: [ vmbox(2.5,1.5,0.05,eth0) ] with .nw at HOST0.ne + (1,0);
+"VM1" at VM1.n below;
+VM2: [ vmbox(2.5,1.5,0.05,eth0) ] with .n at VM1.s - (0,0.5);
+"VM2" at VM2.n below;
+
+VNET0: [ hostnic(1,0.5,vnet0) ] with .e at HOST0.ne - (0,0.75);
+VNET1: [ hostnic(1,0.5,vnet1) ] with .e at VNET0.ne - (0,2.25);
+
+Client: [ box wid 1.5 ht 1 rad 0.1 "Client" ] with .ne at HOST0.nw - (1,0);
+Network: [ box wid 1.5 ht 1 rad 0.1 "Internet" ] with .e at EM2.w - (1,0);
+
+Iptables: [ box wid 1.2 ht 0.8 "iptables" dashed .08] with .sw at EM2.ne + (0.5,-0.2);
+
+line <-> from VNET0.e to VM1.w dashed .08;
+line <-> from VNET1.e to VM2.w dashed .08;
+line <-> from Port2.e to VNET1.w;
+line <-> from Port3.e to VNET0.w;
+arc <-> from EM1.e to Port0.e;
+line -> from EM2.e to Iptables.w dashed .08;
+LineA: line up 0.8 from Iptables.n dashed .08;
+line -> from LineA.end to Port1.e dashed .08;
+
+line <-> from Client.s to Network.n;
+line <-> from Network.e to EM2.w;
+
+.PE

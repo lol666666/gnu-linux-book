@@ -1,0 +1,22 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=mptopdf 2015.6.23)  9 JUL 2015 09:03
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\relax ./manfig-26.mps
+ (./manfig-26.mps{f:/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+) [1] 
+Here is how much of TeX's memory you used:
+ 89 strings out of 496714
+ 671 string characters out of 6201230
+ 4017382 words of memory out of 9002589
+ 1739 multiletter control sequences out of 15000+600000
+ 667 words of font info for 2 fonts, out of 8000000 for 9000
+ 0 hyphenation exceptions out of 8191
+ 10i,3n,7p,120b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
+<f:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><f:/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on manfig-26.pdf (1 page, 17309 bytes).
+PDF statistics:
+ 16 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 7 words of extra memory for PDF output out of 10000 (max. 10000000)
+

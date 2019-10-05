@@ -1,0 +1,231 @@
+\chapter{Bash脚本}
+\label{sec:shellScript}
+\index{bash}
+
+无聊地重复一件事确实惹人厌！当然了，数次重复一些命令是不是也是很不爽的
+一件事呢？如果是请跟随我往下看。当我们熟悉了操作系统后，以期望有更好的
+提高，那就是写脚本了。
+
+\input{body/chapter07_regexp}
+
+\input{body/chapter07_awk}
+
+\input{body/chapter07_sed}
+
+\section{语法介绍}
+
+\subsection{变量定义}
+
+\subsection{特殊变量}
+
+在脚本里有以下几个特殊的变量，如下
+
+\begin{table}[htbp]
+  \centering
+  \caption{特殊变量的含义}
+  \label{tab:specialVariables}
+  \begin{tabular}{cl}
+    \toprule
+    变量  & 说明 \\
+    \midrule
+    \$0   & 代表该脚本的名字 \\
+    \$n   & 代表该程序的第n\footnote{如果参数超过10个，则使用\$n就不合适了，需要使用\$\{n\}的形式。}个参数值，n=1..9 \\
+    \$*   & 代表该脚本的所有参数 \\
+    \$\#  & 代表该脚本的参数个数 \\
+    \$\$  & 代表该脚本的PID \\
+    \$!   & 代表上一个指令的PID \\
+    \$?   & 代表上一个指令的返回值 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{变量赋值和替换}
+
+\subsection{本地变量与全局变量}
+
+\subsection{引用变量}
+
+\subsection{数组}
+
+Bash只支持一维数组，但参数个数没有限制。
+
+数组赋值：
+
+\begin{verbatim}
+1. array=(var1 var2 var3 ... varN)
+2. array=([0]=var1 [1]=var2 [2]=var3 ... [n]=varN)
+3. array[0]=var1
+   array[1]=var2
+   array[2]=var3
+   ...
+   array[N]=varN
+\end{verbatim}
+
+\begin{verbatim}
+  declare -
+
+  MYARRAY=([0]=tom [1]=laven [2]=liu [5]=jim)
+  
+  数组的元素的长度：
+  ${#MYARRAY} 指的是数组MYARRAY的第0个元素的长度，与
+  ${#MYARRAY[0]} 等价
+  ${#MYARRAY[n]} 是第n+1个元素，
+
+  数组的元素个数：
+  ${#MYARRAY[*]}
+  ${#MYARRAY[@]}
+\end{verbatim}
+  一个例子，随机生成10个整型元素的的数组，并找出该数组中的最大值。
+  \begin{lstlisting}
+  #!/bin/bash
+  #
+  for i in {0..9}
+  do
+  ARRAY[$i]=$RANDOM
+  echo -n "${ARRAY[$i]} "
+  sleep 1
+  done
+
+  echo
+
+  declare -i MAX=${ARRAY[0]}
+  INDEX=$[${#ARRAY[*]-1}]
+  for i in `seq 1 $INDEX`
+  do
+      if [ $MAX -lt ${ARRAY[$i]} ] ; then
+          MAX=${ARRAY[$i]}
+      fi
+  done
+
+  echo ${MAX}
+  \end{lstlisting}
+
+\subsection{特殊字符}
+
+\section{基本流程}
+
+Bash与其他编程语言一样，也有自己的程序处理逻辑。接下来的这个章节主要介
+绍Bash的脚本几种基本流程。
+
+\subsection{if结构}
+
+先看一下bash的man page是如何定义if结构的，
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics{graph/for.pdf}
+    \caption{for工作流程}
+  \label{fig:for_workflow}
+\end{figure}
+
+\begin{verbatim}
+if list; then 
+    list; 
+[ elif list; then list; ] 
+... 
+[ else list; ] 
+fi
+\end{verbatim}
+
+当\emph{if list}执行成功并且返回状态是0时，相应的\emph{then list}就会被
+执行；否则，\emph{elif list}执行，且返回状态为0时，相应的\emph{then
+  list}就会被执行；之后命令执行结束。如果前面的\emph{if list}及
+\emph{elif list}都不能成功执行，那么将执行最后一个\emph{else list}语句。
+返回状态就是上一条命令执行成功与否，执行成功就返回0，不成功返回非0。不
+成功的原因有很多，成功返回就一个。
+
+一个示例：
+
+\lstinputlisting[aboveskip=5pt,belowskip=5pt,language=bash]{src/shell01.sh}
+
+\subsection{for结构}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics{graph/do-1.pdf}
+    \caption{do工作流程}
+  \label{fig:do_workflow}
+\end{figure}
+
+\begin{lstlisting}
+#!/bin/sh
+
+# numberlines - A simple alternative to cat -n, etc.
+
+for filename
+do
+    linecount="1"
+    while read line
+    do
+        echo "${linecount}: $line"
+        linecount="$(($linecount + 1))"
+    done < $filename
+done
+exit 0
+\end{lstlisting}
+
+\subsection{while结构}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics{graph/while.pdf}
+    \caption{while工作流程}
+  \label{fig:while_workflow}
+\end{figure}
+
+\lstinputlisting[aboveskip=5pt,belowskip=5pt,language=bash]{src/shell03.sh}
+
+我们可以将while循环和专用命令“:”结合使用来定义。由于循环固有的一个特性，
+当条件永远不被满足时，就会产生一个无限循环。定义一个while无限循环可以使
+用如下三种命令：
+
+\begin{enumerate}
+\item true命令 \- 不做任何事情，表示成功，总是返回退出状态码0
+\item false命令 \- 不做任何事情，表示失败，总是返回退出状态码1
+\item :命令 \- 无作用，此命令也不做任何事情，总是返回退出状态码0
+\end{enumerate}
+
+\section{操作字符串}
+
+\section{函数}
+
+当我们的脚本大到一定程度时，使用函数则可以简化脚本，使程序结构更为清晰。
+
+\section{信号捕捉}
+
+\begin{verbatim}
+trap可以捕捉信号，根据捕捉到的信号，执行响应的操作。
+语法：
+trap 'action' SIGNAL
+\end{verbatim}
+
+\section{开机脚本启动顺序}
+
+\section{一个实例}
+
+\lstinputlisting[aboveskip=5pt,belowskip=5pt,language=bash]{src/shell04.sh}
+
+下面是该脚本的输出结果：
+
+\begin{lstlisting}[numbers=none,aboveskip=5pt,belowskip=5pt]
+System Report for richard on Tue Sep 23 21:34:22 CST 2014
+
+Hostname: richard NIS Domain: (none)
+Processor: 
+Running at 4585.16
+4585.16
+4585.16
+4585.16 bogomips with 3072 KB
+3072 KB
+3072 KB
+3072 KB cache
+
+OS Type: Linux Kernel:3.13.0-35-generic
+Kernel Compile #62-Ubuntu on
+Uptime: .08 days
+Memory: 6003456 kB Free:   : 100
+Swap: 6180860 kB Free:   : 100
+
+Load Avderage:0.63 0.69 0.61 
+Process Count:  total 1 running sleeping 0 stopped 0 zombie
+\end{lstlisting}

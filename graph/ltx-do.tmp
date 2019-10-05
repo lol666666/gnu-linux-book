@@ -1,0 +1,13 @@
+verbatimtex
+%&latex
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{CJK}
+\AtBeginDocument{\begin{CJK}{UTF8}{gbsn}}\AtEndDocument{\end{CJK}}
+\begin{document}
+etex
+picture latexmp_picture[];
+latexmp_picture[1]:= btex   etex ;
+latexmp_picture[2]:= btex 循环体 etex ;
+latexmp_picture[3]:= btex bool表达式 etex ;
+latexmp_picture[4]:= btex   etex ;

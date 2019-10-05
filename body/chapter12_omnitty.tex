@@ -1,0 +1,50 @@
+\chapter{Omnitty}
+\label{chap:Omnitty}
+
+Omnitty是一个轻量级的批量运维管理工具，它是由德国人开发的。该工具目前最多支持同时操作256台远端机器，默认使用SSH协议进行通信\footnote{只有SSH可供使用，使用Omnitty机器上的SSH客户端工具。}。它的安装很简单，下面给出安装步骤：
+
+\begin{verbatim}
+# cd /usr/local/src
+# tar -zxf rote-0.2.8.tar.gz
+# cd rote-0.2.8
+# ./configure
+# make
+# make install
+# cd ..
+
+# cd /usr/local/src
+# tar -zxf omnitty-0.3.0.tar.gz
+# cd omnitty-0.3.0
+# ./configure
+# make
+# make install
+
+# omnitty 
+omnitty: error while loading shared libraries: librote.so.0: cannot open shared object file: No such file or directory
+
+# cd /usr/local/src/rote-0.2.8
+# cp librote.so.0.2.8 /usr/lib64/
+# cd /usr/lib64
+# ln -s librote.so.0.2.8 librote.so.0
+\end{verbatim}
+
+\section{Omnitty的简单使用}
+\label{sec:omnittyBasicUseage}
+
+\subsection{添加机器}
+\label{subsec:addMachine}
+
+有两种方法可以向Omnitty里添加机器，一种是一台一台的进行手工添加；另一种就是使用文件的方式一次性的添加。如果机器数量较少，我们完全可以通过手工的方式进行一台一台的添加，这样没有任何什么问题。如果要操作的机器数量大\footnote{大于10台}，我们就可以通过使用文件的方式进行添加。我们把要操作的机器的IP或主机名\footnote{如果写主机名，要确保Omnitty主机可以解析。}写入到一个文件中，然后Omnitty通过打开这个文件以达到加载机器的目的。
+
+\subsection{激活机器}
+\label{subsec:activeMachine}
+
+在上面的小节中，我们把机器已经加载进来了，这时还不能使用。因为它们未被激活，显示的颜色是灰色的。如果要激活当前光标处的机器，可以按F4键即可激活该机器。只有激活的机器才响应我们的键盘操作。
+
+\subsection{开始操作}
+\label{subsec:beginOps}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

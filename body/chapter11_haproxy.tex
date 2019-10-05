@@ -1,0 +1,30 @@
+\chapter{HAproxy负载均衡与高可用}
+\label{chap:haproxyCluster}
+
+\section{关于HAproxy}
+\label{sec:aboutHaproxy}
+
+HAproxy提供高可用性、负载均衡以及基于TCP和HTTP应用的代理，支持虚拟主机，
+它是免费、快速并且可靠的一种解决方案。HAproxy特别适用于那些负载特大
+的web站点，这些站点通常又需要会话保持或七层处理。HAProxy运行在当前的硬
+件上，完全可以支持数以万计的并发连接。并且它的运行模式使得它可以很简单
+安全的整合进您当前的架构中， 同时可以保护你的web服务器不被暴露到网络
+上。
+
+HAproxy实现了一种事件驱动, 单一进程模型，此模型支持非常大的并发连接数。
+多进程或多线程模型受内存限制 、系统调度器限制以及无处不在的锁限制，很少
+能处理数千并发连接。事件驱动模型因为在有更好的资源和时间管理的用户空
+间(User-Space) 实现所有这些任务，所以没有这些问题。此模型的弊端是，在多
+核系统上，这些程序通常扩展性较差。这就是为什么他们必须进行优化以 使每
+个CPU时间片(Cycle)做更多的工作。\cite{baike}
+
+\section{环境准备}
+\label{sec:envPrepareHaproxy}
+
+\subsection{测试环境准备}
+
+\subsection{安装EPEL源}
+
+\section{HAproxy的高可用}
+\label{sec:HighAvailableHaproxy}
+

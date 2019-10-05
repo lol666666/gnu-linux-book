@@ -1,0 +1,71 @@
+\section{cut命令的使用}
+\label{sec:cutCmd}
+
+cut\index{cut}命令有的时候很有用，比如要获得指定的以某个分隔符分割的列
+时，它就可以做到。其实还有比它更强大的工具，如sed及awk等，这里并不介绍
+它们，后续章节有介绍。这里就不提及了，跳过它们吧。下面直接看例子吧：
+
+\subsection{常用选项}
+\label{subsec:cutOptions}
+
+下面介绍几个常用的cut命令的选项，
+
+\begin{table}[htbp]
+  \centering
+    \caption{cut常用选项}
+    \label{tab:cutSomeOpts}
+    \begin{tabular}{cl}
+      \toprule
+      选项     & 说明 \\
+      \midrule
+      -c        & 按照字符进行分割 \\
+      -d        & 指定分割字段的分隔符，默认是tab \\
+      -f        & 指定要显示的列 \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{一些实例}
+\label{subsec:cutInstances}
+
+接下来演示cut命令的一些常用示例，比如我们要查看/etc/passwd文件中用户名，由于用户名是位于/etc/passwd文件中的每一行的第一个以冒号为分割的字段，因此，可以使用cut命令轻松实现取出用户名的需求，
+
+\begin{verbatim}
+# cut -d: -f1 /etc/passwd
+
+-d 指定区分列的定界，默认是tab
+-f 指定要显示的列
+-c 按字符来切割，如
+# cut -c1-6 file （取文件第一行的前6个字符）
+
+实验：取IP地址
+# ifconfig wlan0 | grep 'inet addr' | cut -d: -f2 | cut -d' ' -f1
+# hostname -i[I]
+
+# 显示系统中总内存量
+# free |tr -s ' ' |sed '/^Mem/!d' |cut -d" " -f2
+\end{verbatim}
+
+
+\begin{verbatim}
+[root@iLiuc ~]# cat test.txt
+chuanchuan:goodboy
+chuanchuan goodboy
+
+# 以冒号为分割，显示第一列
+[root@iLiuc ~]# cut -d: -f1 test.txt
+chuanchuan
+chuanchuan goodboy
+
+# 以冒号为分割，显示第二列
+[root@iLiuc ~]# cut -d: -f2 test.txt
+goodboy
+chuanchuan goodboy
+
+# 以空格为分割，显示第一列
+[root@iLiuc ~]# cut -d" " -f1 test.txt
+chuanchuan:goodboy
+chuanchuan
+\end{verbatim}
+
+我想，知道这么多，应该就可以了。

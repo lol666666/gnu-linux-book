@@ -1,0 +1,23 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=mptopdf 2015.7.9)  10 JUL 2015 16:54
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\relax ./osarch.mps
+ (./osarch.mps{f:/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}) [
+warning: the height is less than 1in] [1] 
+Here is how much of TeX's memory you used:
+ 34 strings out of 496719
+ 310 string characters out of 6201277
+ 4016308 words of memory out of 9001509
+ 1750 multiletter control sequences out of 15000+600000
+ 307 words of font info for 1 font, out of 8000000 for 9000
+ 0 hyphenation exceptions out of 8191
+ 10i,3n,7p,108b,185s stack positions out of 5000i,500n,10000p,200000b,80000s
+<f:/texlive/2015/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb>
+Output written on osarch.pdf (1 page, 17460 bytes).
+PDF statistics:
+ 12 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 7 words of extra memory for PDF output out of 10000 (max. 10000000)
+

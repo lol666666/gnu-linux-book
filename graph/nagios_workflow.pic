@@ -1,0 +1,14 @@
+.PS
+Ndaemon: box wid 0.75 ht 0.35 rad 0.05 "Nagios" "Daemon"
+Ncfg: box wid 0.75 ht 0.35 "nagios.cfg" with .n at Ndaemon.s - (0,0.35)
+Resource: box wid 0.75 ht 0.35 rad 0.05 "resource.cfg" with .n at Ncfg.s - (0.50,0.35)
+Object: box wid 0.75 ht 0.35 rad 0.05 "Object Files" with .n at Ncfg.s - (-0.50,0.35)
+Cgi: box wid 0.75 ht 0.35 rad 0.05 "HTTP CGI" with .w at Ndaemon.e + (0.5,0)
+Cgicfg: box wid 0.75 ht 0.35 rad 0.05 "cgi.cfg" with .w at Ncfg.e + (0.5,0)
+
+arrow from Ndaemon.s to Ncfg.n;
+arrow from Cgi.s to Cgicfg.n;
+arrow from Cgicfg.w to Ncfg.e
+arrow from 1/2 <Ncfg.sw,Ncfg.s> to Resource.n
+arrow from 1/2 <Ncfg.s,Ncfg.se> to Object.n
+.PE

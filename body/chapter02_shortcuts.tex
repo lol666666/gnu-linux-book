@@ -1,0 +1,140 @@
+\section{命令行下的快捷键}
+\label{shortcut}
+
+经常在命令行下工作的同志们，可能用的最多的就是两个上下键，主要用来调出
+历史命令；使用左右箭头使光标向后或向前移动以修改上次使用过的命令。其实
+这样做效率并不是很高，有了快捷键可以让我们的效率有所提高，而且看起来还
+更专业、更加Awesome、更加Geek。掌握了这些快捷键，我们可以做到手不离主键
+盘区域，完全可以忽略掉键盘上的四个可爱的箭头。当我们熟练之后，会越发喜
+欢这种方式。
+
+\subsection{常用快捷键介绍}
+
+下面介绍一些作者在命令行下经常使用的快捷键，这些快捷键在Emacs下面是有同
+样的效果的，不信？你可以试试看。其实，Emacs是Gnu/Linux系统下的命令行编
+辑器，通过/etc/profile或/etc/bashrc等文件都可以找到相关的设置。
+
+\begin{enumerate}[itemsep=0pt,parsep=0pt]
+	\item Ctrl+A\index{Ctrl+A}快捷键
+  \begin{quote}
+    这里的A可以理解为Head。当我们按下此组合键时，光标就从当前位置移到了
+    命令行的起始位置。别只顾着看，动手试试！
+  \end{quote}
+
+\item Ctrl+B\index{Ctrl+B}快捷键
+  \begin{quote}
+    这里的B可以理解为Backward，向后的意思。有时在命令行上，我们把某个命
+    令的参数或路径写错了，一般的做法是，使用左箭头，使光标移动到指定的
+    位置，然后修改。其实我们完全可以使用Ctrl+B的方式以达到同样的效果。
+    别只顾着看，动手试试！
+  \end{quote}
+
+\item Ctrl+C\index{Ctrl+C}快捷键
+  \begin{quote}
+    这个组合键是用来终止当前正在运行的前台进程。在UNIX环境高级编程一书
+    上看到了一个用来终止当前运行进程的组合键，是Ctrl+\textbackslash
+    \cite{unixenvironment}。别只顾着看，动手试试！
+  \end{quote}
+
+\item Ctrl+D\index{Ctrl+D}快捷键
+  \begin{quote}
+    这个组合键的用途也很广，我主要用此组合键来退出某个程序，如Python、
+    MySQL等等。在命令行下意思就不同啦，此时的D可以理解为Delete。按下此
+    组合键，会删除当前光标处的字符。别只顾着看，动手试试！
+  \end{quote}
+
+\item Ctrl+E\index{Ctrl+E}快捷键
+  \begin{quote}
+    这里的E可以理解为End。当在命令行按下此组合键时，我们的可爱的光标就
+    乖乖地跑到了当前命令行的最后。\marginpar{这是边注一个}
+  \end{quote}
+
+\item Ctrl+F\index{Ctrl+F}快捷键
+  \begin{quote}
+    这里的F可以理解为Forward，向前的意思，等同于按下右箭头。别只顾着看，
+    动手试试！
+  \end{quote}
+
+\item Ctrl+H\index{Ctrl+H}快捷键
+  \begin{quote}
+    此组合键相当于键盘上的Backspace键。按下此组合键，它会从当前光标处开
+    始向后删除字符。别只顾着看，动手试试！
+  \end{quote}
+
+\item Ctrl+J\index{Ctrl+J}快捷键
+  \begin{quote}
+    此组合键相当于键盘的回车键。按下此组合键，相当于按了一次回车键。在
+    Windows的命令行下，Ctrl+M好像是等同于回车键。别只顾看着，动手试试！
+  \end{quote}
+
+\item Ctrl+K\index{Ctrl+K}快捷键
+  \begin{quote}
+    这里的K可以理解为Kill。按下此组合键，会删除从当前光标到本命令行的结
+    束的位置的所有字符。别只顾着看，动手试试！
+  \end{quote}
+
+\item Ctrl+L\index{Ctrl+L}快捷键
+  \begin{quote}
+    这里的L可以理解为Clear。按下此组合键相当于执行了clear这条命令，清除
+    当前屏幕上的内容。别只顾着看，动手试试！
+  \end{quote}
+
+\item Ctrl+N\index{Ctrl+N}快捷键
+  \begin{quote}
+    这里的N可以理解为Next。这个组合键的作用是用来调出下一条历史命令，与
+    之对应的快捷键Ctrl+P是调出上一条历史命令。代替了向下的箭头。别只顾
+    着看，动手试试！
+  \end{quote}
+
+\item Ctrl+P\index{Ctrl+P}快捷键
+  \begin{quote}
+    这里的N可以理解为Previous。这个组合键的作用是用来调出上一条历史命令，
+    与之对应的快捷键Ctrl+N是调出下一条历史命令。代替了向上的箭头。别只
+    顾着看，动手试试！
+  \end{quote}
+
+\item Ctrl+R\index{Ctrl+R}快捷键
+  \begin{quote}
+    这个组合键是用来搜索之前的历史命令。这里的R可以理解为Reverse，反向
+    的意思。在Emacs里为向后搜索，与之对应的是Ctrl+S快捷键是向前搜索。不
+    过Ctrl+S在命令行里却不是这个作用，而是用来锁屏的。别只顾着看，动手
+    试试！
+  \end{quote}
+
+\item Ctrl+T\index{Ctrl+T}快捷键
+  \begin{quote}
+    此组合键是交换两个相邻字符的位置。交换的是当前光标处字符及其当前光
+    标前面的字符。比如我们不小心把clear命令写成了clera，此时我们也不用
+    把ra两个字符删掉，然后再写上正确的。此时使我们的光标位于字符a上，让
+    后按下此组合键，是不是神奇的事情发生了？当然，如果光标在行尾，按下
+    此组合键，它会交换光标前的两个连续的字符。在Emacs下面，使用Ctrl+X与
+    Ctrl+T两个组合键\footnote{先按下Ctrl+X，然后松开X，继续
+      按着Ctrl键，然后再按下T键，即可完成两个组合键的操作。别嫌麻烦，习
+      惯就好了。}，可以交换当前光标行与上一行的位置。别只顾着看，动手试
+    试！
+  \end{quote}
+
+\item Ctrl+W\index{Ctrl+W}快捷键
+  \begin{quote}
+    此组合键在Emacs中的作用是剪切选中区域的文本。在命令行上使用该组合键
+    则是往后删除一个字符组合。也就是说，删除光标左边的一个字母组合或单
+    词。比如，我们在此命令行上使用了命令如下，“service network
+    restart”，让我们的光标位于字符串的restart的后面，按下该组合键，看看
+    有何效果？是不是变成“service network”了？确实是这样，如果我们使用
+    Backspace键的话，则需要使用7次的按键才能达到一个Ctrl+W的组合键的效
+    果。嗯，别只顾着看，动手试试？
+  \end{quote}
+
+\item Alt+.\index{Alt+.}快捷键
+  \begin{quote}
+    此组合键是调出上一条命令的最后一个参数。如上一条命是“service
+    network restart”，则“restart”就是最后一个参数。如果我们接下来要敲的
+    命令需要用到上一条命令的最后一个参数，则可使用此快捷键，而不需要手
+    工输入“restart”了，而且不会出错，节省敲击键盘的次数。如果我们接下来
+    想重启httpd服务，则只需要输入“service httpd ”，然后按下“Alt+.”即可
+    补全上一条命令的“restart”。在有些终端上，按“Alt+.”组合键可能会没有
+    效果，这时可以使用“ESC+.”组合键代替。在Emacs中，ESC键与Alt键是等价
+    的。可以动手试试该组合键的效果。
+  \end{quote}
+
+\end{enumerate}

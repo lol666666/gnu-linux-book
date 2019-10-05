@@ -1,0 +1,89 @@
+\section{DHCP}
+
+随着网络规模的不断扩大和网络复杂度的提高，计算机的数量经常超过可分配
+的IP地址数量。同时随着便携机及无线网络的广泛使用，计算机的位置也经常变
+化，相应的IP地址也必须经常更新，从而导致网络配置越来越复
+杂。DHCP（Dynamic Host Configuration Protocol，动态主机配置协议）就是为
+满足这些需求而发展起来的。
+
+DHCP提供安全、可靠且简单的TCP/IP网络设置，避免了TCP/IP网络中地址的冲突，
+同时也降低了管理IP地址设置的工作强度。使用DHCP主要的好处有以下几点：
+
+\begin{enumerate}[itemsep=0pt,parsep=0pt]
+\item 减少管理员的工作量
+\item 减小输入错误的可能
+\item 避免IP冲突
+\item 当罗更改IP地址段时，不需要重新配置每台计算机的IP
+\item 计算机移动不必重新配置TCP/IP信息
+\item 提高了IP地址的利用率
+\end{enumerate}
+
+当一台DHCP客户端启动时，该客户端将在网络中请求IP地址，当DHCP服务器收到
+申请IP地址请求后，它将从可用的地址中选择一个提供给DHCP客户端。
+
+客户端除了可以从DHCP服务器得到IP地址信息外，还可以得到子网掩码、默认网
+关、DNS服务器等其他TCP/IP信息。一般这些信息并非永久使用，而是有一个使用
+的期限，这个期限被称为租约。所以DHCP服务器与客户端之间的通信分为两类，
+即租约产生及租约更新。
+
+DHCP的作用是为局域网中的每台计算机自动分配TCP/IP信息，包括IP地址、子网
+掩码、网关以及DNS服务器等。其优点是终端无须配置，且网络维护方便。
+
+动态主机配置协议(DHCP)\index{DHCP}，
+
+\begin{enumerate}[itemsep=0pt,parsep=0pt]
+\item 服务端端口67/UDP
+\item 客户端端口68/UDP
+\item 客户端发送DHCPDISCOVER在网络中寻求地址分配
+\item 服务端回应DHCPDISCOVER请求
+\item 客户端发送DHCPREQUEST
+\item 服务端发送DHCPACK
+\item 客户端得到地址
+\end{enumerate}
+
+主配 cp /usr/share/doc/dhcp-<version>/dhcpd.conf.sample /etc/dhcpd.conf
+包含以下7项 服务器即可搭建
+
+\small{
+\begin{verbatim}
+1. ddns-update-style
+2. subnet
+3. option
+4. range dynamic-bootp
+5. default-lease-time
+6. max-lease-time
+7. host
+\end{verbatim}
+}
+\normalsize
+
+\small{
+\begin{verbatim}
+ddns-update-style interim;
+ignore client-updates;
+default-lease-time 600;
+max-lease-time 7200;
+
+subnet 192.168.0.0 netmask 255.255.255.0 {
+    next-server 192.168.0.128;
+    filename="pxelinux.0";
+    option routers 192.168.0.128;
+    option subnet-mask 255.255.255.0;
+    option nis-domain "lavenliu.com";
+    option domain-name "lavenliu.com";
+    option ntp-servers 192.168.0.254;
+    range dynamic-bootp 192.168.0.100 192.168.0.130;
+    host stu1 {
+      next-server lavenliu.com;
+      hardware Ethernet 12:34:56:78:AB:CD;
+      fixed-address 192.168.0.2;
+    }
+}
+\end{verbatim}
+}
+\normalsize
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

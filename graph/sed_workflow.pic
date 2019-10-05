@@ -1,0 +1,25 @@
+.PS
+A: box ht 0.8 rad 0.08 "Line 1" "Line 2" "Line 3" "Line 4" "..."
+INFILE: "\fBInput file\fP" with .n at A.s - (0,0.15)
+B: box width 1.8 "\fBRead\fP a line into the" "pattern space" with .nw at A.ne + (0.5,0)
+C: box width 1.8 "\fBExecute\fP given sed commands" "on the pattern space" at B - (0,0.8)
+D: box width 1.8 "\fBPrint\fP the pattern space" "and empty it" at C - (0,0.8)
+E: box width 1.8 "\fBRepeat\fP for the next line until" "end of the input file" at D - (0,0.8)
+F: box width 0.75 ht 0.35 rad 0.05 "Line 1" with .w at B.e + (0.35,0)
+PATTERN: "\fBPattern space\fP" with .n at F.s - (0,0.15)
+G: circle "Output" with .w at D.e + (0.35,0)
+
+L1: line chop 0.01 chop 0.9 from 1st box at 1/3 <A.e,A.ne> to B ->
+
+L2: line down from B to C -> chop
+L3: arrow down from C to D chop
+L4: arrow down from D to E chop
+
+L5: line dashed from B.e to F.w ->
+L6: line dashed from C.e to F.w ->
+L7: line dashed from D.e to G.w ->
+
+L8: line down 2.85 from L1 .center to E.sw - (0.2,0.2)
+L9: line right from L8.end to E.s - (0,0.2)
+L10: line from E.s to L9.end
+.PE

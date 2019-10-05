@@ -1,0 +1,279 @@
+\section{LAMP}
+
+\subsection{安装依赖包}
+
+Needless to say, you should install required system packages. So you
+cancontinue the next steps. :-)
+
+Be sure these packages are installed:
+
+\small{
+\begin{verbatim}
+  gcc
+  gcc-c++
+  flex
+  bison
+  autoconf
+  automake
+  bzip2-devel
+  ncurses-devel
+  libjpeg-devel
+  libpng-devel
+  libtiff-devel
+  freetype-devel
+  pam-devel
+\end{verbatim}
+}
+\normalsize
+
+\subsection{安装额外的包}
+
+In this section, we need to compile and install four packages:
+
+\begin{enumerate}[itemsep=0pt,parsep=0pt]
+\item GD2
+  \small{
+\begin{verbatim}
+  [root@lamp ~] # cd /usr/local/src
+  [root@lamp src] # tar xzvf gd-2.0.34.tar.gz
+  [root@lamp src] # cd gd-2.0.34
+  [root@lamp gd-2.0.34] # ./configure --prefix=/usr/local/gd2
+  [root@lamp gd-2.0.34] # make
+  [root@lamp gd-2.0.34] # make install  
+\end{verbatim}
+  }
+  \normalsize
+
+\item LibXML2
+  \small{
+\begin{verbatim}
+  [root@lamp ~] # cd /usr/local/src
+  [root@lamp src] # tar xzvf libxml2-2.6.29.tar.gz
+  [root@lamp src] # cd libxml2-2.6.29
+  [root@lamp libxml2-2.6.29] # ./configure --prefix=/usr/local/libxml2
+  [root@lamp libxml2-2.6.29] # make
+  [root@lamp libxml2-2.6.29] # make install
+\end{verbatim}
+  }
+  \normalsize
+
+\item LibMcrypt
+  \small{
+\begin{verbatim}
+  [root@lamp ~] # cd /usr/local/src
+  [root@lamp src] # tar xjvf libmcrypt-2.5.8.tar.bz2
+  [root@lamp src] # cd libmcrypt-2.5.8
+  [root@lamp libmcrypt-2.5.8] # ./configure --prefix=/usr/local/libmcrypt
+  [root@lamp libmcrypt-2.5.8] # make
+  [root@lamp libmcrypt-2.5.8] # make install
+\end{verbatim}
+  }
+  \normalsize
+
+\item OpenSSL
+  \small{
+\begin{verbatim}
+  [root@lamp ~] # cd /usr/local/src
+  [root@lamp src] # tar xzvf openssl-0.9.8e.tar.gz
+  [root@lamp src] # cd openssl-0.9.8e
+  [root@lamp openssl-0.9.8e] # ./config --prefix=/usr/local/openssl
+  [root@lamp openssl-0.9.8e] # make
+  [root@lamp openssl-0.9.8e] # make test
+  [root@lamp openssl-0.9.8e] # make install
+\end{verbatim}
+  }
+  \normalsize
+
+\end{enumerate}
+
+\subsection{编译安装MySQL}
+
+\small{
+\begin{verbatim}
+  [root@lamp ~] #tar xzvf mysql-5.0.27.tar.gz
+  [root@lamp ~] # cd mysql-5.0.27
+  [root@lamp mysql-5.0.27] # ./configure \
+  "--prefix=/usr/local/mysql" \
+  "--localstatedir=/var/lib/mysql" \
+  "--with-mysqld-user=mysql" \
+  "--without-debug" \
+  "--with-big-tables" \
+  "--with-extra-charsets=all" \
+  "--with-pthread" \
+  "--enable-static" \
+  "--enable-thread-safe-client" \
+  "--with-client-ldflags=-all-static" \
+  "--with-mysqld-ldflags=-all-static" \
+  "--enable-assembler" \
+  "--without-isam" \
+  "--without-innodb" \
+  "--without-ndb-debug"
+  
+  [root@lamp msyql-5.0.27] # make
+  [root@lamp mysql-5.0.27] # make install
+  [root@lamp mysql-5.0.27] # useradd mysql
+  [root@lamp mysql-5.0.27] # cd /usr/local/mysql
+  [root@lamp mysql] # bin/mysql_install_db --user=mysql
+  [root@lamp mysql] # chown -R root:mysql .
+  [root@lamp mysql] # chown -R mysql /var/lib/mysql
+  [root@lamp mysql] # cp share/mysql/my-huge.cnf /etc/my.cnf
+  [root@lamp mysql] # cp share/mysql/mysql.server /etc/rc.d/init.d/mysqld
+  [root@lamp mysql] # chmod 755 /etc/rc.d/init.d/mysqld
+  [root@lamp mysql] # chkconfig --add mysqld
+  [root@lamp mysql] # chkconfig --level 3 mysqld on
+  [root@lamp mysql] # /etc/rc.d/init.d/mysqld start
+  [root@lamp mysql] # bin/mysqladmin -u root password 'clear123'
+\end{verbatim}
+}
+\normalsize
+
+\subsection{编译安装Apache}
+
+\small{
+\begin{verbatim}
+  [root@lamp src] # cd /usr/local/src
+  [root@lamp src] # tar xjvf httpd-2.2.4.tar.bz2
+  [root@lamp src] # cd httpd-2.2.4
+  [root@lamp httpd-2.2.4] # ./configure \
+  "--prefix=/usr/local/apache2" \
+  "--with-included-apr" \
+  "--enable-so" \
+  "--enable-deflate=shared" \
+  "--enable-expires=shared" \
+  "--enable-rewrite=shared" \
+  "--enable-static-support" \
+  "--disable-userdir"
+  [root@lamp httpd2.2.4] # make
+  [root@lamp httpd2.2.4] # make install
+  [root@lamp httpd2.2.4] # echo '/usr/local/apache2/bin/apachectl start' \
+  > >> /etc/rc.local
+\end{verbatim}
+}
+\normalsize
+
+\subsection{编译安装PHP}
+
+\small{
+\begin{verbatim}
+  [root@lamp ~] # cd /usr/local/src
+  [root@lamp src] # tar xjvf php-5.2.3.tar.bz2
+  [root@lamp php-5.2.3] # cd php-5.2.3
+  [root@lamp php-5.2.3] # ./configure \
+  "--prefix=/usr/local/php" \
+  "--with-apxs2=/usr/local/apache2/bin/apxs" \
+  "--with-config-file-path=/usr/local/php/etc" \
+  "--with-mysql=/usr/local/mysql" \
+  "--with-libxml-dir=/usr/local/libxml2" \
+  "--with-gd=/usr/local/gd2" \
+  "--with-jpeg-dir" \
+  "--with-png-dir" \
+  "--with-bz2" \
+  "--with-freetype-dir" \
+  "--with-iconv-dir" \
+  "--with-zlib-dir " \
+  "--with-openssl=/usr/local/openssl" \
+  "--with-mcrypt=/usr/local/libmcrypt" \
+  "--enable-soap" \
+  "--enable-gd-native-ttf" \
+  "--enable-memory-limit" \
+  "--enable-ftp" \
+  "--enable-mbstring" \
+  "--enable-exif" \
+  "--disable-ipv6" \
+  "--disable-cgi" \
+  "--disable-cli"
+  [root@lamp php-5.2.3] # make
+  [root@lamp php-5.2.3] # make install
+  [root@lamp php-5.2.3] # mkdir /usr/local/php/etc
+  [root@lamp php-5.2.3] # cp php.ini-dist /usr/local/php/etc/php.ini
+\end{verbatim}
+}
+\normalsize
+
+\subsection{安装Zend加速器}
+
+\small{
+\begin{verbatim}
+  [root@lamp ~]# cd /usr/local/src
+  [root@lamp ~]# tar xf ZendOptimizer-3.2.8-linux-glibc21-i386.tar.gz
+  [root@lamp ~]# ./ZendOptimizer-3.2.8-linux-glibc21-i386/install.sh
+\end{verbatim}
+}
+\normalsize
+
+\subsection{整合Apache与PHP}
+
+We should modify configure file httpd.conf:
+
+\small{
+\begin{verbatim}
+[root@lamp ~]# emacs /usr/local/apache2/conf/httpd.conf
+\end{verbatim}
+}
+\normalsize
+
+Find this line,
+
+\small{
+\begin{verbatim}
+AddType application/x-gzip .gz .tgz
+\end{verbatim}
+}
+\normalsize
+
+Add on line under this line,
+
+\small{
+\begin{verbatim}
+AddType application/x-httpd-php .php
+\end{verbatim}
+}
+\normalsize
+
+Find these lines,
+
+\small{
+\begin{verbatim}
+<IfModule dir_module>
+DirectoryIndex index.html
+<IfModule>
+\end{verbatim}
+}
+\normalsize
+
+Change them like this,
+
+\small{
+\begin{verbatim}
+<IfModule dir_module>
+DirectoryIndex index.html index.htm index.php
+<IfModule>
+\end{verbatim}
+}
+\normalsize
+
+Find these lines and uncomment them,
+
+\small{
+\begin{verbatim}
+#Include conf/extra/httpd-mpm.conf
+#Include conf/extra/httpd-info.conf
+#Include conf/extra/httpd-vhosts.conf
+#Include conf/extra/httpd-default.conf
+\end{verbatim}
+}
+\normalsize
+
+When finished, save it! Then restart apache service,
+
+\small{
+\begin{verbatim}
+[root@lamp ~]# /usr/local/apache2/bin/apachectl restart
+\end{verbatim}
+}
+\normalsize
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

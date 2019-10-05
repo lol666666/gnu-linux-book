@@ -1,0 +1,104 @@
+\section{yum命令的使用}
+\label{sec:yumCmd}
+\index{yum}
+安装好系统时，在/etc/yum.repos.d目录下回有一个rhel-debuginfo.repo的文件，
+我们这里以redhat系统为例进行讲解。不管这个配置文件的名字如何，但文件的
+扩展名须为.repo，如redhat.repo也是可以的。我们需要做一些准备工作。
+
+准备系统镜像文件并挂载到本地：
+
+\small{
+\begin{verbatim}
+[root@iLiuc ~]# ls 
+rhel-server-5.5-i386-dvd.iso
+
+[root@iLiuc ~]# mount -o loop rhel-server-5.5-i386-dvd.iso /media
+\end{verbatim}
+}
+\normalsize
+
+复制镜像里的文件到本地目录：
+
+\begin{verbatim}
+[root@iLiuc ~]# mkdir /iso
+[root@iLiuc ~]# cp -r /media/* /iso
+\end{verbatim}
+
+修改这个配置文件：
+
+\begin{verbatim}
+[root@iLiuc ~]# cat /etc/yum.repos.d/rhel-debuginfo.repo
+[rhel-debuginfo]
+name=Red Hat Enterprise Linux $releasever - $basearch - Debug
+baseurl=file:///iso/Server
+enabled=1
+gpgcheck=0
+\end{verbatim}
+
+几点说明：
+
+\begin{quote}
+    1. [rhel-debuginfo] 中括号里的内容可以随意 \\
+    2. name这一行可有可无 \\
+    3. baseurl这行要指定我们的资源在哪里 \\
+    4. file://说明我们使用什么协议，也可以是ftp://等 \\
+    5. /iso/Server指明我们的源在/iso/Server目录下
+\end{quote}
+
+配置好之后，如何使用呢？直接看操作吧：
+
+\begin{enumerate}[itemsep=0pt,parsep=0pt]
+\item 列出我们有哪些yum仓库
+  \small{
+\begin{verbatim}
+[root@iLiuc ~]# yum repolist
+\end{verbatim}
+  }
+  \normalsize
+
+\item 列出仓库里的包
+\begin{verbatim}
+[root@iLiuc ~]# yum list
+Deployment_Guide-en-US.noarch    5.2-11               installed     
+GConf2.i386                      2.14.0-9.el5         installed     
+ImageMagick.i386                 6.2.8.0-4.el5_1.1    installed     
+MAKEDEV.i386                     3.23-1.2             installed     
+NetworkManager.i386              1:0.7.0-10.el5       installed     
+NetworkManager-glib.i386         1:0.7.0-10.el5       installed     
+NetworkManager-gnome.i386        1:0.7.0-10.el5       installed     
+ORBit2.i386                      2.14.3-5.el5         installed    
+....
+yum-utils.noarch                 1.1.16-13.el5        rhel-debuginfo
+yum-verify.noarch                1.16-13.el5          rhel-debuginfo
+yum-versionlock.noarch           1.1.16-13.el5        rhel-debuginfo
+zisofs-tools.i386                1.0.6-3.2.2          rhel-debuginfo
+zsh.i386                         4.2.6-3.el5          rhel-debuginfo
+zsh-html.i386                    4.2.6-3.el5          rhel-debuginfo
+\end{verbatim}
+\end{enumerate}
+
+一些说明：
+\begin{quote}
+    1. 第一列是我们的软件包名 \\
+    2. 第二列是对应软件包的版本号 \\
+    3. 第三列 \\
+    + installed表明该软件包已安装 \\
+    + rhel-debuginfo表明包未安装 
+\end{quote}
+
+几个常用的yum命令：
+\begin{table}[!htbp]
+  \centering
+    \caption{yum常用命令选项}
+    \begin{tabular}{ll}
+      \toprule
+      命令           & 说明 \\
+      \midrule
+      repolist       & 列出我们有哪些yum仓库 \\
+      list           & 列出仓库里有哪些软件包 \\
+      install        & 安装软件包的命令 \\
+      groupinstall   & 安装软件包组 \\
+      erase          & 移除一个或多个软件包 \\
+      \bottomrule
+    \end{tabular}
+\end{table}

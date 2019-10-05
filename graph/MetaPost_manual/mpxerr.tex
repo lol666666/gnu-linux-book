@@ -1,0 +1,185 @@
+\input texnames.sty
+\def\place#1{\vphantom{FiMP}\smash{#1}}
+
+\gdef\mpxshipout{\shipout\hbox\bgroup
+  \setbox0=\hbox\bgroup}
+\gdef\stopmpxshipout{\egroup  \dimen0=\ht0 \advance\dimen0\dp0
+  \dimen1=\ht0 \dimen2=\dp0
+  \setbox0=\hbox\bgroup
+    \box0
+    \ifnum\dimen0>0 \vrule width1sp height\dimen1 depth\dimen2 
+    \else \vrule width1sp height1sp depth0sp\relax
+    \fi\egroup
+  \ht0=0pt \dp0=0pt \box0 \egroup}
+\mpxshipout% line 26 ./manfig.mp
+\place{Figures in MetaPost}%
+\stopmpxshipout
+\mpxshipout% line 27 ./manfig.mp
+\place{\TeX\ Document}%
+\stopmpxshipout
+\mpxshipout% line 28 ./manfig.mp
+\hbox to 75bp {\hfil\place{MetaPost}\hfil}%
+\stopmpxshipout
+\mpxshipout% line 29 ./manfig.mp
+\hbox to 75bp {\hfil\place{\TeX\ or \LaTeX}\hfil}%
+\stopmpxshipout
+\mpxshipout% line 30 ./manfig.mp
+\place{Figures in PostScript}%
+\stopmpxshipout
+\mpxshipout% line 31 ./manfig.mp
+\place{{\tt dvi} file}%
+\stopmpxshipout
+\mpxshipout% line 32 ./manfig.mp
+\place{\tt dvips}%
+\stopmpxshipout
+\mpxshipout% line 33 ./manfig.mp
+PostScript%
+\stopmpxshipout
+\mpxshipout% line 34 ./manfig.mp
+\vbox{
+          \hbox to 50bp {\hfil\hbox{bounding}\hfil}
+          \hbox to 50bp {\hfil\hbox{box}\hfil}
+        }%
+\stopmpxshipout
+\mpxshipout% line 268 ./manfig.mp
+\llap{$x={}$}0%
+\stopmpxshipout
+\mpxshipout% line 294 ./manfig.mp
+$\sqrt x$%
+\stopmpxshipout
+\mpxshipout% line 295 ./manfig.mp
+$x$%
+\stopmpxshipout
+\mpxshipout% line 296 ./manfig.mp
+$y$%
+\stopmpxshipout
+\mpxshipout% line 309 ./manfig.mp
+$x$ axis%
+\stopmpxshipout
+\mpxshipout% line 310 ./manfig.mp
+$y$ axis%
+\stopmpxshipout
+\mpxshipout% line 313 ./manfig.mp
+$\displaystyle y={2\over1+\cos x}$%
+\stopmpxshipout
+\mpxshipout% line 323 ./manfig.mp
+\tt llcorner%
+\stopmpxshipout
+\mpxshipout% line 324 ./manfig.mp
+\tt lrcorner%
+\stopmpxshipout
+\mpxshipout% line 325 ./manfig.mp
+\tt ulcorner%
+\stopmpxshipout
+\mpxshipout% line 326 ./manfig.mp
+\tt urcorner%
+\stopmpxshipout
+\mpxshipout% line 345 ./manfig.mp
+$A$%
+\stopmpxshipout
+\mpxshipout% line 346 ./manfig.mp
+$B$%
+\stopmpxshipout
+\mpxshipout% line 354 ./manfig.mp
+$U$%
+\stopmpxshipout
+\mpxshipout% line 367 ./manfig.mp
+1%
+\stopmpxshipout
+\mpxshipout% line 368 ./manfig.mp
+2%
+\stopmpxshipout
+\mpxshipout% line 369 ./manfig.mp
+\tt aa%
+\stopmpxshipout
+\mpxshipout% line 370 ./manfig.mp
+\tt b%
+\stopmpxshipout
+\mpxshipout% line 386 ./manfig.mp
+1%
+\stopmpxshipout
+\mpxshipout% line 387 ./manfig.mp
+2%
+\stopmpxshipout
+\mpxshipout% line 388 ./manfig.mp
+\tt aa%
+\stopmpxshipout
+\mpxshipout% line 389 ./manfig.mp
+\tt b%
+\stopmpxshipout
+\mpxshipout% line 404 ./manfig.mp
+$f>0$%
+\stopmpxshipout
+\mpxshipout% line 407 ./manfig.mp
+$P$%
+\stopmpxshipout
+\mpxshipout% line 408 ./manfig.mp
+$Q$%
+\stopmpxshipout
+\mpxshipout% line 409 ./manfig.mp
+$R$%
+\stopmpxshipout
+\mpxshipout% line 410 ./manfig.mp
+$S$%
+\stopmpxshipout
+\mpxshipout% line 455 ./manfig.mp
+$x_1$%
+\stopmpxshipout
+\mpxshipout% line 456 ./manfig.mp
+$x_2$%
+\stopmpxshipout
+\mpxshipout% line 457 ./manfig.mp
+$x_3$%
+\stopmpxshipout
+\mpxshipout% line 497 ./manfig.mp
+\tt dashed evenly%
+\stopmpxshipout
+\mpxshipout% line 499 ./manfig.mp
+\tt dashed evenly scaled 2%
+\stopmpxshipout
+\mpxshipout% line 501 ./manfig.mp
+\tt dashed evenly scaled 4%
+\stopmpxshipout
+\mpxshipout% line 503 ./manfig.mp
+\tt dashed withdots%
+\stopmpxshipout
+\mpxshipout% line 505 ./manfig.mp
+\tt dashed withdots scaled 2%
+\stopmpxshipout
+\mpxshipout% line 518 ./manfig.mp
+1 \tt\ draw z0..z1 dashed e4%
+\stopmpxshipout
+\mpxshipout% line 520 ./manfig.mp
+3 \tt\ draw z2..z3 dashed e4 shifted (6bp,0)%
+\stopmpxshipout
+\mpxshipout% line 522 ./manfig.mp
+5 \tt\ draw z4..z5 dashed e4 shifted (12bp,0)%
+\stopmpxshipout
+\mpxshipout% line 524 ./manfig.mp
+7 \tt\ draw z6..z7 dashed e4 shifted (18bp,0)%
+\stopmpxshipout
+\mpxshipout% line 589 ./manfig.mp
+miter length%
+\stopmpxshipout
+\mpxshipout% line 590 ./manfig.mp
+line width%
+\stopmpxshipout
+\mpxshipout% line 604 ./manfig.mp
+2 \tt\ drawarrow z1..z2%
+\stopmpxshipout
+\mpxshipout% line 605 ./manfig.mp
+4 \tt\ drawarrow reverse(z3..z4)%
+\stopmpxshipout
+\mpxshipout% line 606 ./manfig.mp
+6 \tt\ drawdblarrow z5..z6%
+\stopmpxshipout
+\mpxshipout% line 632 ./manfig.mp
+\tt ahlength%
+\stopmpxshipout
+\mpxshipout% line 635 ./manfig.mp
+\tt ahlength%
+\stopmpxshipout
+\mpxshipout% line 639 ./manfig.mp
+\tt ahangle%
+\stopmpxshipout
+\end{document}

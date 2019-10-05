@@ -1,0 +1,95 @@
+\section{tar命令的使用}
+\label{sec:tarCmd}
+
+tar\index{tar}命令是一个打包与解包的一个工具，功能很强大。下面介绍一些常用选项及使
+用示例。
+
+通用选项：
+
+\begin{table}[htbp]
+  \centering
+    \caption{tar通用选项}
+    \label{tab:tarGeneralOpt}
+    \begin{tabular}{cl}
+      \toprule
+      选项     & 说明 \\
+      \midrule
+      j        & 使用bzip2的压缩方式 \\
+      t        & 列出压缩包里有哪些文件，并不解压 \\
+      z        & 使用gzip的压缩方式 \\
+      f        & 指定输出的结果文件。该选项是必选的，不管是压缩还是解压缩 \\
+      p        & 保留文件的所有权限 \\
+      v        & 压缩或解压缩时，查看其打包过程 \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+压缩时用的选项：
+
+\begin{table}[!htbp]
+  \centering
+    \caption{tar压缩选项}
+    \label{tab:tarCompressOpt}
+    \begin{tabular}{cl}
+      \toprule
+      选项     & 说明 \\
+      \midrule
+      c        & 打包时用的选项，选项c与x不能同时出现 \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+解压缩用的选项：
+
+\begin{table}[htbp]
+  \centering
+    \caption{tar解压缩选项}
+    \label{tab:tarUncompressOpt}
+    \begin{tabular}{cl}
+      \toprule
+      选项     & 说明 \\
+      \midrule
+      x        & 解包时用的选项，选项c与x不能同时出现 \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+举例说明:
+
+\small{
+\begin{verbatim}
+  [root@iLiuc ~]# ls
+  360fy        CLEAR-VOD-INSTALLPACKGE.V.2.0.8.tar
+  这里有两个文件，第一个为目录，第二个为压缩包
+
+  1. 创建tar包，不压缩
+  [root@iLiuc ~]# tar -cvf 360fy.tar 360fy
+  360fy/
+  360fy/clearVodMS_360fy.tar.gz
+  360fy/vod_yuezizhongxin.tar.gz
+  360fy/clear_360fy.sql
+  上面的例子我们使用-v选项，使我们可以看到过程。其中360fy.tar是我们创建的tar包，是针对
+  360fy这个目录的，后面可以是一个或多个文件。
+
+  2. 创建tar包，以gzip方式压缩
+  [root@iLiuc ~]# tar -czvf 360fy.tar.gz 360fy
+
+  3. 创建tar包，以bzip2的方式压缩
+  [root@iLiuc ~]# tar -cjvf 360fy.tar.bz2 360fy
+
+  4. 查看压缩包的内容，并不解压缩
+  [root@iLiuc ~]# tar -tf 360fy.tar
+  360fy/
+  360fy/clearVodMS_360fy.tar.gz
+  360fy/vod_yuezizhongxin.tar.gz
+  360fy/clear_360fy.sql
+
+  5. 解压缩
+  不管是tar包，还是以gzip或bz2压缩的方式，我们使用一下这条命令都是通用的
+  [root@iLiuc ~]# tar -xf 360fy.tar
+  [root@iLiuc ~]# tar -xf 360fy.tar.gz
+  [root@iLiuc ~]# tar -xf 360fy.tar.bz2
+  这里我们没有加-v选项，可以加上-v选项以看到解压过程
+\end{verbatim}
+}
+\normalsize

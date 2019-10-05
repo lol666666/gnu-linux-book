@@ -1,0 +1,23 @@
+.PS
+A: box ht 0.3 "Playbook"
+L1: line right
+B: box ht 0.3 "Play"
+L2: line right
+C: box ht 0.3 "Hosts"
+D: box ht 0.3 "Tasks" with .n at B.s - 0,0.4
+E: box ht 0.3 "Modules" with .n at C.s - 0,0.4
+
+L3: line from 1/8 <L1.end,L1.start> to 1/4 <B.w,B.nw>
+L4: line from 1/8 <L1.end,L1.start> to 1/4 <B.w,B.sw>
+
+L5: line from 1/8 <L2.end,L2.start> to 1/4 <C.w,C.nw>
+L6: line from 1/8 <L2.end,L2.start> to 1/4 <C.w,C.sw>
+
+L7: line from B.s to D.n
+L8: line from D.e to E.w
+
+L9: line from 1/8 <L7.end,L7.start> to 1/9 <D.n,D.nw>
+L10: line from 1/8 <L7.end,L7.start> to 1/9 <D.n,D.ne>
+
+L11: line from 1/8 <L8.end,L8.start> to 1/4 <E.w,E.nw>
+L12: line from 1/8 <L8.end,L8.start> to 1/4 <E.w,E.sw>

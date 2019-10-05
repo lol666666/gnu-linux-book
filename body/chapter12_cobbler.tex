@@ -1,0 +1,43 @@
+\chapter{Cobbler自动化装机}
+\label{chap:cobbler}
+
+\begin{verbatim}
+# yum install -y httpd dhcp tftp cobbler cobbler-web
+
+# service httpd start
+# service cobblerd start
+# cobbler check # 检查是否通过，根据不通过的提示，进行修改配置文件
+# vim /etc/cobbler/settings
+  server: xxx.yyy.zzz.vvv
+  next_server: xxx.yyy.zzz.vvv
+# /etc/init.d/xinetd restart
+# yum install -y pykickstart
+# cobbler get-loaders
+# openssl passwd -1 -salt 'lavenliu' 'laven'
+fjsakjfsdkjfkdseri
+# service cobblerd restart
+# cobblerd check
+# 如果检查没有问题，可以执行:
+# cobbler sync
+# vim /etc/cobbler/dhcp.template
+#+END_EXAMPLE
+
+配置完毕，接下来设置镜像：
+BEGIN_EXAMPLE
+mount /dev/cdrom /mnt
+cobbler import --path=/mnt --name=CentOS-6.5-x86_64 --arch=x86_64
+cobbler profile report # 可以找到默认ks配置文件
+准备自定义的ks文件
+cd /var/lib/cobbler/kickstarts
+cobbler profile edit --name=CentOS-6.5-x86_64 --kickstart=/var/lib/cobbler/kickstarts/CentOS-6.5.x86_64.ks
+cobbler profile report
+每次改动，要执行sync动作
+cobbler sync
+  
+镜像文件被复制到了/var/www/cobbler/ks_mirror/CentOS-6.5-x86_64目录下。
+\end{verbatim}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

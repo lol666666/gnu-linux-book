@@ -1,0 +1,42 @@
+\chapter{Keepalived}
+\label{chap:keepalived}
+
+\section{Keepalived简介}
+
+KeepAlived起初是专为LVS设计的，专门用来监控LVS集群系统中各个服务节点的
+状态，后来又加入了VRRP的功能，因此，除了配合LVS服务外，也可以作为其他服
+务（如Nginx，HAProxy等）的高可用软件。VRRP是Virtual Router Redundancy
+Protocol（虚拟路由冗余协议）的缩写，VRRP出现的目的就是为了解决静态路由
+出现的单点故障问题，它能够保证网络的不间断、稳定地运行。所
+以，KeepAlived一方面具有LVS cluster nodes healthcheck功能，另一方面也具
+有LVS directors failover功能。
+
+\section{Keepalived安装部署}
+
+\subsection{环境准备}
+
+演示环境为CentOS6.5 64位系统，机器列表如下：
+
+\begin{table}[!htbp]
+  \centering
+  \caption{KeepAlived演示环境机器列表}
+  \begin{tabular}{|l|l|r|}
+    \hline
+    主机名  & IP地址 & 角色 \\
+    \hline
+    lb01.lavenliu.com & 192.168.20.150 & KeepAlived（主） \\
+    \hline
+    lb02.lavenliu.com & 192.168.20.151 & KeepAlived（备） \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{开始安装}
+
+\begin{verbatim}
+yum install -y keepalived
+\end{verbatim}
+
+\subsection{Keepalived配置介绍}
+
+\section{运行服务与故障模拟}

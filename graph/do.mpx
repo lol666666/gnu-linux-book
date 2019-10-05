@@ -1,0 +1,63 @@
+% Written by metapost version 1.999
+begingroup save _p,_r,_s,_n; picture _p; _p=nullpicture;
+setbounds _p to (0,0.0000)--(0.0000,0.0000)--
+ (0.0000,0.0000)--(0,0.0000)--cycle;
+_p endgroup
+mpxbreak
+begingroup save _p,_r,_s,_n; picture _p; _p=nullpicture;
+string _n[];
+vardef _s(expr _t,_f,_m,_x,_y)(text _c)=
+  addto _p also _t infont _f scaled _m shifted (_x,_y) _c; enddef;
+_n0="gbsnu5f";
+_s(char170,_n0,1.00000,0.0000,0.0000,);
+_n1="gbsnu73";
+_s(char175,_n1,1.00000,9.9626,0.0000,);
+_n2="gbsnu4f";
+_s("S",_n2,1.00000,19.9253,0.0000,);
+setbounds _p to (0,-0.8797)--(29.8879,-0.8797)--
+ (29.8879,8.4455)--(0,8.4455)--cycle;
+_p endgroup
+mpxbreak
+begingroup save _p,_r,_s,_n; picture _p; _p=nullpicture;
+string _n[];
+vardef _s(expr _t,_f,_m,_x,_y)(text _c)=
+  addto _p also _t infont _f scaled _m shifted (_x,_y) _c; enddef;
+_n3="cmr10";
+_s("b",_n3,1.00000,0.0000,0.0000,);
+_s("o",_n3,1.00000,5.8116,0.0000,);
+_s("ol",_n3,1.00000,11.0696,0.0000,);
+_n4="gbsnu88";
+_s("h",_n4,1.00000,18.8184,0.0000,);
+_n5="gbsnu8f";
+_s(char190,_n5,1.00000,28.7810,0.0000,);
+_n0="gbsnu5f";
+_s(char15,_n0,1.00000,38.7437,0.0000,);
+setbounds _p to (0,-0.8070)--(48.7063,-0.8070)--
+ (48.7063,8.4235)--(0,8.4235)--cycle;
+_p endgroup
+mpxbreak
+begingroup save _p,_r,_s,_n; picture _p; _p=nullpicture;
+setbounds _p to (0,0.0000)--(0.0000,0.0000)--
+ (0.0000,0.0000)--(0,0.0000)--cycle;
+_p endgroup
+mpxbreak
+begingroup save _p,_r,_s,_n; picture _p; _p=nullpicture;
+string _n[];
+vardef _s(expr _t,_f,_m,_x,_y)(text _c)=
+  addto _p also _t infont _f scaled _m shifted (_x,_y) _c; enddef;
+_n6="gbsnu77";
+_s(char31,_n6,1.00000,0.0000,0.0000,);
+setbounds _p to (0,-0.9268)--(9.9626,-0.9268)--
+ (9.9626,8.4342)--(0,8.4342)--cycle;
+_p endgroup
+mpxbreak
+begingroup save _p,_r,_s,_n; picture _p; _p=nullpicture;
+string _n[];
+vardef _s(expr _t,_f,_m,_x,_y)(text _c)=
+  addto _p also _t infont _f scaled _m shifted (_x,_y) _c; enddef;
+_n7="gbsnu50";
+_s("G",_n7,1.00000,0.0000,0.0000,);
+setbounds _p to (0,-0.9069)--(9.9626,-0.9069)--
+ (9.9626,8.3415)--(0,8.3415)--cycle;
+_p endgroup
+mpxbreak

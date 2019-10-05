@@ -1,0 +1,51 @@
+% Written by metapost version 1.999
+begingroup save _p,_r,_s,_n; picture _p; _p=nullpicture;
+string _n[];
+vardef _s(expr _t,_f,_m,_x,_y)(text _c)=
+  addto _p also _t infont _f scaled _m shifted (_x,_y) _c; enddef;
+_n0="gbsnu6d";
+_s("O",_n0,1.00000,0.0000,0.0000,);
+_n1="gbsnu89";
+_s(char200,_n1,1.00000,9.9626,0.0000,);
+_n2="gbsnu56";
+_s("h",_n2,1.00000,19.9253,0.0000,);
+setbounds _p to (0,-0.8558)--(29.8879,-0.8558)--
+ (29.8879,8.4211)--(0,8.4211)--cycle;
+_p endgroup
+mpxbreak
+begingroup save _p,_r,_s,_n; picture _p; _p=nullpicture;
+string _n[];
+vardef _s(expr _t,_f,_m,_x,_y)(text _c)=
+  addto _p also _t infont _f scaled _m shifted (_x,_y) _c; enddef;
+_n3="cmr10";
+_s("Nginx",_n3,1.00000,12.8961,6.0854,);
+_n4="gbsnu5f";
+_s(char2,_n4,1.00000,5.9776,-5.8861,);
+_n5="gbsnu6b";
+_s("e",_n5,1.00000,15.9402,-5.8861,);
+_n6="gbsnu4e";
+_s(char227,_n6,1.00000,25.9029,-5.8861,);
+_n7="gbsnu74";
+_s(char6,_n7,1.00000,35.8655,-5.8861,);
+setbounds _p to (0,-9.4727)--(51.8057,-9.4727)--
+ (51.8057,14.4540)--(0,14.4540)--cycle;
+_p endgroup
+mpxbreak
+begingroup save _p,_r,_s,_n; picture _p; _p=nullpicture;
+string _n[];
+vardef _s(expr _t,_f,_m,_x,_y)(text _c)=
+  addto _p also _t infont _f scaled _m shifted (_x,_y) _c; enddef;
+_n8="gbsnu54";
+_s(char14,_n8,1.00000,10.9589,6.0804,);
+_n9="gbsnu7a";
+_s(char239,_n9,1.00000,20.9215,6.0804,);
+_n10="gbsnu67";
+_s(char13,_n10,1.00000,5.9776,-5.9334,);
+_n11="gbsnu52";
+_s(char161,_n11,1.00000,15.9402,-5.9334,);
+_n2="gbsnu56";
+_s("h",_n2,1.00000,25.9029,-5.9334,);
+setbounds _p to (0,-9.5200)--(41.8431,-9.5200)--
+ (41.8431,14.5013)--(0,14.5013)--cycle;
+_p endgroup
+mpxbreak
