@@ -5,3 +5,7 @@
 *.ilg
 *.el
 *.pdf
+*.out
+*.toc
+*.zip
+*.lof
