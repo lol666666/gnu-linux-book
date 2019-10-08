@@ -309,6 +309,12 @@ INPUT d:/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT d:/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT d:/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 INPUT d:/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+INPUT d:/home/gnu-linux-book/BookTemplate.out
+INPUT d:/home/gnu-linux-book/BookTemplate.out
+INPUT d:/home/gnu-linux-book/BookTemplate.out
+INPUT d:/home/gnu-linux-book/BookTemplate.out
+INPUT d:/home/gnu-linux-book/BookTemplate.out
+INPUT d:/home/gnu-linux-book/BookTemplate.out
 OUTPUT d:/home/gnu-linux-book/BookTemplate.out
 OUTPUT d:/home/gnu-linux-book/BookTemplate.pdf
 INPUT d:/home/gnu-linux-book/img/bg.jpg
@@ -369,6 +375,7 @@ INPUT d:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/zhmetrics/gbkhei/gbkhei51.tfm
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/zhmetrics/gbkhei/gbkhei49.tfm
 INPUT d:/texlive/2019/texmf-dist/tex/latex/xcjk2uni/cmap/c1949.cmap
+INPUT d:/home/gnu-linux-book/BookTemplate.toc
 OUTPUT d:/home/gnu-linux-book/BookTemplate.toc
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/zhmetrics/gbksong/gbksongsl51.tfm
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/zhmetrics/gbksong/gbksongsl49.tfm
@@ -376,6 +383,7 @@ INPUT d:/texlive/2019/texmf-dist/fonts/tfm/zhmetrics/gbkhei/gbkhei38.tfm
 INPUT d:/texlive/2019/texmf-dist/tex/latex/xcjk2uni/cmap/c1938.cmap
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/zhmetrics/gbkhei/gbkhei57.tfm
 INPUT d:/texlive/2019/texmf-dist/tex/latex/xcjk2uni/cmap/c1957.cmap
+INPUT d:/home/gnu-linux-book/BookTemplate.lof
 OUTPUT d:/home/gnu-linux-book/BookTemplate.lof
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/zhmetrics/gbksong/gbksongsl38.tfm
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/zhmetrics/gbksong/gbksongsl57.tfm
@@ -383,6 +391,7 @@ INPUT d:/texlive/2019/texmf-dist/fonts/tfm/zhmetrics/gbkhei/gbkhei37.tfm
 INPUT d:/texlive/2019/texmf-dist/tex/latex/xcjk2uni/cmap/c1937.cmap
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/zhmetrics/gbkhei/gbkhei42.tfm
 INPUT d:/texlive/2019/texmf-dist/tex/latex/xcjk2uni/cmap/c1942.cmap
+INPUT d:/home/gnu-linux-book/BookTemplate.lot
 OUTPUT d:/home/gnu-linux-book/BookTemplate.lot
 OUTPUT d:/home/gnu-linux-book/body/chapter01SystemIntro.aux
 INPUT d:/home/gnu-linux-book/body/chapter01SystemIntro.tex
