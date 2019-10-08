@@ -1,0 +1,447 @@
+\contentsline {part}{第一部分\hspace {1em}Gnu/Linux基础知识篇}{7}{part.1}% 
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}关于本书}{9}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Gnu计划}{9}{section.1.1}% 
+\contentsline {subsection}{\numberline {1.1.1}图片欣赏}{10}{subsection.1.1.1}% 
+\contentsline {section}{\numberline {1.2}本书使用的操作系统}{11}{section.1.2}% 
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}常用命令使用}{13}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}命令行下的快捷键}{13}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}常用快捷键介绍}{13}{subsection.2.1.1}% 
+\contentsline {section}{\numberline {2.2}使用man page获得帮助}{15}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}echo与终端颜色}{15}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}终端颜色}{16}{subsection.2.3.1}% 
+\contentsline {section}{\numberline {2.4}date命令的使用}{17}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}yum命令的使用}{18}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}zypper命令的使用}{20}{section.2.6}% 
+\contentsline {subsection}{\numberline {2.6.1}zypper本地源的配置}{20}{subsection.2.6.1}% 
+\contentsline {subsection}{\numberline {2.6.2}zypper命令选项介绍}{22}{subsection.2.6.2}% 
+\contentsline {section}{\numberline {2.7}parted命令的使用}{26}{section.2.7}% 
+\contentsline {section}{\numberline {2.8}mount命令的使用}{26}{section.2.8}% 
+\contentsline {section}{\numberline {2.9}grep命令的使用}{26}{section.2.9}% 
+\contentsline {subsection}{\numberline {2.9.1}常用选项}{26}{subsection.2.9.1}% 
+\contentsline {subsection}{\numberline {2.9.2}一些实例}{26}{subsection.2.9.2}% 
+\contentsline {section}{\numberline {2.10}crontab命令的使用}{27}{section.2.10}% 
+\contentsline {section}{\numberline {2.11}find命令的使用}{28}{section.2.11}% 
+\contentsline {section}{\numberline {2.12}top命令的使用}{29}{section.2.12}% 
+\contentsline {section}{\numberline {2.13}free命令的使用}{30}{section.2.13}% 
+\contentsline {subsection}{\numberline {2.13.1}常用选项}{30}{subsection.2.13.1}% 
+\contentsline {subsection}{\numberline {2.13.2}一些实例}{31}{subsection.2.13.2}% 
+\contentsline {section}{\numberline {2.14}xargs命令的使用}{31}{section.2.14}% 
+\contentsline {section}{\numberline {2.15}tr命令的使用}{31}{section.2.15}% 
+\contentsline {section}{\numberline {2.16}tar命令的使用}{31}{section.2.16}% 
+\contentsline {section}{\numberline {2.17}read命令的使用}{32}{section.2.17}% 
+\contentsline {subsection}{\numberline {2.17.1}常用选项}{32}{subsection.2.17.1}% 
+\contentsline {subsection}{\numberline {2.17.2}一些实例}{32}{subsection.2.17.2}% 
+\contentsline {section}{\numberline {2.18}cut命令的使用}{32}{section.2.18}% 
+\contentsline {subsection}{\numberline {2.18.1}常用选项}{32}{subsection.2.18.1}% 
+\contentsline {subsection}{\numberline {2.18.2}一些实例}{32}{subsection.2.18.2}% 
+\contentsline {section}{\numberline {2.19}sort命令的使用}{34}{section.2.19}% 
+\contentsline {subsection}{\numberline {2.19.1}常用选项}{34}{subsection.2.19.1}% 
+\contentsline {subsection}{\numberline {2.19.2}一些实例}{34}{subsection.2.19.2}% 
+\contentsline {section}{\numberline {2.20}lsof命令的使用}{34}{section.2.20}% 
+\contentsline {subsection}{\numberline {2.20.1}恢复删除的文件}{35}{subsection.2.20.1}% 
+\contentsline {section}{\numberline {2.21}netstat命令的使用}{37}{section.2.21}% 
+\contentsline {section}{\numberline {2.22}tcpdump命令的使用}{37}{section.2.22}% 
+\contentsline {section}{\numberline {2.23}traceroute命令的使用}{38}{section.2.23}% 
+\contentsline {section}{\numberline {2.24}wget命令的使用}{38}{section.2.24}% 
+\contentsline {section}{\numberline {2.25}screen命令的使用}{38}{section.2.25}% 
+\contentsline {subsection}{\numberline {2.25.1}screen常用参数}{38}{subsection.2.25.1}% 
+\contentsline {subsection}{\numberline {2.25.2}使用screen}{38}{subsection.2.25.2}% 
+\contentsline {section}{\numberline {2.26}iptables的使用}{39}{section.2.26}% 
+\contentsline {subsection}{\numberline {2.26.1}内网机器通过iptables访问互联网}{42}{subsection.2.26.1}% 
+\contentsline {subsection}{\numberline {2.26.2}iptables之端口转发}{43}{subsection.2.26.2}% 
+\contentsline {section}{\numberline {2.27}qperf命令的使用}{44}{section.2.27}% 
+\contentsline {subsection}{\numberline {2.27.1}参数说明及示例}{44}{subsection.2.27.1}% 
+\contentsline {section}{\numberline {2.28}iperf命令的使用}{45}{section.2.28}% 
+\contentsline {subsection}{\numberline {2.28.1}参数说明及示例}{45}{subsection.2.28.1}% 
+\contentsline {section}{\numberline {2.29}vmstat命令的使用}{46}{section.2.29}% 
+\contentsline {section}{\numberline {2.30}iostat命令的使用}{47}{section.2.30}% 
+\contentsline {section}{\numberline {2.31}sar命令的使用}{47}{section.2.31}% 
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}vim编辑器}{51}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}vim的几种模式}{51}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}输入模式}{51}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {3.1.2}命令模式}{52}{subsection.3.1.2}% 
+\contentsline {subsection}{\numberline {3.1.3}vim的其他一些指令}{53}{subsection.3.1.3}% 
+\contentsline {section}{\numberline {3.2}vim的一些小技巧}{53}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}vim复制粘贴及剪切板}{55}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}vim配置文件}{55}{section.3.4}% 
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}Bash脚本}{59}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}正则表达式}{59}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}正则表达式语法}{59}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {4.1.2}一些实例}{59}{subsection.4.1.2}% 
+\contentsline {section}{\numberline {4.2}awk}{59}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}初步使用}{60}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}awk程序结构}{61}{subsection.4.2.2}% 
+\contentsline {subsection}{\numberline {4.2.3}BEGIN与END}{62}{subsection.4.2.3}% 
+\contentsline {subsection}{\numberline {4.2.4}域和记录}{62}{subsection.4.2.4}% 
+\contentsline {subsection}{\numberline {4.2.5}内置变量}{62}{subsection.4.2.5}% 
+\contentsline {subsection}{\numberline {4.2.6}One-liners awk程序}{62}{subsection.4.2.6}% 
+\contentsline {subsection}{\numberline {4.2.7}条件和循环}{62}{subsection.4.2.7}% 
+\contentsline {subsection}{\numberline {4.2.8}if-else语句}{63}{subsection.4.2.8}% 
+\contentsline {subsection}{\numberline {4.2.9}while循环}{63}{subsection.4.2.9}% 
+\contentsline {subsection}{\numberline {4.2.10}for循环}{64}{subsection.4.2.10}% 
+\contentsline {subsection}{\numberline {4.2.11}do循环}{64}{subsection.4.2.11}% 
+\contentsline {subsection}{\numberline {4.2.12}影响流控制的语句}{64}{subsection.4.2.12}% 
+\contentsline {subsection}{\numberline {4.2.13}数组}{64}{subsection.4.2.13}% 
+\contentsline {subsection}{\numberline {4.2.14}表达式}{65}{subsection.4.2.14}% 
+\contentsline {subsection}{\numberline {4.2.15}函数}{67}{subsection.4.2.15}% 
+\contentsline {subsection}{\numberline {4.2.16}总结}{67}{subsection.4.2.16}% 
+\contentsline {section}{\numberline {4.3}sed}{67}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}匹配}{69}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}变量定义}{69}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.3.3}特殊变量}{69}{subsection.4.3.3}% 
+\contentsline {subsection}{\numberline {4.3.4}数组}{69}{subsection.4.3.4}% 
+\contentsline {subsection}{\numberline {4.3.5}删除}{69}{subsection.4.3.5}% 
+\contentsline {subsection}{\numberline {4.3.6}替换}{69}{subsection.4.3.6}% 
+\contentsline {subsection}{\numberline {4.3.7}追加、插入和更改}{70}{subsection.4.3.7}% 
+\contentsline {subsection}{\numberline {4.3.8}模式空间和保留空间}{70}{subsection.4.3.8}% 
+\contentsline {subsection}{\numberline {4.3.9}流控制}{70}{subsection.4.3.9}% 
+\contentsline {subsection}{\numberline {4.3.10}地址范围}{70}{subsection.4.3.10}% 
+\contentsline {subsection}{\numberline {4.3.11}调用外部变量}{70}{subsection.4.3.11}% 
+\contentsline {subsection}{\numberline {4.3.12}总结}{70}{subsection.4.3.12}% 
+\contentsline {section}{\numberline {4.4}语法介绍}{70}{section.4.4}% 
+\contentsline {subsection}{\numberline {4.4.1}变量定义}{70}{subsection.4.4.1}% 
+\contentsline {subsection}{\numberline {4.4.2}特殊变量}{70}{subsection.4.4.2}% 
+\contentsline {subsection}{\numberline {4.4.3}变量赋值和替换}{71}{subsection.4.4.3}% 
+\contentsline {subsection}{\numberline {4.4.4}本地变量与全局变量}{71}{subsection.4.4.4}% 
+\contentsline {subsection}{\numberline {4.4.5}引用变量}{71}{subsection.4.4.5}% 
+\contentsline {subsection}{\numberline {4.4.6}数组}{71}{subsection.4.4.6}% 
+\contentsline {subsection}{\numberline {4.4.7}特殊字符}{72}{subsection.4.4.7}% 
+\contentsline {section}{\numberline {4.5}基本流程}{72}{section.4.5}% 
+\contentsline {subsection}{\numberline {4.5.1}if结构}{72}{subsection.4.5.1}% 
+\contentsline {subsection}{\numberline {4.5.2}for结构}{73}{subsection.4.5.2}% 
+\contentsline {subsection}{\numberline {4.5.3}while结构}{74}{subsection.4.5.3}% 
+\contentsline {section}{\numberline {4.6}操作字符串}{75}{section.4.6}% 
+\contentsline {section}{\numberline {4.7}函数}{75}{section.4.7}% 
+\contentsline {section}{\numberline {4.8}信号捕捉}{76}{section.4.8}% 
+\contentsline {section}{\numberline {4.9}开机脚本启动顺序}{76}{section.4.9}% 
+\contentsline {section}{\numberline {4.10}一个实例}{76}{section.4.10}% 
+\contentsline {part}{第二部分\hspace {1em}数据库篇}{81}{part.2}% 
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}MySQL数据库基本知识}{83}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}存储设备配置}{83}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}构建文件系统}{83}{subsection.5.1.1}% 
+\contentsline {subsection}{\numberline {5.1.2}挂载文件系统}{84}{subsection.5.1.2}% 
+\contentsline {section}{\numberline {5.2}安装MySQL}{84}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}创建MySQL用户}{84}{subsection.5.2.1}% 
+\contentsline {subsection}{\numberline {5.2.2}安装MySQL}{84}{subsection.5.2.2}% 
+\contentsline {section}{\numberline {5.3}操作系统配置}{86}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.3.1}进程文件数配置}{86}{subsection.5.3.1}% 
+\contentsline {subsection}{\numberline {5.3.2}sysctl配置}{86}{subsection.5.3.2}% 
+\contentsline {subsection}{\numberline {5.3.3}cgroup配置}{86}{subsection.5.3.3}% 
+\contentsline {subsection}{\numberline {5.3.4}cgrule配置}{88}{subsection.5.3.4}% 
+\contentsline {section}{\numberline {5.4}MySQL配置}{88}{section.5.4}% 
+\contentsline {subsection}{\numberline {5.4.1}程序文件和目录配置}{88}{subsection.5.4.1}% 
+\contentsline {subsection}{\numberline {5.4.2}多实例配置}{88}{subsection.5.4.2}% 
+\contentsline {section}{\numberline {5.5}数据库日常管理}{90}{section.5.5}% 
+\contentsline {subsection}{\numberline {5.5.1}实例切换}{90}{subsection.5.5.1}% 
+\contentsline {subsection}{\numberline {5.5.2}MySQL启动}{90}{subsection.5.5.2}% 
+\contentsline {subsection}{\numberline {5.5.3}MySQL关闭}{90}{subsection.5.5.3}% 
+\contentsline {section}{\numberline {5.6}如何进入MySQL数据库}{90}{section.5.6}% 
+\contentsline {section}{\numberline {5.7}如何建库建表}{91}{section.5.7}% 
+\contentsline {section}{\numberline {5.8}简单sql语句的使用}{91}{section.5.8}% 
+\contentsline {subsection}{\numberline {5.8.1}create语句的使用}{91}{subsection.5.8.1}% 
+\contentsline {subsection}{\numberline {5.8.2}insert语句的使用}{92}{subsection.5.8.2}% 
+\contentsline {subsection}{\numberline {5.8.3}select语句的使用}{92}{subsection.5.8.3}% 
+\contentsline {subsection}{\numberline {5.8.4}update语句的使用}{93}{subsection.5.8.4}% 
+\contentsline {section}{\numberline {5.9}数据库文件的备份}{95}{section.5.9}% 
+\contentsline {subsection}{\numberline {5.9.1}数据库文件的导出}{95}{subsection.5.9.1}% 
+\contentsline {subsection}{\numberline {5.9.2}数据库文件的导入}{95}{subsection.5.9.2}% 
+\contentsline {section}{\numberline {5.10}常用命令总结}{95}{section.5.10}% 
+\contentsline {subsection}{\numberline {5.10.1}忘记MySQL密码}{97}{subsection.5.10.1}% 
+\contentsline {chapter}{\numberline {第六章\hspace {.3em}}MySQL复制}{99}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}复制如何工作}{99}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}MySQL复制原理}{100}{section.6.2}% 
+\contentsline {section}{\numberline {6.3}MySQL同步细节}{100}{section.6.3}% 
+\contentsline {section}{\numberline {6.4}MySQL半同步配置}{100}{section.6.4}% 
+\contentsline {chapter}{\numberline {第七章\hspace {.3em}}MySQL+KeepAlived}{103}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}KeepAlived介绍}{103}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}测试同步}{107}{section.7.2}% 
+\contentsline {section}{\numberline {7.3}安装配置KeepAlived}{108}{section.7.3}% 
+\contentsline {section}{\numberline {7.4}启动KeepAlived}{110}{section.7.4}% 
+\contentsline {chapter}{\numberline {第八章\hspace {.3em}}MySQL+LVS}{125}{chapter.8}% 
+\contentsline {chapter}{\numberline {第九章\hspace {.3em}}MHA}{127}{chapter.9}% 
+\contentsline {section}{\numberline {9.1}实验环境说明}{127}{section.9.1}% 
+\contentsline {subsection}{\numberline {9.1.1}SSH无密码通信设置}{127}{subsection.9.1.1}% 
+\contentsline {section}{\numberline {9.2}安装MySQL}{127}{section.9.2}% 
+\contentsline {section}{\numberline {9.3}安装及配置MHA}{127}{section.9.3}% 
+\contentsline {subsection}{\numberline {9.3.1}安装node节点}{127}{subsection.9.3.1}% 
+\contentsline {subsection}{\numberline {9.3.2}安装manager节点}{127}{subsection.9.3.2}% 
+\contentsline {part}{第三部分\hspace {1em}基本服务篇}{129}{part.3}% 
+\contentsline {chapter}{\numberline {第十章\hspace {.3em}}常用基本服务的搭建}{133}{chapter.10}% 
+\contentsline {section}{\numberline {10.1}DHCP}{133}{section.10.1}% 
+\contentsline {section}{\numberline {10.2}DNS}{134}{section.10.2}% 
+\contentsline {subsection}{\numberline {10.2.1}测试环境}{134}{subsection.10.2.1}% 
+\contentsline {subsection}{\numberline {10.2.2}安装及配置主DNS}{134}{subsection.10.2.2}% 
+\contentsline {subsection}{\numberline {10.2.3}启动DNS服务}{136}{subsection.10.2.3}% 
+\contentsline {section}{\numberline {10.3}FTP}{137}{section.10.3}% 
+\contentsline {section}{\numberline {10.4}NFS}{137}{section.10.4}% 
+\contentsline {subsection}{\numberline {10.4.1}配置NFS服务器}{138}{subsection.10.4.1}% 
+\contentsline {subsection}{\numberline {10.4.2}配置NFS客户端}{138}{subsection.10.4.2}% 
+\contentsline {section}{\numberline {10.5}Kickstart}{138}{section.10.5}% 
+\contentsline {subsection}{\numberline {10.5.1}安装相关软件包}{138}{subsection.10.5.1}% 
+\contentsline {section}{\numberline {10.6}Samba}{141}{section.10.6}% 
+\contentsline {section}{\numberline {10.7}Apache}{141}{section.10.7}% 
+\contentsline {subsection}{\numberline {10.7.1}安装及配置Apache}{141}{subsection.10.7.1}% 
+\contentsline {section}{\numberline {10.8}Nginx}{141}{section.10.8}% 
+\contentsline {subsection}{\numberline {10.8.1}关于Nginx}{141}{subsection.10.8.1}% 
+\contentsline {subsection}{\numberline {10.8.2}Nginx的安装与启动}{141}{subsection.10.8.2}% 
+\contentsline {subsection}{\numberline {10.8.3}Nginx的基本配置}{142}{subsection.10.8.3}% 
+\contentsline {subsubsection}{Nginx主配置概述}{142}{subsubsection*.44}% 
+\contentsline {subsubsection}{Nginx虚拟主机配置}{146}{subsubsection*.45}% 
+\contentsline {subsection}{\numberline {10.8.4}安全的连接https}{146}{subsection.10.8.4}% 
+\contentsline {subsection}{\numberline {10.8.5}Nginx日志管理}{146}{subsection.10.8.5}% 
+\contentsline {subsection}{\numberline {10.8.6}Nginx访问控制}{146}{subsection.10.8.6}% 
+\contentsline {subsection}{\numberline {10.8.7}Nginx反向代理}{146}{subsection.10.8.7}% 
+\contentsline {subsection}{\numberline {10.8.8}Nginx 与 Lua 结合}{148}{subsection.10.8.8}% 
+\contentsline {section}{\numberline {10.9}LAMP}{148}{section.10.9}% 
+\contentsline {subsection}{\numberline {10.9.1}安装依赖包}{148}{subsection.10.9.1}% 
+\contentsline {subsection}{\numberline {10.9.2}安装额外的包}{148}{subsection.10.9.2}% 
+\contentsline {subsection}{\numberline {10.9.3}编译安装MySQL}{149}{subsection.10.9.3}% 
+\contentsline {subsection}{\numberline {10.9.4}编译安装Apache}{150}{subsection.10.9.4}% 
+\contentsline {subsection}{\numberline {10.9.5}编译安装PHP}{150}{subsection.10.9.5}% 
+\contentsline {subsection}{\numberline {10.9.6}安装Zend加速器}{151}{subsection.10.9.6}% 
+\contentsline {subsection}{\numberline {10.9.7}整合Apache与PHP}{151}{subsection.10.9.7}% 
+\contentsline {section}{\numberline {10.10}Nagios}{152}{section.10.10}% 
+\contentsline {subsection}{\numberline {10.10.1}关于Nagios}{152}{subsection.10.10.1}% 
+\contentsline {chapter}{\numberline {第十一章\hspace {.3em}}多网卡绑定bonding}{153}{chapter.11}% 
+\contentsline {section}{\numberline {11.1}bonding的几种模式}{153}{section.11.1}% 
+\contentsline {section}{\numberline {11.2}RHEL下配置bonding}{153}{section.11.2}% 
+\contentsline {section}{\numberline {11.3}SuSE下配置bonding}{155}{section.11.3}% 
+\contentsline {section}{\numberline {11.4}单网卡多IP配置}{156}{section.11.4}% 
+\contentsline {chapter}{\numberline {第十二章\hspace {.3em}}RAID技术}{157}{chapter.12}% 
+\contentsline {section}{\numberline {12.1}RAID基础知识}{157}{section.12.1}% 
+\contentsline {subsection}{\numberline {12.1.1}RAID解决了什么问题}{157}{subsection.12.1.1}% 
+\contentsline {section}{\numberline {12.2}RAID实现方式}{158}{section.12.2}% 
+\contentsline {subsection}{\numberline {12.2.1}RAID0数据组织原理}{158}{subsection.12.2.1}% 
+\contentsline {subsection}{\numberline {12.2.2}RAID1数据组织原理}{158}{subsection.12.2.2}% 
+\contentsline {subsection}{\numberline {12.2.3}RAID10数据组织原理}{159}{subsection.12.2.3}% 
+\contentsline {subsection}{\numberline {12.2.4}RAID5数据组织原理}{159}{subsection.12.2.4}% 
+\contentsline {section}{\numberline {12.3}MegaRAID Cli工具基本使用}{159}{section.12.3}% 
+\contentsline {subsection}{\numberline {12.3.1}制作RAID}{159}{subsection.12.3.1}% 
+\contentsline {subsection}{\numberline {12.3.2}删除RAID}{160}{subsection.12.3.2}% 
+\contentsline {part}{第四部分\hspace {1em}集群方案篇}{161}{part.4}% 
+\contentsline {chapter}{\numberline {第十三章\hspace {.3em}}集群基础知识}{165}{chapter.13}% 
+\contentsline {section}{\numberline {13.1}集群概述}{165}{section.13.1}% 
+\contentsline {section}{\numberline {13.2}集群类型}{165}{section.13.2}% 
+\contentsline {chapter}{\numberline {第十四章\hspace {.3em}}Keepalived}{167}{chapter.14}% 
+\contentsline {section}{\numberline {14.1}Keepalived简介}{167}{section.14.1}% 
+\contentsline {section}{\numberline {14.2}Keepalived安装部署}{167}{section.14.2}% 
+\contentsline {subsection}{\numberline {14.2.1}环境准备}{167}{subsection.14.2.1}% 
+\contentsline {subsection}{\numberline {14.2.2}开始安装}{167}{subsection.14.2.2}% 
+\contentsline {subsection}{\numberline {14.2.3}Keepalived配置介绍}{167}{subsection.14.2.3}% 
+\contentsline {section}{\numberline {14.3}运行服务与故障模拟}{167}{section.14.3}% 
+\contentsline {chapter}{\numberline {第十五章\hspace {.3em}}LVS+Keepalived负载均衡集群}{169}{chapter.15}% 
+\contentsline {section}{\numberline {15.1}LVS调度算法}{170}{section.15.1}% 
+\contentsline {section}{\numberline {15.2}安装LVS}{172}{section.15.2}% 
+\contentsline {subsection}{\numberline {15.2.1}环境准备}{172}{subsection.15.2.1}% 
+\contentsline {chapter}{\numberline {第十六章\hspace {.3em}}Heartbeat高可用集群}{173}{chapter.16}% 
+\contentsline {section}{\numberline {16.1}安装Heartbeat}{173}{section.16.1}% 
+\contentsline {section}{\numberline {16.2}配置Heartbeat}{174}{section.16.2}% 
+\contentsline {section}{\numberline {16.3}测试}{176}{section.16.3}% 
+\contentsline {chapter}{\numberline {第十七章\hspace {.3em}}Nginx负载均衡与高可用集群}{179}{chapter.17}% 
+\contentsline {section}{\numberline {17.1}upstream模块介绍}{179}{section.17.1}% 
+\contentsline {section}{\numberline {17.2}Nginx负载均衡方法介绍}{179}{section.17.2}% 
+\contentsline {section}{\numberline {17.3}准备工作}{179}{section.17.3}% 
+\contentsline {section}{\numberline {17.4}Nginx+KeepAlived高可用}{179}{section.17.4}% 
+\contentsline {chapter}{\numberline {第十八章\hspace {.3em}}Pacemaker+Corosync高可用集群}{181}{chapter.18}% 
+\contentsline {section}{\numberline {18.1}准备工作}{181}{section.18.1}% 
+\contentsline {section}{\numberline {18.2}安装软件包}{182}{section.18.2}% 
+\contentsline {section}{\numberline {18.3}配置及启动corosync}{183}{section.18.3}% 
+\contentsline {section}{\numberline {18.4}为集群添加资源}{187}{section.18.4}% 
+\contentsline {section}{\numberline {18.5}为Web创建IP资源}{190}{section.18.5}% 
+\contentsline {section}{\numberline {18.6}高可用验证}{191}{section.18.6}% 
+\contentsline {chapter}{\numberline {第十九章\hspace {.3em}}DRBD}{193}{chapter.19}% 
+\contentsline {section}{\numberline {19.1}三种同步模式}{194}{section.19.1}% 
+\contentsline {section}{\numberline {19.2}安装及配置DRBD}{195}{section.19.2}% 
+\contentsline {chapter}{\numberline {第二十章\hspace {.3em}}HAproxy负载均衡与高可用}{199}{chapter.20}% 
+\contentsline {section}{\numberline {20.1}关于HAproxy}{199}{section.20.1}% 
+\contentsline {section}{\numberline {20.2}环境准备}{199}{section.20.2}% 
+\contentsline {subsection}{\numberline {20.2.1}测试环境准备}{199}{subsection.20.2.1}% 
+\contentsline {subsection}{\numberline {20.2.2}安装EPEL源}{199}{subsection.20.2.2}% 
+\contentsline {section}{\numberline {20.3}HAproxy的高可用}{199}{section.20.3}% 
+\contentsline {part}{第五部分\hspace {1em}集群监控篇}{201}{part.5}% 
+\contentsline {chapter}{\numberline {第二十一章\hspace {.3em}}Zabbix}{205}{chapter.21}% 
+\contentsline {section}{\numberline {21.1}Zabbix简介}{205}{section.21.1}% 
+\contentsline {section}{\numberline {21.2}Zabbix监控方案介绍}{205}{section.21.2}% 
+\contentsline {section}{\numberline {21.3}集群概述}{205}{section.21.3}% 
+\contentsline {part}{第六部分\hspace {1em}自动化运维篇}{207}{part.6}% 
+\contentsline {chapter}{\numberline {第二十二章\hspace {.3em}}PXE批量系统安装}{211}{chapter.22}% 
+\contentsline {section}{\numberline {22.1}PXE简介}{211}{section.22.1}% 
+\contentsline {section}{\numberline {22.2}PXE工作原理}{211}{section.22.2}% 
+\contentsline {subsection}{\numberline {22.2.1}PXE工作原理框图}{211}{subsection.22.2.1}% 
+\contentsline {subsection}{\numberline {22.2.2}PXE工作原理示意图}{211}{subsection.22.2.2}% 
+\contentsline {section}{\numberline {22.3}开始搭建PXE服务器}{213}{section.22.3}% 
+\contentsline {subsection}{\numberline {22.3.1}安装及配置DHCP服务}{213}{subsection.22.3.1}% 
+\contentsline {section}{\numberline {22.4}安装及配置TFTP服务}{214}{section.22.4}% 
+\contentsline {section}{\numberline {22.5}安装及配置NFS服务}{214}{section.22.5}% 
+\contentsline {section}{\numberline {22.6}SLEL11sp2系统镜像文件}{215}{section.22.6}% 
+\contentsline {subsection}{\numberline {22.6.1}目录结构}{215}{subsection.22.6.1}% 
+\contentsline {subsection}{\numberline {22.6.2}镜像挂载}{215}{subsection.22.6.2}% 
+\contentsline {subsection}{\numberline {22.6.3}复制系统内核文件}{215}{subsection.22.6.3}% 
+\contentsline {subsection}{\numberline {22.6.4}创建default文件}{215}{subsection.22.6.4}% 
+\contentsline {subsection}{\numberline {22.6.5}AutoYast自动化安装脚本}{216}{subsection.22.6.5}% 
+\contentsline {chapter}{\numberline {第二十三章\hspace {.3em}}Cobbler自动化装机}{217}{chapter.23}% 
+\contentsline {chapter}{\numberline {第二十四章\hspace {.3em}}Omnitty}{219}{chapter.24}% 
+\contentsline {section}{\numberline {24.1}Omnitty的简单使用}{219}{section.24.1}% 
+\contentsline {subsection}{\numberline {24.1.1}添加机器}{219}{subsection.24.1.1}% 
+\contentsline {subsection}{\numberline {24.1.2}激活机器}{220}{subsection.24.1.2}% 
+\contentsline {subsection}{\numberline {24.1.3}开始操作}{220}{subsection.24.1.3}% 
+\contentsline {chapter}{\numberline {第二十五章\hspace {.3em}}Ansible}{221}{chapter.25}% 
+\contentsline {section}{\numberline {25.1}关于Ansible}{221}{section.25.1}% 
+\contentsline {section}{\numberline {25.2}安装Ansible}{221}{section.25.2}% 
+\contentsline {section}{\numberline {25.3}测试Ansible}{221}{section.25.3}% 
+\contentsline {subsection}{\numberline {25.3.1}command模块}{222}{subsection.25.3.1}% 
+\contentsline {subsection}{\numberline {25.3.2}shell模块}{223}{subsection.25.3.2}% 
+\contentsline {subsection}{\numberline {25.3.3}package模块}{223}{subsection.25.3.3}% 
+\contentsline {subsection}{\numberline {25.3.4}service模块}{224}{subsection.25.3.4}% 
+\contentsline {subsection}{\numberline {25.3.5}file模块}{225}{subsection.25.3.5}% 
+\contentsline {subsection}{\numberline {25.3.6}copy模块}{226}{subsection.25.3.6}% 
+\contentsline {subsection}{\numberline {25.3.7}lineinfile模块}{228}{subsection.25.3.7}% 
+\contentsline {subsection}{\numberline {25.3.8}setup模块}{228}{subsection.25.3.8}% 
+\contentsline {subsection}{\numberline {25.3.9}获得模块的帮助信息}{229}{subsection.25.3.9}% 
+\contentsline {section}{\numberline {25.4}Ansible工作流程}{230}{section.25.4}% 
+\contentsline {section}{\numberline {25.5}playbooks}{230}{section.25.5}% 
+\contentsline {section}{\numberline {25.6}一个综合实例}{230}{section.25.6}% 
+\contentsline {chapter}{\numberline {第二十六章\hspace {.3em}}fabric}{235}{chapter.26}% 
+\contentsline {chapter}{\numberline {第二十七章\hspace {.3em}}SaltStack}{237}{chapter.27}% 
+\contentsline {section}{\numberline {27.1}初识SaltStack}{237}{section.27.1}% 
+\contentsline {section}{\numberline {27.2}安装及运行SaltStack}{237}{section.27.2}% 
+\contentsline {subsection}{\numberline {27.2.1}环境准备}{237}{subsection.27.2.1}% 
+\contentsline {subsection}{\numberline {27.2.2}安装SaltStack Master}{238}{subsection.27.2.2}% 
+\contentsline {subsection}{\numberline {27.2.3}安装SaltStack Minion}{238}{subsection.27.2.3}% 
+\contentsline {section}{\numberline {27.3}SaltStack配置}{239}{section.27.3}% 
+\contentsline {subsection}{\numberline {27.3.1}Master端配置}{239}{subsection.27.3.1}% 
+\contentsline {subsection}{\numberline {27.3.2}Minion端配置}{239}{subsection.27.3.2}% 
+\contentsline {section}{\numberline {27.4}基本使用}{239}{section.27.4}% 
+\contentsline {subsection}{\numberline {27.4.1}单master设置}{239}{subsection.27.4.1}% 
+\contentsline {subsection}{\numberline {27.4.2}基本命令}{239}{subsection.27.4.2}% 
+\contentsline {subsection}{\numberline {27.4.3}密钥管理}{239}{subsection.27.4.3}% 
+\contentsline {subsection}{\numberline {27.4.4}定位minions}{239}{subsection.27.4.4}% 
+\contentsline {section}{\numberline {27.5}理解YAML}{241}{section.27.5}% 
+\contentsline {section}{\numberline {27.6}SaltStack配置管理实例}{241}{section.27.6}% 
+\contentsline {subsection}{\numberline {27.6.1}安装JDK}{243}{subsection.27.6.1}% 
+\contentsline {subsection}{\numberline {27.6.2}安装Tomcat}{244}{subsection.27.6.2}% 
+\contentsline {subsection}{\numberline {27.6.3}安装Nginx}{244}{subsection.27.6.3}% 
+\contentsline {subsection}{\numberline {27.6.4}安装MySQL}{244}{subsection.27.6.4}% 
+\contentsline {subsection}{\numberline {27.6.5}安装PHP}{244}{subsection.27.6.5}% 
+\contentsline {subsection}{\numberline {27.6.6}安装Redis}{244}{subsection.27.6.6}% 
+\contentsline {subsection}{\numberline {27.6.7}安装ELK Stack}{244}{subsection.27.6.7}% 
+\contentsline {subsection}{\numberline {27.6.8}安装OpenStack}{244}{subsection.27.6.8}% 
+\contentsline {chapter}{\numberline {第二十八章\hspace {.3em}}Puppet}{245}{chapter.28}% 
+\contentsline {section}{\numberline {28.1}关于Puppet}{245}{section.28.1}% 
+\contentsline {section}{\numberline {28.2}服务器端puppetca安装配置}{245}{section.28.2}% 
+\contentsline {subsection}{\numberline {28.2.1}配置NTP}{245}{subsection.28.2.1}% 
+\contentsline {subsection}{\numberline {28.2.2}增加虚拟IP}{245}{subsection.28.2.2}% 
+\contentsline {subsection}{\numberline {28.2.3}主机名IP静态解析配置和验证}{245}{subsection.28.2.3}% 
+\contentsline {subsection}{\numberline {28.2.4}安装新版本puppet软件包}{245}{subsection.28.2.4}% 
+\contentsline {subsection}{\numberline {28.2.5}修改配置并验证结果}{245}{subsection.28.2.5}% 
+\contentsline {section}{\numberline {28.3}客户端puppet安装配置}{245}{section.28.3}% 
+\contentsline {section}{\numberline {28.4}服务器端rabbitmq-server安装配置}{245}{section.28.4}% 
+\contentsline {section}{\numberline {28.5}服务器端mcollective安装配置}{245}{section.28.5}% 
+\contentsline {section}{\numberline {28.6}客户端mcollective安装配置}{245}{section.28.6}% 
+\contentsline {chapter}{\numberline {第二十九章\hspace {.3em}}Git}{247}{chapter.29}% 
+\contentsline {section}{\numberline {29.1}git简介}{247}{section.29.1}% 
+\contentsline {section}{\numberline {29.2}安装git}{247}{section.29.2}% 
+\contentsline {section}{\numberline {29.3}创建版本库}{247}{section.29.3}% 
+\contentsline {section}{\numberline {29.4}本地仓库}{248}{section.29.4}% 
+\contentsline {subsection}{\numberline {29.4.1}版本回退}{250}{subsection.29.4.1}% 
+\contentsline {subsection}{\numberline {29.4.2}工作区和暂存区}{250}{subsection.29.4.2}% 
+\contentsline {subsection}{\numberline {29.4.3}管理修改}{250}{subsection.29.4.3}% 
+\contentsline {subsection}{\numberline {29.4.4}撤销修改}{250}{subsection.29.4.4}% 
+\contentsline {subsection}{\numberline {29.4.5}删除文件}{250}{subsection.29.4.5}% 
+\contentsline {section}{\numberline {29.5}远程仓库}{250}{section.29.5}% 
+\contentsline {subsection}{\numberline {29.5.1}添加远程库}{250}{subsection.29.5.1}% 
+\contentsline {subsection}{\numberline {29.5.2}克隆远程库}{250}{subsection.29.5.2}% 
+\contentsline {section}{\numberline {29.6}分支管理}{250}{section.29.6}% 
+\contentsline {subsection}{\numberline {29.6.1}创建与合并分支}{250}{subsection.29.6.1}% 
+\contentsline {subsection}{\numberline {29.6.2}解决冲突}{250}{subsection.29.6.2}% 
+\contentsline {subsection}{\numberline {29.6.3}分支管理策略}{250}{subsection.29.6.3}% 
+\contentsline {subsection}{\numberline {29.6.4}Bug分支}{250}{subsection.29.6.4}% 
+\contentsline {subsection}{\numberline {29.6.5}Feature分支}{250}{subsection.29.6.5}% 
+\contentsline {subsection}{\numberline {29.6.6}多人协作}{250}{subsection.29.6.6}% 
+\contentsline {section}{\numberline {29.7}标签管理}{250}{section.29.7}% 
+\contentsline {subsection}{\numberline {29.7.1}创建标签}{250}{subsection.29.7.1}% 
+\contentsline {subsection}{\numberline {29.7.2}操作标签}{250}{subsection.29.7.2}% 
+\contentsline {section}{\numberline {29.8}使用GitHub}{250}{section.29.8}% 
+\contentsline {section}{\numberline {29.9}自定义Git}{250}{section.29.9}% 
+\contentsline {subsection}{\numberline {29.9.1}忽略特殊文件}{250}{subsection.29.9.1}% 
+\contentsline {subsection}{\numberline {29.9.2}配置别名}{250}{subsection.29.9.2}% 
+\contentsline {subsection}{\numberline {29.9.3}搭建Git服务器}{250}{subsection.29.9.3}% 
+\contentsline {part}{第七部分\hspace {1em}虚拟化部分}{251}{part.7}% 
+\contentsline {chapter}{\numberline {第三十章\hspace {.3em}}KVM}{255}{chapter.30}% 
+\contentsline {section}{\numberline {30.1}关于KVM}{255}{section.30.1}% 
+\contentsline {subsection}{\numberline {30.1.1}KVM管理工具libvirt简介}{255}{subsection.30.1.1}% 
+\contentsline {subsection}{\numberline {30.1.2}libvirt中的一些术语}{256}{subsection.30.1.2}% 
+\contentsline {subsection}{\numberline {30.1.3}检查宿主机是否支持KVM虚拟化}{256}{subsection.30.1.3}% 
+\contentsline {section}{\numberline {30.2}安装前的准备工作}{257}{section.30.2}% 
+\contentsline {subsection}{\numberline {30.2.1}KVM测试环境}{257}{subsection.30.2.1}% 
+\contentsline {subsection}{\numberline {30.2.2}安装EPEL源}{257}{subsection.30.2.2}% 
+\contentsline {subsection}{\numberline {30.2.3}安装KVM管理工具}{257}{subsection.30.2.3}% 
+\contentsline {section}{\numberline {30.3}开始部署KVM虚拟机}{257}{section.30.3}% 
+\contentsline {subsection}{\numberline {30.3.1}创建虚拟机镜像}{257}{subsection.30.3.1}% 
+\contentsline {subsubsection}{创建raw格式镜像文件}{257}{subsubsection*.66}% 
+\contentsline {subsubsection}{创建qcow2格式镜像文件}{258}{subsubsection*.67}% 
+\contentsline {subsubsection}{虚拟机镜像文件格式对比}{258}{subsubsection*.68}% 
+\contentsline {subsection}{\numberline {30.3.2}安装虚拟机}{258}{subsection.30.3.2}% 
+\contentsline {subsubsection}{安装raw格式的虚拟机系统}{259}{subsubsection*.69}% 
+\contentsline {subsubsection}{安装qcow2格式的虚拟机系统}{259}{subsubsection*.70}% 
+\contentsline {section}{\numberline {30.4}KVM虚拟机管理}{259}{section.30.4}% 
+\contentsline {subsection}{\numberline {30.4.1}libvirt的配置和使用}{259}{subsection.30.4.1}% 
+\contentsline {subsection}{\numberline {30.4.2}虚拟机拷贝}{260}{subsection.30.4.2}% 
+\contentsline {subsection}{\numberline {30.4.3}虚拟机克隆}{261}{subsection.30.4.3}% 
+\contentsline {subsection}{\numberline {30.4.4}增加虚拟机硬盘空间}{262}{subsection.30.4.4}% 
+\contentsline {subsection}{\numberline {30.4.5}虚拟机硬盘格式转换}{262}{subsection.30.4.5}% 
+\contentsline {subsection}{\numberline {30.4.6}虚拟机迁移}{263}{subsection.30.4.6}% 
+\contentsline {subsection}{\numberline {30.4.7}创建虚拟机快照}{263}{subsection.30.4.7}% 
+\contentsline {subsubsection}{创建虚拟机快照}{263}{subsubsection*.71}% 
+\contentsline {subsubsection}{查看虚拟机快照}{264}{subsubsection*.72}% 
+\contentsline {subsubsection}{恢复指定快照}{264}{subsubsection*.73}% 
+\contentsline {subsubsection}{删除虚拟机快照}{264}{subsubsection*.74}% 
+\contentsline {section}{\numberline {30.5}KVM虚拟机桥接网络}{265}{section.30.5}% 
+\contentsline {section}{\numberline {30.6}Libvirt API}{268}{section.30.6}% 
+\contentsline {subsection}{\numberline {30.6.1}Libvirt API简介}{268}{subsection.30.6.1}% 
+\contentsline {subsection}{\numberline {30.6.2}C API示例}{268}{subsection.30.6.2}% 
+\contentsline {subsubsection}{显示某个域的信息}{269}{subsubsection*.75}% 
+\contentsline {subsection}{\numberline {30.6.3}Python API示例}{270}{subsection.30.6.3}% 
+\contentsline {subsubsection}{查看宿主机正在运行的虚拟机}{270}{subsubsection*.76}% 
+\contentsline {chapter}{\numberline {第三十一章\hspace {.3em}}Docker}{275}{chapter.31}% 
+\contentsline {section}{\numberline {31.1}关于Docker}{275}{section.31.1}% 
+\contentsline {section}{\numberline {31.2}容器 VS. 虚拟机}{275}{section.31.2}% 
+\contentsline {section}{\numberline {31.3}Docker简介}{276}{section.31.3}% 
+\contentsline {subsection}{\numberline {31.3.1}Docker与传统虚拟机建构对比}{276}{subsection.31.3.1}% 
+\contentsline {subsection}{\numberline {31.3.2}应用容器虚拟化定位}{276}{subsection.31.3.2}% 
+\contentsline {subsection}{\numberline {31.3.3}Docker有哪些优势}{276}{subsection.31.3.3}% 
+\contentsline {subsection}{\numberline {31.3.4}Docker应用场景}{276}{subsection.31.3.4}% 
+\contentsline {subsection}{\numberline {31.3.5}Docker组成}{276}{subsection.31.3.5}% 
+\contentsline {section}{\numberline {31.4}安装及启动第一台Docker容器}{276}{section.31.4}% 
+\contentsline {section}{\numberline {31.5}测试环境}{276}{section.31.5}% 
+\contentsline {subsection}{\numberline {31.5.1}安装Docker}{276}{subsection.31.5.1}% 
+\contentsline {subsection}{\numberline {31.5.2}运行第一台Docker容器}{277}{subsection.31.5.2}% 
+\contentsline {section}{\numberline {31.6}容器及镜像管理}{277}{section.31.6}% 
+\contentsline {subsection}{\numberline {31.6.1}容器管理}{277}{subsection.31.6.1}% 
+\contentsline {subsection}{\numberline {31.6.2}镜像管理}{277}{subsection.31.6.2}% 
+\contentsline {section}{\numberline {31.7}构建Docker镜像}{277}{section.31.7}% 
+\contentsline {subsection}{\numberline {31.7.1}手工构建}{277}{subsection.31.7.1}% 
+\contentsline {subsection}{\numberline {31.7.2}使用Dockerfile构建}{277}{subsection.31.7.2}% 
+\contentsline {chapter}{\numberline {第三十二章\hspace {.3em}}OpenStack}{279}{chapter.32}% 
+\contentsline {section}{\numberline {32.1}OpenStack简介}{279}{section.32.1}% 
+\contentsline {subsection}{\numberline {32.1.1}OpenStack常用组件介绍}{279}{subsection.32.1.1}% 
+\contentsline {section}{\numberline {32.2}安装前的准备工作}{279}{section.32.2}% 
+\contentsline {chapter}{\numberline {第三十三章\hspace {.3em}}公有云}{281}{chapter.33}% 
+\contentsline {section}{\numberline {33.1}公有云简介}{281}{section.33.1}% 
+\contentsline {part}{第八部分\hspace {1em}网络部分}{283}{part.8}% 
+\contentsline {chapter}{\numberline {第三十四章\hspace {.3em}}TCP/IP}{287}{chapter.34}% 
+\contentsline {section}{\numberline {34.1}OSI网络参考模型}{287}{section.34.1}% 
+\contentsline {subsection}{\numberline {34.1.1}TCP/IP三次握手}{288}{subsection.34.1.1}% 
+\contentsline {subsection}{\numberline {34.1.2}TCP/IP四次挥手}{288}{subsection.34.1.2}% 
+\contentsline {chapter}{\numberline {第三十五章\hspace {.3em}}H3C交换机配置}{289}{chapter.35}% 
+\contentsline {section}{\numberline {35.1}配置telnet方式登录}{289}{section.35.1}% 
+\contentsline {subsection}{\numberline {35.1.1}认证方式为Scheme时的登录配置}{289}{subsection.35.1.1}% 
+\contentsline {section}{\numberline {35.2}以太网接口配置}{289}{section.35.2}% 
+\contentsline {subsection}{\numberline {35.2.1}打开或关闭以太网接口}{289}{subsection.35.2.1}% 
+\contentsline {subsection}{\numberline {35.2.2}以太网端口基本属性配置}{290}{subsection.35.2.2}% 
+\contentsline {section}{\numberline {35.3}以太网接口的配置显示和维护}{290}{section.35.3}% 
+\contentsline {part}{第九部分\hspace {1em}附录部分}{291}{part.9}% 
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}书中的源码}{293}{appendix.A}% 
+\contentsline {section}{\numberline {A.1}第1章插图源码}{293}{section.A.1}% 
+\contentsline {section}{\numberline {A.2}第2章插图源码}{295}{section.A.2}% 
+\contentsline {section}{\numberline {A.3}第14章插图源码}{305}{section.A.3}% 
