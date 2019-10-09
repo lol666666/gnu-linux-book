@@ -1,6 +1,0 @@
-# cat playbooks/site.yml
----
-- name: apply common configuation to all nodes
-  hosts: all
-  roles:
-  - common
