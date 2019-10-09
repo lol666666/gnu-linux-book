@@ -1,7 +1,7 @@
-\section{Nginx}
-\label{sec:nginx}
+\chapter{Nginx}
+\label{chap:nginx}
 
-\subsection{关于Nginx}
+\section{关于Nginx}
 \label{subsec:AboutNginx}
 
 Nginx是由俄罗斯人Igor Sysoev为俄罗斯访问量第二Rambler.ru站
@@ -17,7 +17,7 @@ X”， 是一个高性能的HTTP和反向代理服务器，同时也是一个IM
 示，Nginx服务的主机在过去的一年里以四倍的速度增长并且在这几年里，它的排
 名还在不断上升，下图为Netcraft截止至2010年5月的统计。
 
-\subsection{Nginx的安装与启动}
+\section{Nginx的安装与启动}
 \label{subsec:InstallAndStartNginx}
 
 Linux下安装软件有三种方式，这里我以源代码编译安装为主。服务器最小化安装
@@ -65,14 +65,14 @@ cd /usr/local/src/nginx-1.8.0
 --with-http_ssl_module 启用https支持
 \end{verbatim}
 
-\subsection{Nginx的基本配置}
+\section{Nginx的基本配置}
 \label{subsec:NginxConf}
 
 Linux下基本上每个服务都会有它的主配置文件，该文件会定义服务应该如果去运
 行，使用些什么参数，启用些什么功能，相关会涉及到的一些操作文件在哪，所
 以主配置文件对服务是至关重要的。下面我们来分析一下Nginx的主配置文件。
 
-\subsubsection{Nginx主配置概述}
+\subsection{Nginx主配置概述}
 
 Linux下基本上每个服务都会有它的主配置文件，该文件会定义服务应该如果去运
 行，使用些什么参数，启用些什么功能，相关会涉及到的一些操作文件在哪，所以主
@@ -227,7 +227,7 @@ somename:8080;
 }
 \end{verbatim}
 
-\subsubsection{Nginx虚拟主机配置}
+\subsection{Nginx虚拟主机配置}
 
 利用虚拟主机技术，可以把一台真正的主机分成许多虚拟的主机，每一台虚拟主
 机都具有独立的域名和IP地址，具有完整的Internet服务器（www，FTP，email）
@@ -247,11 +247,11 @@ somename:8080;
 因此是不安全的。https可以说是http协议的安全版，就是为了满足对安全性要求
 比较高的用户而设计的。
 
-\subsection{Nginx日志管理}
+\section{Nginx日志管理}
 
-\subsection{Nginx访问控制}
+\section{Nginx访问控制}
 
-\subsection{Nginx反向代理}
+\section{Nginx反向代理}
 \label{subsec:NginxReverseProxy}
 
 反向代理（Reverse Proxy）方式是指以代理服务器来接受Internet上的连接请求，

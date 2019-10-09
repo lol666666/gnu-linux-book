@@ -1,5 +1,5 @@
-\section{DNS}
-\label{sec:dns}
+\chapter{DNS}
+\label{chap:dns}
 
 在TCP/IP网络中，IP地址是网络节点的标识。但是，IP地址是点分十进制数字，
 难以记忆。联想到在现实生活中，名字比身份证号码更容易被人记住，那么是否
@@ -7,7 +7,7 @@
 域名系统）是一种用于TCP/IP应用程序的分布式数据库，提供域名与IP地址之间
 的转换。
 
-\subsection{测试环境}
+\section{测试环境}
 \label{sec:dnsTestEnv}
 
 以下测试是在CentOS6U5 64位系统上进行测试。系统均关闭iptables及selinux，
@@ -28,7 +28,7 @@
     \end{tabular}
 \end{table}
 
-\subsection{安装及配置主DNS}
+\section{安装及配置主DNS}
 \label{sec:configMasterDNS}
 
 在master01.lavenliu.com上安装如下软件包，

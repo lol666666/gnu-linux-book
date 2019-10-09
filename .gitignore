@@ -1,0 +1,13 @@
+*.tex~
+*.aux
+*.log
+*.ind
+*.ilg
+*.el
+*.pdf
+*.out
+*.toc
+*.zip
+*.lof
+*.bbl
+*.blg
