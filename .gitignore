@@ -1,6 +1,8 @@
 *.tex~
 *.aux
 *.log
+*.lof
+*.lot
 *.ind
 *.ilg
 *.el

@@ -1,0 +1,46 @@
+
+\section{date命令的使用}
+\label{sec:dateCmd}
+
+\index{date}
+
+\small{
+\begin{verbatim}
+# 设日期
+date -s 20091112                     
+
+# 设时间
+date -s 18:30:50                     
+
+# 7天前日期
+date -d "7 days ago" +%Y%m%d         
+
+# 5分钟前时间
+date -d "5 minute ago" +%H:%M        
+
+# 一个月前
+date -d "1 month ago" +%Y%m%d        
+
+# 日期格式转换
+date +%Y-%m-%d -d '20110902'         
+
+# 日期和时间
+date +%Y-%m-%d_%X                    
+
+# 纳秒
+date +%N                             
+
+# 换算成秒计算(1970年至今的秒数)
+date -d "2012-08-13 14:00:23" +%s    
+
+# 将时间戳换算成日期
+date -d "@1363867952" +%Y-%m-%d-%T   
+
+# 将时间戳换算成日期
+date -d "1970-01-01 UTC 1363867952 seconds" +%Y-%m-%d-%T  
+
+# 格式化系统启动时间(多少秒前)
+date -d "`awk -F. '{print $1}' /proc/uptime` second ago" +"%Y-%m-%d %H:%M:%S"    
+\end{verbatim}
+}
+\normalsize

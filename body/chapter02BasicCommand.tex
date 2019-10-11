@@ -1,285 +1,60 @@
 \chapter{常用命令使用}
 \label{sec:BasicCommand}
 
-\input{body/chapter02_shortcuts}
+\input{body/commands/shortcuts}
 
-\section{使用man page获得帮助}
-\label{sec:getHelp}
+\input{body/commands/man}
 
-当我们遇到不会用的系统命令时，该怎么办呢？或许你第一个想到的
-是Baidu或Google，这样想很正常，可以节省很多时间。如果每次遇到不会的命令，
-都去找网络，个人觉得这不是一件好的事情，不利于我们的提高。
+\input{body/commands/echo}
 
-如果不依靠互联网，该怎么解决呢？那就是依赖系统自带的man page\index{man
-  page}了。通过它我们可以获取绝大部分的帮助信息，这正是锻炼我们的时候。当然我们也可以使用强大的info工具来查看帮助。
+\input{body/commands/date}
 
-\section{echo与终端颜色}
-\label{sec:echoCmd}
+\input{body/commands/yum}
 
-echo\index{echo}会将输入的字符串送往标准输出。输出的字符串间以空白字符隔开, 并在最
-后加上换行号。
+% \input{body/chapter02_zypper}
 
-参数：
+\input{body/commands/parted}
 
-\begin{enumerate}[itemsep=0pt,parsep=0pt]
-\item \-n 不要在最后自动换行 
-\item \-e 若字符串中出现以下字符，则特别加以处理，而不会将它当成一般文字输出： 
-\begin{verbatim}
-\a 发出警告声； 
-\b ***前一个字符； 
-\c 最后不加上换行符号； 
-\f 换行但光标仍旧停留在原来的位置； 
-\n 换行且光标移至行首； 
-\r 光标移至行首，但不换行； 
-\t 插入tab； 
-\v 与\f相同； 
-\\ 插入\字符； 
-\nnn 插入nnn（八进制）所代表的ASCII字符； 
-–help 显示帮助 
-–version 显示版本信息
-\end{verbatim}
-\end{enumerate}
+\input{body/commands/mount}
 
-\subsection{终端颜色}
+\input{body/commands/grep}
 
-echo字体颜色和背景颜色 
+\input{body/commands/crontab}
 
--e enable interpretation of the backslash-escaped characters listed below 
+\input{body/commands/find}
 
-字背景颜色范围:40-47
+\input{body/commands/top}
 
-\begin{table}[!htbp]
-  \centering
-  \begin{tabular}{llll}
-    \toprule
-    R & G & B & Color \\
-    \midrule
-    0 & 0 & 0 & Black \\
-    0 & 0 & 1 & Blue \\
-    0 & 1 & 0 & Green \\
-    0 & 1 & 1 & Cyan \\
-    1 & 0 & 0 & Red \\
-    1 & 0 & 1 & Magenta \\
-    1 & 1 & 0 & Yellow \\
-    1 & 1 & 1 & White \\
-    \bottomrule
-  \end{tabular}
-  \caption{颜色表\cite{computersystem}}
-  \label{tab:colorTable}
-\end{table}
+\input{body/commands/free}
 
-\begin{verbatim}
-40:黑 
-41:深红 
-42:绿 
-43:*** 
-44:蓝色 
-45:紫色 
-46:深绿 
-47:白色
-\end{verbatim}
+\input{body/commands/xargs}
 
-字颜色:30-37
+\input{body/commands/tr}
 
-ANSI控制码的说明：
+\input{body/commands/tar}
 
-\begin{verbatim}
-\e[0m 关闭所有属性 
-\e[1m 设置高亮度 
-\e[4m 下划线 
-\e[5m 闪烁 
-\e[7m 反显 
-\e[8m 消隐 
-\e[30m — \e[37m 设置前景色 
-\e[40m — \e[47m 设置背景色 
-\e[nA 光标上移n行 
-\e[nB 光标下移n行 
-\e[nC 光标右移n行 
-\e[nD 光标左移n行 
-\e[y;xH设置光标位置 
-\e[2J 清屏 
-\e[K 清除从光标到行尾的内容 
-\e[s 保存光标位置 
-\e[u 恢复光标位置 
-\e[?25l 隐藏光标 
-\e[?25h 显示光标
-\end{verbatim}
+\input{body/commands/read}
 
-下面看一个例子：
-\begin{verbatim}
-for i in `seq 0 7` ; do echo -e "\033[30;4${i}m      \033[0m"; \ 
-done
-\end{verbatim}
+\input{body/commands/cut}
 
-输出结果为：
-\begin{figure}[hbtp]
-  \centering
-  \includegraphics[width=.15\textwidth]{img/color.png}
-  \caption{终端颜色效果}
-  \label{fig:TermColor}
-\end{figure}
+\input{body/commands/sort}
 
-\section{date命令的使用}
-\label{sec:dateCmd}
-
-\index{date}
-
-\small{
-\begin{verbatim}
-# 设日期
-date -s 20091112                     
-
-# 设时间
-date -s 18:30:50                     
-
-# 7天前日期
-date -d "7 days ago" +%Y%m%d         
-
-# 5分钟前时间
-date -d "5 minute ago" +%H:%M        
-
-# 一个月前
-date -d "1 month ago" +%Y%m%d        
-
-# 日期格式转换
-date +%Y-%m-%d -d '20110902'         
-
-# 日期和时间
-date +%Y-%m-%d_%X                    
-
-# 纳秒
-date +%N                             
-
-# 换算成秒计算(1970年至今的秒数)
-date -d "2012-08-13 14:00:23" +%s    
-
-# 将时间戳换算成日期
-date -d "@1363867952" +%Y-%m-%d-%T   
-
-# 将时间戳换算成日期
-date -d "1970-01-01 UTC 1363867952 seconds" +%Y-%m-%d-%T  
-
-# 格式化系统启动时间(多少秒前)
-date -d "`awk -F. '{print $1}' /proc/uptime` second ago" +"%Y-%m-%d %H:%M:%S"    
-\end{verbatim}
-}
-\normalsize
-
-\input{body/chapter02_yum}
-
-\input{body/chapter02_zypper}
-
-\section{parted命令的使用}
-\label{sec:PartedCmd}
-
-Gnu/Linux系统的分区工具通常可以使用fdisk与parted。我们用的比较多的工具
-就是fdisk了，这里不介绍它的使用了。这里简单的介绍如何使用parted工具，对
-于分区表通常有MBR分区表和GPT分区表对于磁盘大小小于2T的磁盘，我们可以使
-用fdisk和parted命令工具进行分区对于MBR分区表的特点（通常使用fdisk命令进
-行分区）所支持的最大磁盘大小：2T最多支持4个主分区或者是3个主分区加上一
-个扩展分区对于GPT分区表的特点（使用parted命令进行分区）支持最大
-卷：18EB（1EB=1024TB）最多支持128个分区
-
-对于parted命令工具分区的介绍
-
-最后，fdisk与parted有些差异。fdisk分区完毕后，需要使用“w”命令才能保存
-之前所做的一些操作；而parted则是实时的，每一步操作不需要保存，即时生
-效。
-
-\section{mount命令的使用}
-\label{sec:mountCmd}
-
-如何挂载iso镜像文件呢？我们可以使用一下mount\index{mount}命令：
-
-\small{
-\begin{verbatim}
-[root@iLiuc ~]# mount -o loop rhel-server-5.5-i386-dvd.iso /mnt
-意思是把挂rhel-server-5.5-i386-dvd.iso载到/mnt目录下，不过
-你得事先有这个镜像文件
-\end{verbatim}
-}
-\normalsize
-
-\input{body/chapter02_grep}
-
-\input{body/chapter02_crontab}
-
-\input{body/chapter02_find}
-
-\section{top命令的使用}
-\label{sec:topCmd}
-
-top\index{top}命令可动态显示服务器的进程信息，用户可以通过按键来刷新当
-前状态。别的不多说，给个例子看看：
-
-\begin{verbatim}
-Tasks: 202 total,   2 running, 199 sleeping,   0 stopped,   1 zombie
-Cpu(s):  7.9%us,  1.9%sy,  0.0%ni, 89.5%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
-Mem:   6003152k total,  1909420k used,  4093732k free,    73688k buffers
-Swap:  6180860k total,        0k used,  6180860k free,   893544k cached
-
-  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                   
- 3852 richard   20   0 1329m 127m  31m S   22  2.2   2:11.41 vlc                                                                 
- 2891 richard    9 -11  418m 6988 4660 S    6  0.1   0:37.86 pulseaudio 
- 2880 richard   20   0 1669m  90m  35m S    5  1.6   1:35.32 gnome-shell
- 2452 root      20   0  303m  74m  61m S    4  1.3   1:23.90 Xorg
- 3051 richard   20   0  872m 200m  52m S    1  3.4   1:32.25 firefox
-   10 root      20   0     0    0    0 S    0  0.0   0:00.57 rcuos/2
-   77 root      20   0     0    0    0 R    0  0.0   0:01.30 kworker/3:1
-  909 root     -51   0     0    0    0 S    0  0.0   0:10.11 irq/48-iwlwifi
- 3025 richard   20   0  581m  19m  11m S    0  0.3   0:01.72 gnome-terminal
- 3942 richard   20   0 99.6m  15m 5028 S    0  0.3   0:02.35 python
- 4025 richard   20   0 17460 1408  980 R    0  0.0   0:00.04 top
-    1 root      20   0 24740 2620 1352 S    0  0.0   0:00.88 init
-    2 root      20   0     0    0    0 S    0  0.0   0:00.00 kthreadd
-    3 root      20   0     0    0    0 S    0  0.0   0:00.08 ksoftirqd/0
-    5 root       0 -20     0    0    0 S    0  0.0   0:00.00 kworker/0:0H                                                                            
-    6 root      20   0     0    0    0 S    0  0.0   0:01.68 kworker/u16:0
-    7 root      20   0     0    0    0 S    0  0.0   0:01.60 rcu_sched
-    8 root      20   0     0    0    0 S    0  0.0   0:01.24 rcuos/0
-    9 root      20   0     0    0    0 S    0  0.0   0:00.45 rcuos/1
-   11 root      20   0     0    0    0 S    0  0.0   0:00.28 rcuos/3
-   12 root      20   0     0    0    0 S    0  0.0   0:00.00 rcuos/4
-   13 root      20   0     0    0    0 S    0  0.0   0:00.00 rcuos/5
-   14 root      20   0     0    0    0 S    0  0.0   0:00.00 rcuos/6
-   15 root      20   0     0    0    0 S    0  0.0   0:00.00 rcuos/7
-   16 root      20   0     0    0    0 S    0  0.0   0:00.00 rcu_bh
-\end{verbatim}
-
-\input{body/chapter02_free}
-
-\section{xargs命令的使用}
-\label{sec:xargsCmd}
-\index{xargs}
-
-\section{tr命令的使用}
-\label{sec:trCmd}
-\index{tr}
-
-\input{body/chapter02_tar}
-
-\input{body/chapter02_read}
-
-\input{body/chapter02_cut}
-
-\input{body/chapter02_sort}
-
-\input{body/chapter02_lsof}
+\input{body/commands/lsof}
 
 \section{netstat命令的使用}
 \label{sec:netstatCmd}
 \index{netstat}
 
-\input{body/chapter02_tcpdump}
+\input{body/commands/tcpdump}
 
 \section{traceroute命令的使用}
 \label{sec:tracerouteCmd}
 
-\input{body/chapter02_wget}
+\input{body/commands/wget}
 
-\input{body/chapter02_screen}
+\input{body/commands/screen}
 
-\input{body/chapter02_iptables}
+\input{body/commands/iptables}
 
 \section{qperf命令的使用}
 \label{sec:qperfCmd}
@@ -651,4 +426,4 @@ sar命令的用法很多，有时判断一个问题，需要几个sar命令结�
 怀疑CPU存在瓶颈，可用sar -u 和sar -q来看，怀疑I/O存在瓶颈，可用sar -b、
 sar -u和sar-d来看。
 
-% \input{body/chapter02_ip}
+\input{body/commands/ip}

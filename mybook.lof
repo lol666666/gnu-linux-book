@@ -7,35 +7,19 @@
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {网友恶搞}}}{10}{subfigure.2.4}% 
 \addvspace {10.0pt}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces 终端颜色效果\relax }}{17}{figure.caption.8}% 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces kvm桥接方式的网络拓扑\relax }}{44}{figure.caption.22}% 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces kvm桥接方式的网络拓扑\relax }}{38}{figure.caption.19}% 
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces vim粘贴板一览\relax }}{55}{figure.caption.29}% 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces vim配置文件效果\relax }}{57}{figure.caption.30}% 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces vim粘贴板一览\relax }}{51}{figure.caption.26}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces vim配置文件效果\relax }}{53}{figure.caption.27}% 
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces awk工作流程\relax }}{60}{figure.caption.31}% 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces sed工作流程\relax }}{67}{figure.caption.33}% 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces for工作流程\relax }}{73}{figure.caption.36}% 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces do工作流程\relax }}{74}{figure.caption.37}% 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces while工作流程\relax }}{75}{figure.caption.38}% 
-\addvspace {10.0pt}
-\addvspace {10.0pt}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces MySQL复制的工作原理\relax }}{100}{figure.caption.40}% 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces awk工作流程\relax }}{56}{figure.caption.28}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces sed工作流程\relax }}{63}{figure.caption.30}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces for工作流程\relax }}{69}{figure.caption.33}% 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces do工作流程\relax }}{70}{figure.caption.34}% 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces while工作流程\relax }}{71}{figure.caption.35}% 
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\addvspace {10.0pt}
-\addvspace {10.0pt}
-\addvspace {10.0pt}
-\addvspace {10.0pt}
-\addvspace {10.0pt}
-\addvspace {10.0pt}
-\contentsline {figure}{\numberline {14.1}{\ignorespaces PXE WorkFlow\relax }}{143}{figure.caption.42}% 
-\contentsline {figure}{\numberline {14.2}{\ignorespaces PXE工作流程图\relax }}{144}{figure.caption.43}% 
-\addvspace {10.0pt}
-\addvspace {10.0pt}
-\addvspace {10.0pt}
-\contentsline {figure}{\numberline {17.1}{\ignorespaces 两种代理模式比较\relax }}{157}{figure.caption.44}% 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {squid代理模式}}}{157}{subfigure.1.1}% 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {nginx代理模式}}}{157}{subfigure.1.2}% 
+\contentsline {figure}{\numberline {6.1}{\ignorespaces MySQL复制的工作原理\relax }}{96}{figure.caption.37}% 
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
@@ -43,34 +27,50 @@
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {24.1}{\ignorespaces heartbeat实验拓扑\relax }}{185}{figure.caption.46}% 
+\addvspace {10.0pt}
+\contentsline {figure}{\numberline {14.1}{\ignorespaces PXE WorkFlow\relax }}{139}{figure.caption.39}% 
+\contentsline {figure}{\numberline {14.2}{\ignorespaces PXE工作流程图\relax }}{140}{figure.caption.40}% 
+\addvspace {10.0pt}
+\addvspace {10.0pt}
+\addvspace {10.0pt}
+\contentsline {figure}{\numberline {17.1}{\ignorespaces 两种代理模式比较\relax }}{153}{figure.caption.41}% 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {squid代理模式}}}{153}{subfigure.1.1}% 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {nginx代理模式}}}{153}{subfigure.1.2}% 
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {29.1}{\ignorespaces PXE工作原理示意图\relax }}{208}{figure.caption.47}% 
+\addvspace {10.0pt}
+\addvspace {10.0pt}
+\contentsline {figure}{\numberline {24.1}{\ignorespaces heartbeat实验拓扑\relax }}{181}{figure.caption.43}% 
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {32.1}{\ignorespaces 网络七层模型\relax }}{217}{figure.caption.49}% 
-\contentsline {figure}{\numberline {32.2}{\ignorespaces Playbook\relax }}{226}{figure.caption.51}% 
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {34.1}{\ignorespaces salt通信示意图\relax }}{233}{figure.caption.52}% 
-\addvspace {10.0pt}
-\addvspace {10.0pt}
-\addvspace {10.0pt}
-\contentsline {figure}{\numberline {37.1}{\ignorespaces Libvirt支持的虚拟化类型\relax }}{252}{figure.caption.60}% 
-\contentsline {figure}{\numberline {37.2}{\ignorespaces 节点、域与Hypervisor之间的关系\relax }}{252}{figure.caption.61}% 
-\addvspace {10.0pt}
-\contentsline {figure}{\numberline {38.1}{\ignorespaces 容器架构模型\relax }}{271}{figure.caption.73}% 
-\contentsline {figure}{\numberline {38.2}{\ignorespaces 虚拟化架构模型\relax }}{272}{figure.caption.74}% 
-\contentsline {figure}{\numberline {38.3}{\ignorespaces 系统架构\relax }}{273}{figure.caption.76}% 
+\contentsline {figure}{\numberline {29.1}{\ignorespaces PXE工作原理示意图\relax }}{204}{figure.caption.44}% 
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {41.1}{\ignorespaces OSI七层模型\relax }}{283}{figure.caption.77}% 
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {42.1}{\ignorespaces Linux虚拟文件（测试图形）\relax }}{285}{figure.caption.78}% 
+\contentsline {figure}{\numberline {33.1}{\ignorespaces 网络七层模型\relax }}{215}{figure.caption.46}% 
+\contentsline {figure}{\numberline {33.2}{\ignorespaces Playbook\relax }}{224}{figure.caption.48}% 
+\addvspace {10.0pt}
+\contentsline {figure}{\numberline {34.1}{\ignorespaces salt通信示意图\relax }}{229}{figure.caption.49}% 
+\addvspace {10.0pt}
+\addvspace {10.0pt}
+\addvspace {10.0pt}
+\contentsline {figure}{\numberline {37.1}{\ignorespaces Libvirt支持的虚拟化类型\relax }}{248}{figure.caption.57}% 
+\contentsline {figure}{\numberline {37.2}{\ignorespaces 节点、域与Hypervisor之间的关系\relax }}{248}{figure.caption.58}% 
+\addvspace {10.0pt}
+\contentsline {figure}{\numberline {38.1}{\ignorespaces 容器架构模型\relax }}{267}{figure.caption.70}% 
+\contentsline {figure}{\numberline {38.2}{\ignorespaces 虚拟化架构模型\relax }}{268}{figure.caption.71}% 
+\contentsline {figure}{\numberline {38.3}{\ignorespaces 系统架构\relax }}{269}{figure.caption.73}% 
+\addvspace {10.0pt}
+\addvspace {10.0pt}
+\addvspace {10.0pt}
+\contentsline {figure}{\numberline {41.1}{\ignorespaces OSI七层模型\relax }}{279}{figure.caption.74}% 
+\addvspace {10.0pt}
+\contentsline {figure}{\numberline {42.1}{\ignorespaces Linux虚拟文件（测试图形）\relax }}{281}{figure.caption.75}% 
 \addvspace {10.0pt}

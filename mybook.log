@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.10.8)  9 OCT 2019 18:10
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.10.8)  11 OCT 2019 17:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1465,7 +1465,8 @@ File: img/lw.png Graphic file (type bmp)
 
 ]
 第二章
-(./body/chapter02_shortcuts.tex [13] [14]) [15]
+(./body/commands/shortcuts.tex [13] [14]) (./body/commands/man.tex)
+(./body/commands/echo.tex [15]
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -1490,20 +1491,20 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
  [16]
-Overfull \hbox (2.29448pt too wide) in paragraph at lines 110--110
+Overfull \hbox (2.29448pt too wide) in paragraph at lines 96--96
 []\TU/CourierNew(0)/m/n/10.95 for i in `seq 0 7` ; do echo -e "\033[30;4${i}m  
     \033[0m"; \[] 
  []
 
 File: img/color.png Graphic file (type bmp)
 <img/color.png>
-[17]
-Overfull \hbox (43.82152pt too wide) in paragraph at lines 163--163
+) (./body/commands/date.tex [17]
+Overfull \hbox (43.82152pt too wide) in paragraph at lines 43--43
 []\TU/CourierNew(0)/m/n/10 date -d "`awk -F. '{print $1}' /proc/uptime` second 
 ago" +"%Y-%m-%d %H:%M:%S"[] 
  []
 
-(./body/chapter02_yum.tex [18]
+) (./body/commands/yum.tex [18]
 Overfull \hbox (23.09845pt too wide) in paragraph at lines 62--62
  []\TU/CourierNew(0)/m/n/10.95 Deployment_Guide-en-US.noarch    5.2-11         
       installed[] 
@@ -1587,327 +1588,212 @@ Overfull \hbox (55.9537pt too wide) in paragraph at lines 76--76
       rhel-debuginfo[] 
  []
 
-[19]) (./body/chapter02_zypper.tex
-Overfull \hbox (61.82445pt too wide) in paragraph at lines 17--17
-[]\TU/CourierNew(0)/m/n/10 [root@master ~]# env x='() { :;}; echo vulnerable' b
-ash -c "echo this is a test"[] 
- []
-
-[20]
-Overfull \hbox (35.15pt too wide) in paragraph at lines 34--34
-[]  \TU/CourierNew(0)/m/n/10.95 inflating: CVE-2014-6271/libreadline5-32bit-5.2
--147.20.1.x86_64.rpm[] 
- []
-
-[21] [22] [23]
-Overfull \hbox (2.29428pt too wide) in paragraph at lines 217--217
-[]\TU/CourierNew(0)/m/n/10.95 S | Name                | Summary                
-         | Type[] 
- []
-
-
-Overfull \hbox (41.72058pt too wide) in paragraph at lines 218--218
-[]\TU/CourierNew(0)/m/n/10.95 --+---------------------+------------------------
----------+-----------[] 
- []
-
-
-Overfull \hbox (22.00768pt too wide) in paragraph at lines 219--219
-[]\TU/CourierNew(0)/m/n/10.95 i | libsnmp15           | Shared Libraries from n
-et-snmp  | package[] 
- []
-
-
-Overfull \hbox (22.00772pt too wide) in paragraph at lines 220--220
-[]  \TU/CourierNew(0)/m/n/10.95 | libsnmp15-32bit     | Shared Libraries from n
-et-snmp  | package[] 
- []
-
-
-Overfull \hbox (22.00755pt too wide) in paragraph at lines 221--221
-[]\TU/CourierNew(0)/m/n/10.95 i | net-snmp            | SNMP Daemon            
-         | package[] 
- []
-
-
-Overfull \hbox (41.72076pt too wide) in paragraph at lines 222--222
-[]  \TU/CourierNew(0)/m/n/10.95 | net-snmp            | SNMP Daemon            
-         | srcpackage[] 
- []
-
-
-Overfull \hbox (22.00764pt too wide) in paragraph at lines 223--223
-[]  \TU/CourierNew(0)/m/n/10.95 | perl-Net-SNMP       | Net::SNMP Perl Module  
-         | package[] 
- []
-
-
-Overfull \hbox (41.72086pt too wide) in paragraph at lines 224--224
-[]  \TU/CourierNew(0)/m/n/10.95 | perl-Net-SNMP       | Net::SNMP Perl Module  
-         | srcpackage[] 
- []
-
-
-Overfull \hbox (22.00755pt too wide) in paragraph at lines 225--225
-[]\TU/CourierNew(0)/m/n/10.95 i | perl-SNMP           | Perl-SNMP              
-         | package[] 
- []
-
-
-Overfull \hbox (22.00761pt too wide) in paragraph at lines 226--226
-[]  \TU/CourierNew(0)/m/n/10.95 | php5-snmp           | PHP5 Extension Module  
-         | package[] 
- []
-
-
-Overfull \hbox (22.00763pt too wide) in paragraph at lines 227--227
-[]  \TU/CourierNew(0)/m/n/10.95 | php53-snmp          | PHP5 Extension Module  
-         | package[] 
- []
-
-
-Overfull \hbox (22.00774pt too wide) in paragraph at lines 228--228
-[]  \TU/CourierNew(0)/m/n/10.95 | rsyslog-module-snmp | SNMP support module for
- rsyslog | package[] 
- []
-
-
-Overfull \hbox (22.00766pt too wide) in paragraph at lines 229--229
-[]\TU/CourierNew(0)/m/n/10.95 i | snmp-mibs           | MIB files from net-snmp
-         | package[] 
- []
-
-
-Overfull \hbox (1579.35072pt too wide) in paragraph at lines 249--249
-[]\TU/CourierNew(0)/m/n/10.95 This package was originally based on the CMU 2.1.
-2.1 snmp verbatim.It has been greatly modified, restructured, enhanced, and fix
-ed.It hardly looks the same as anything that CMU has ever released.It was renam
-ed from cmu-snmp to ucd-snmp in 1995 and later renamedfrom ucd-snmp to net-snmp
- in November 2000.[] 
- []
-
-[24]
-Overfull \hbox (153.42915pt too wide) in paragraph at lines 298--298
-[]\TU/CourierNew(0)/m/n/10.95 Overall download size: 543.0 KiB. After the opera
-tion, additional 1.6 MiB will be used.[] 
- []
-
-
-Overfull \hbox (173.14238pt too wide) in paragraph at lines 300--300
-[]\TU/CourierNew(0)/m/n/10.95 Retrieving package perl-SNMP-5.4.2.1-8.12.6.1.x86
-_64 (1/2), 176.0 KiB (609.0 KiB unpacked)[] 
- []
-
-
-Overfull \hbox (153.42918pt too wide) in paragraph at lines 301--301
-[]\TU/CourierNew(0)/m/n/10.95 Retrieving package net-snmp-5.4.2.1-8.12.6.1.x86_
-64 (2/2), 367.0 KiB (1.0 MiB unpacked)[] 
- []
-
-) [25] (./body/chapter02_grep.tex
+[19]) (./body/commands/parted.tex) (./body/commands/mount.tex)
+(./body/commands/grep.tex [20]
 Overfull \hbox (22.00781pt too wide) in paragraph at lines 60--60
 []  \TU/CourierNew(0)/m/n/10.95 inet addr:192.168.18.18  Bcast:192.168.18.255  
 Mask:255.255.255.0[] 
  []
 
-[26]
+[21]
 Overfull \hbox (22.00781pt too wide) in paragraph at lines 71--71
 []  \TU/CourierNew(0)/m/n/10.95 inet addr:192.168.18.18  Bcast:192.168.18.255  
 Mask:255.255.255.0[] 
  []
 
-) (./body/chapter02_crontab.tex [27]
+) (./body/commands/crontab.tex
 Overfull \hbox (13.81664pt too wide) in paragraph at lines 29--29
 []   \TU/FangSong(0)/m/n/10 上 面 语 句 的 意 思 是 ， 每 \TU/CourierNew(0)/m/n/10 2 \TU/
 FangSong(0)/m/n/10 分 钟 去 执 行 \TU/CourierNew(0)/m/n/10 /usr/lib/clear-server/cle
 argard \TU/FangSong(0)/m/n/10 目 录 下 的 [] 
  []
 
-) (./body/chapter02_find.tex [28])
-Overfull \hbox (28.57877pt too wide) in paragraph at lines 216--216
+) (./body/commands/find.tex [22]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23])
+(./body/commands/top.tex
+Overfull \hbox (28.57877pt too wide) in paragraph at lines 9--9
 []\TU/CourierNew(0)/m/n/10.95 Tasks: 202 total,   2 running, 199 sleeping,   0 
 stopped,   1 zombie[] 
  []
 
 
-Overfull \hbox (94.28943pt too wide) in paragraph at lines 217--217
+Overfull \hbox (94.28943pt too wide) in paragraph at lines 10--10
 []\TU/CourierNew(0)/m/n/10.95 Cpu(s):  7.9%us,  1.9%sy,  0.0%ni, 89.5%id,  0.7%
 wa,  0.0%hi,  0.0%si,  0.0%st[] 
  []
 
 
-Overfull \hbox (54.86307pt too wide) in paragraph at lines 218--218
+Overfull \hbox (54.86307pt too wide) in paragraph at lines 11--11
 []\TU/CourierNew(0)/m/n/10.95 Mem:   6003152k total,  1909420k used,  4093732k 
 free,    73688k buffers[] 
  []
 
 
-Overfull \hbox (48.29198pt too wide) in paragraph at lines 219--219
+Overfull \hbox (48.29198pt too wide) in paragraph at lines 12--12
 []\TU/CourierNew(0)/m/n/10.95 Swap:  6180860k total,        0k used,  6180860k 
 free,   893544k cached[] 
  []
 
 
-Overfull \hbox (28.57875pt too wide) in paragraph at lines 221--221
+Overfull \hbox (28.57875pt too wide) in paragraph at lines 14--14
 []  \TU/CourierNew(0)/m/n/10.95 PID USER      PR  NI  VIRT  RES  SHR S %CPU %ME
 M    TIME+  COMMAND[] 
  []
 
 
-Overfull \hbox (2.2945pt too wide) in paragraph at lines 222--222
+Overfull \hbox (2.2945pt too wide) in paragraph at lines 15--15
 [] \TU/CourierNew(0)/m/n/10.95 3852 richard   20   0 1329m 127m  31m S   22  2.
 2   2:11.41 vlc[] 
  []
 
 
-Overfull \hbox (48.29195pt too wide) in paragraph at lines 223--223
+Overfull \hbox (48.29195pt too wide) in paragraph at lines 16--16
 [] \TU/CourierNew(0)/m/n/10.95 2891 richard    9 -11  418m 6988 4660 S    6  0.
 1   0:37.86 pulseaudio[] 
  []
 
 
-Overfull \hbox (54.86302pt too wide) in paragraph at lines 224--224
+Overfull \hbox (54.86302pt too wide) in paragraph at lines 17--17
 [] \TU/CourierNew(0)/m/n/10.95 2880 richard   20   0 1669m  90m  35m S    5  1.
 6   1:35.32 gnome-shell[] 
  []
 
 
-Overfull \hbox (8.86551pt too wide) in paragraph at lines 225--225
+Overfull \hbox (8.86551pt too wide) in paragraph at lines 18--18
 [] \TU/CourierNew(0)/m/n/10.95 2452 root      20   0  303m  74m  61m S    4  1.
 3   1:23.90 Xorg[] 
  []
 
 
-Overfull \hbox (28.57872pt too wide) in paragraph at lines 226--226
+Overfull \hbox (28.57872pt too wide) in paragraph at lines 19--19
 [] \TU/CourierNew(0)/m/n/10.95 3051 richard   20   0  872m 200m  52m S    1  3.
 4   1:32.25 firefox[] 
  []
 
 
-Overfull \hbox (28.5786pt too wide) in paragraph at lines 227--227
+Overfull \hbox (28.5786pt too wide) in paragraph at lines 20--20
 []   \TU/CourierNew(0)/m/n/10.95 10 root      20   0     0    0    0 S    0  0.
 0   0:00.57 rcuos/2[] 
  []
 
 
-Overfull \hbox (54.86288pt too wide) in paragraph at lines 228--228
+Overfull \hbox (54.86288pt too wide) in paragraph at lines 21--21
 []   \TU/CourierNew(0)/m/n/10.95 77 root      20   0     0    0    0 R    0  0.
 0   0:01.30 kworker/3:1[] 
  []
 
-[29]
-Overfull \hbox (74.57611pt too wide) in paragraph at lines 229--229
+
+Overfull \hbox (74.57611pt too wide) in paragraph at lines 22--22
 []  \TU/CourierNew(0)/m/n/10.95 909 root     -51   0     0    0    0 S    0  0.
 0   0:10.11 irq/48-iwlwifi[] 
  []
 
 
-Overfull \hbox (74.5762pt too wide) in paragraph at lines 230--230
+Overfull \hbox (74.5762pt too wide) in paragraph at lines 23--23
 [] \TU/CourierNew(0)/m/n/10.95 3025 richard   20   0  581m  19m  11m S    0  0.
 3   0:01.72 gnome-terminal[] 
  []
 
 
-Overfull \hbox (22.00768pt too wide) in paragraph at lines 231--231
+Overfull \hbox (22.00768pt too wide) in paragraph at lines 24--24
 [] \TU/CourierNew(0)/m/n/10.95 3942 richard   20   0 99.6m  15m 5028 S    0  0.
 3   0:02.35 python[] 
  []
 
 
-Overfull \hbox (2.29448pt too wide) in paragraph at lines 232--232
+Overfull \hbox (2.29448pt too wide) in paragraph at lines 25--25
 [] \TU/CourierNew(0)/m/n/10.95 4025 richard   20   0 17460 1408  980 R    0  0.
 0   0:00.04 top[] 
  []
 
 
-Overfull \hbox (8.8655pt too wide) in paragraph at lines 233--233
+Overfull \hbox (8.8655pt too wide) in paragraph at lines 26--26
 []    \TU/CourierNew(0)/m/n/10.95 1 root      20   0 24740 2620 1352 S    0  0.
 0   0:00.88 init[] 
  []
 
 
-Overfull \hbox (35.14966pt too wide) in paragraph at lines 234--234
+Overfull \hbox (35.14966pt too wide) in paragraph at lines 27--27
 []    \TU/CourierNew(0)/m/n/10.95 2 root      20   0     0    0    0 S    0  0.
 0   0:00.00 kthreadd[] 
  []
 
 
-Overfull \hbox (54.86287pt too wide) in paragraph at lines 235--235
+Overfull \hbox (54.86287pt too wide) in paragraph at lines 28--28
 []    \TU/CourierNew(0)/m/n/10.95 3 root      20   0     0    0    0 S    0  0.
 0   0:00.08 ksoftirqd/0[] 
  []
 
 
-Overfull \hbox (61.43394pt too wide) in paragraph at lines 236--236
+Overfull \hbox (61.43394pt too wide) in paragraph at lines 29--29
 []    \TU/CourierNew(0)/m/n/10.95 5 root       0 -20     0    0    0 S    0  0.
 0   0:00.00 kworker/0:0H[] 
  []
 
 
-Overfull \hbox (68.00499pt too wide) in paragraph at lines 237--237
+Overfull \hbox (68.00499pt too wide) in paragraph at lines 30--30
 []    \TU/CourierNew(0)/m/n/10.95 6 root      20   0     0    0    0 S    0  0.
 0   0:01.68 kworker/u16:0[] 
  []
 
 
-Overfull \hbox (41.72072pt too wide) in paragraph at lines 238--238
+Overfull \hbox (41.72072pt too wide) in paragraph at lines 31--31
 []    \TU/CourierNew(0)/m/n/10.95 7 root      20   0     0    0    0 S    0  0.
 0   0:01.60 rcu_sched[] 
  []
 
 
-Overfull \hbox (28.57858pt too wide) in paragraph at lines 239--239
+Overfull \hbox (28.57858pt too wide) in paragraph at lines 32--32
 []    \TU/CourierNew(0)/m/n/10.95 8 root      20   0     0    0    0 S    0  0.
 0   0:01.24 rcuos/0[] 
  []
 
 
-Overfull \hbox (28.57858pt too wide) in paragraph at lines 240--240
+Overfull \hbox (28.57858pt too wide) in paragraph at lines 33--33
 []    \TU/CourierNew(0)/m/n/10.95 9 root      20   0     0    0    0 S    0  0.
 0   0:00.45 rcuos/1[] 
  []
 
 
-Overfull \hbox (28.5786pt too wide) in paragraph at lines 241--241
+Overfull \hbox (28.5786pt too wide) in paragraph at lines 34--34
 []   \TU/CourierNew(0)/m/n/10.95 11 root      20   0     0    0    0 S    0  0.
 0   0:00.28 rcuos/3[] 
  []
 
 
-Overfull \hbox (28.5786pt too wide) in paragraph at lines 242--242
+Overfull \hbox (28.5786pt too wide) in paragraph at lines 35--35
 []   \TU/CourierNew(0)/m/n/10.95 12 root      20   0     0    0    0 S    0  0.
 0   0:00.00 rcuos/4[] 
  []
 
 
-Overfull \hbox (28.5786pt too wide) in paragraph at lines 243--243
+Overfull \hbox (28.5786pt too wide) in paragraph at lines 36--36
 []   \TU/CourierNew(0)/m/n/10.95 13 root      20   0     0    0    0 S    0  0.
 0   0:00.00 rcuos/5[] 
  []
 
 
-Overfull \hbox (28.5786pt too wide) in paragraph at lines 244--244
+Overfull \hbox (28.5786pt too wide) in paragraph at lines 37--37
 []   \TU/CourierNew(0)/m/n/10.95 14 root      20   0     0    0    0 S    0  0.
 0   0:00.00 rcuos/6[] 
  []
 
 
-Overfull \hbox (28.5786pt too wide) in paragraph at lines 245--245
+Overfull \hbox (28.5786pt too wide) in paragraph at lines 38--38
 []   \TU/CourierNew(0)/m/n/10.95 15 root      20   0     0    0    0 S    0  0.
 0   0:00.00 rcuos/7[] 
  []
 
-
-Overfull \hbox (22.00754pt too wide) in paragraph at lines 246--246
+[24]
+Overfull \hbox (22.00754pt too wide) in paragraph at lines 39--39
 []   \TU/CourierNew(0)/m/n/10.95 16 root      20   0     0    0    0 S    0  0.
 0   0:00.00 rcu_bh[] 
  []
 
-(./body/chapter02_free.tex) (./body/chapter02_tar.tex
-Underfull \vbox (badness 3407) has occurred while \output is active []
-
- [30]
-[31]
+) (./body/commands/free.tex) (./body/commands/xargs.tex)
+(./body/commands/tr.tex) (./body/commands/tar.tex [25]
 Overfull \hbox (97.8303pt too wide) in paragraph at lines 71--71
 []   \TU/FangSong(0)/m/n/10 上 面 的 例 子 我 们 使 用 \TU/CourierNew(0)/m/n/10 -v \TU/F
 angSong(0)/m/n/10 选 项 ， 使 我 们 可 以 看 到 过 程 。 其 中 \TU/CourierNew(0)/m/n/10 360fy.
@@ -1923,19 +1809,19 @@ rierNew(0)/m/n/10 bz2 \TU/FangSong(0)/m/n/10 压 缩 的 方 式 ， 我 们 使
 是 通 用 的 [] 
  []
 
-) (./body/chapter02_read.tex) (./body/chapter02_cut.tex [32]
+[26]) (./body/commands/read.tex) (./body/commands/cut.tex
 Overfull \hbox (8.86562pt too wide) in paragraph at lines 42--42
 []\TU/CourierNew(0)/m/n/10.95 # ifconfig wlan0 | grep 'inet addr' | cut -d: -f2
  | cut -d' ' -f1[] 
  []
 
-) (./body/chapter02_sort.tex [33]) (./body/chapter02_lsof.tex
+[27]) (./body/commands/sort.tex) (./body/commands/lsof.tex [28]
 Overfull \hbox (192.85544pt too wide) in paragraph at lines 23--23
 []\TU/CourierNew(0)/m/n/10.95 sshd    7892 root   3u   IPv6   6757       TCP 10
 .10.1.5:ssh->192.168.1.5:49901 (ESTABLISHED)[] 
  []
 
-[34]
+
 Overfull \hbox (15.43675pt too wide) in paragraph at lines 37--37
 []\TU/CourierNew(0)/m/n/10.95 # show connections based on the host and the port
  using @host:port[] 
@@ -1947,7 +1833,7 @@ Overfull \hbox (35.14995pt too wide) in paragraph at lines 46--46
 d what they're doing[] 
  []
 
-
+[29]
 Overfull \hbox (28.57886pt too wide) in paragraph at lines 53--53
 []\TU/CourierNew(0)/m/n/10.95 # show what all users are doing except a certain 
 user using -u ^user[] 
@@ -1960,7 +1846,7 @@ Overfull \hbox (56.83789pt too wide) in paragraph at lines 73--75
 /TimesNewRoman(0)/m/n/10.95 /var/log/messages
  []
 
-[35]
+
 Overfull \hbox (61.43416pt too wide) in paragraph at lines 79--79
 []\TU/CourierNew(0)/m/n/10.95 syslog-ng 1493 root   10w   REG    8,2 57599903 3
 080573 /var/log/messages[] 
@@ -1984,7 +1870,7 @@ Overfull \hbox (114.0027pt too wide) in paragraph at lines 104--104
 0573 /var/log/messages (deleted)[] 
  []
 
-
+[30]
 Overfull \hbox (87.71849pt too wide) in paragraph at lines 113--113
 []\TU/CourierNew(0)/m/n/10.95 Oct  9 03:55:32 linux syslog-ng[5747]: syslog-ng 
 starting up; version='2.0.9'[] 
@@ -2044,13 +1930,13 @@ Overfull \hbox (87.71849pt too wide) in paragraph at lines 122--122
 starting up; version='2.0.9'[] 
  []
 
-[36]
+
 Overfull \hbox (61.43414pt too wide) in paragraph at lines 140--140
 []\TU/CourierNew(0)/m/n/10.95 syslog-ng 3819 root    4w   REG    8,2 57608271 3
 080449 /var/log/messages[] 
  []
 
-) (./body/chapter02_tcpdump.tex [37]
+) (./body/commands/tcpdump.tex [31]
 Overfull \hbox (19.81761pt too wide) in paragraph at lines 50--50
 []\TU/CourierNew(0)/m/n/10 #  \TU/FangSong(0)/m/n/10 想 要 获 取 主 机 \TU/CourierNew
 (0)/m/n/10 210.27.38.1 \TU/FangSong(0)/m/n/10 和 主 机 \TU/CourierNew(0)/m/n/10 21
@@ -2066,8 +1952,11 @@ rNew(0)/m/n/10 210.27.38.1 \TU/FangSong(0)/m/n/10 除 了 和 主 机 \TU/Courie
 n/10 ip \TU/FangSong(0)/m/n/10 包 ， 则 ： [] 
  []
 
-) (./body/chapter02_wget.tex) (./body/chapter02_screen.tex [38])
-(./body/chapter02_iptables.tex [39]
+) (./body/commands/wget.tex) (./body/commands/screen.tex [32])
+(./body/commands/iptables.tex [33]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34]
 Overfull \hbox (54.86288pt too wide) in paragraph at lines 83--83
 []\TU/CourierNew(0)/m/n/10.95 8.3) \TU/FangSong(0)/m/n/10.95 通 过 \TU/CourierNew
 (0)/m/n/10.95 MASQUERADE \TU/FangSong(0)/m/n/10.95 设 定 来 源 于 \TU/CourierNew(0)/
@@ -2079,7 +1968,7 @@ TU/FangSong(0)/m/n/10.95 转 发 出 去 []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40]
+ [35]
 Overfull \hbox (100.86028pt too wide) in paragraph at lines 111--111
 []\TU/CourierNew(0)/m/n/10.95 10.2) \TU/FangSong(0)/m/n/10.95 通 过 \TU/CourierNe
 w(0)/m/n/10.95 DNAT \TU/FangSong(0)/m/n/10.95 设 定 为 所 有 访 问 \TU/CourierNew(0)/m
@@ -2107,11 +1996,7 @@ Overfull \hbox (28.57884pt too wide) in paragraph at lines 122--122
 -dport 25 -j ACCEPT[] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [41]
-[42]
+[36]
 Overfull \hbox (28.57887pt too wide) in paragraph at lines 200--200
 []\TU/CourierNew(0)/m/n/10.95 [root@server ~]# iptables -t nat -A POSTROUTING -
 s 192.168.56.0/24 \[] 
@@ -2124,43 +2009,41 @@ Overfull \hbox (43.42128pt too wide) in paragraph at lines 221--228
 0[]\TU/SimSun(0)/m/n/10.95 。|
  []
 
+[37]
 File: graph/kvm_network.pdf Graphic file (type pdf)
 <use graph/kvm_network.pdf>
-) [43]
-Underfull \vbox (badness 6927) has occurred while \output is active []
-
- [44]
-Overfull \hbox (2.29462pt too wide) in paragraph at lines 343--343
+) [38]
+Overfull \hbox (2.29462pt too wide) in paragraph at lines 118--118
 []\TU/CourierNew(0)/m/n/10.95 # wget https://iperf.fr/download/iperf_2.0.2/iper
 f_2.0.2-4_amd64[] 
  []
 
-[45]
-Overfull \hbox (9.95633pt too wide) in paragraph at lines 369--369
+[39]
+Overfull \hbox (9.95633pt too wide) in paragraph at lines 144--144
  []\TU/CourierNew(0)/m/n/10.95 A0305010:~ # iperf --udp --client 172.16.25.39 -
 -interval 1 \[] 
  []
 
 
-Overfull \hbox (94.28926pt too wide) in paragraph at lines 396--396
+Overfull \hbox (94.28926pt too wide) in paragraph at lines 171--171
 []\TU/CourierNew(0)/m/n/10.95 procs -----------memory---------- ---swap-- -----
 io---- --system-- ----cpu----[] 
  []
 
 
-Overfull \hbox (94.2893pt too wide) in paragraph at lines 397--397
+Overfull \hbox (94.2893pt too wide) in paragraph at lines 172--172
 []\TU/CourierNew(0)/m/n/10.95 r b   swpd free buff cache          si so      bi
  bo      in cs    us sy id wa[] 
  []
 
 
-Overfull \hbox (81.14714pt too wide) in paragraph at lines 398--398
+Overfull \hbox (81.14714pt too wide) in paragraph at lines 173--173
 []\TU/CourierNew(0)/m/n/10.95 0 0   100152 2436 97200 289740       0 1       34
  45       99 33    0 0 99 0[] 
  []
 
-[46] [47] [48]
-Overfull \hbox (81.14723pt too wide) in paragraph at lines 568--568
+[40] [41] [42]
+Overfull \hbox (81.14723pt too wide) in paragraph at lines 343--343
 []\TU/CourierNew(0)/m/n/10.95 11:06:43 device \TU/FangSong(0)/m/n/10.95 　 \TU/C
 ourierNew(0)/m/n/10.95 %busy \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)/
 m/n/10.95 avque \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)/m/n/10.95 r+w
@@ -2169,7 +2052,7 @@ g(0)/m/n/10.95 　 　 \TU/CourierNew(0)/m/n/10.95 avwait avserv (-d)[]
  []
 
 
-Overfull \hbox (28.57863pt too wide) in paragraph at lines 569--569
+Overfull \hbox (28.57863pt too wide) in paragraph at lines 344--344
 []\TU/CourierNew(0)/m/n/10.95 11:07:13 wd-0 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU
 /CourierNew(0)/m/n/10.95 1.47 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)
 /m/n/10.95 2.75 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)/m/n/10.95 4.6
@@ -2178,7 +2061,7 @@ g(0)/m/n/10.95 　 　  \TU/CourierNew(0)/m/n/10.95 5.50 3.14[]
  []
 
 
-Overfull \hbox (35.1497pt too wide) in paragraph at lines 570--570
+Overfull \hbox (35.1497pt too wide) in paragraph at lines 345--345
 []\TU/CourierNew(0)/m/n/10.95 11:07:43 wd-0 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU
 /CourierNew(0)/m/n/10.95 0.43 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)
 /m/n/10.95 18.77 \TU/FangSong(0)/m/n/10.95 　 　  \TU/CourierNew(0)/m/n/10.95 3.0
@@ -2187,7 +2070,7 @@ Overfull \hbox (35.1497pt too wide) in paragraph at lines 570--570
  []
 
 
-Overfull \hbox (28.57861pt too wide) in paragraph at lines 571--571
+Overfull \hbox (28.57861pt too wide) in paragraph at lines 346--346
 []\TU/CourierNew(0)/m/n/10.95 11:08:13 wd-0 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU
 /CourierNew(0)/m/n/10.95 0.77 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)
 /m/n/10.95 2.78 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)/m/n/10.95 2.7
@@ -2196,7 +2079,7 @@ Overfull \hbox (28.57861pt too wide) in paragraph at lines 571--571
  []
 
 
-Overfull \hbox (35.14972pt too wide) in paragraph at lines 572--572
+Overfull \hbox (35.14972pt too wide) in paragraph at lines 347--347
 []\TU/CourierNew(0)/m/n/10.95 11:08:43 wd-0 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU
 /CourierNew(0)/m/n/10.95 1.10 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)
 /m/n/10.95 11.18 \TU/FangSong(0)/m/n/10.95 　 　  \TU/CourierNew(0)/m/n/10.95 4.1
@@ -2205,7 +2088,7 @@ g(0)/m/n/10.95 　 　  \TU/CourierNew(0)/m/n/10.95 27.32 2.68[]
  []
 
 
-Overfull \hbox (41.72078pt too wide) in paragraph at lines 573--573
+Overfull \hbox (41.72078pt too wide) in paragraph at lines 348--348
 []\TU/CourierNew(0)/m/n/10.95 11:09:13 wd-0 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU
 /CourierNew(0)/m/n/10.95 1.97 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)
 /m/n/10.95 21.78 \TU/FangSong(0)/m/n/10.95 　 　  \TU/CourierNew(0)/m/n/10.95 5.8
@@ -2214,7 +2097,7 @@ g(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)/m/n/10.95 69.66 3.35[]
  []
 
 
-Overfull \hbox (35.1497pt too wide) in paragraph at lines 574--574
+Overfull \hbox (35.1497pt too wide) in paragraph at lines 349--349
 []\TU/CourierNew(0)/m/n/10.95 Average wd-0 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/
 CourierNew(0)/m/n/10.95 1.15 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)/
 m/n/10.95 12.11 \TU/FangSong(0)/m/n/10.95 　 　  \TU/CourierNew(0)/m/n/10.95 4.09
@@ -2222,39 +2105,39 @@ m/n/10.95 12.11 \TU/FangSong(0)/m/n/10.95 　 　  \TU/CourierNew(0)/m/n/10.95 4
 (0)/m/n/10.95 　 　 　 \TU/CourierNew(0)/m/n/10.95 31.12 2.80[] 
  []
 
-
-Overfull \hbox (87.71841pt too wide) in paragraph at lines 599--599
+[43]
+Overfull \hbox (87.71841pt too wide) in paragraph at lines 374--374
 []\TU/CourierNew(0)/m/n/10.95 14:54:59 bread/s lread/s %rcache bwrit/s lwrit/s 
 %wcache pread/s pwrit/s (-b)[] 
  []
 
-[49]) [50]
+[44] (./body/commands/ip.tex)) [45]
 \openout2 = `body/chapter03Vim.aux'.
 
- (./body/chapter03Vim.tex
-第三章
-[51
+ (./body/chapter03Vim.tex [46
 
 
 
 ]
+第三章
+[47]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52]
-[53]
+ [48]
+[49]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [54]
+ [50]
 File: img/vimregister.png Graphic file (type bmp)
 <img/vimregister.png>
 
-[55]
+[51]
 File: img/vimrc.png Graphic file (type bmp)
 <img/vimrc.png>
-) [56] [57]
+) [52] [53]
 \openout2 = `body/chapter07Shell.aux'.
 
- (./body/chapter07Shell.tex [58
+ (./body/chapter07Shell.tex [54
 
 
 
@@ -2263,17 +2146,17 @@ File: img/vimrc.png Graphic file (type bmp)
 (./body/chapter07_regexp.tex) (./body/chapter07_awk.tex
 File: graph/awk_workflow.pdf Graphic file (type pdf)
 <use graph/awk_workflow.pdf>
- [59] [60] [61]
+ [55] [56] [57]
 
-LaTeX Warning: Reference `sec:FirstAwk' on page 62 undefined on input line 201.
-
-
-[62] [63] [64]
-
-LaTeX Warning: Reference `sec:FirstAwk' on page 65 undefined on input line 309.
+LaTeX Warning: Reference `sec:FirstAwk' on page 58 undefined on input line 201.
 
 
-[65]
+[58] [59] [60]
+
+LaTeX Warning: Reference `sec:FirstAwk' on page 61 undefined on input line 309.
+
+
+[61]
 Overfull \hbox (22.00766pt too wide) in paragraph at lines 346--346
 []\TU/CourierNew(0)/m/n/10.95 gold     0.25 1987  USA                 Constitut
 ion 5-dollar piece[] 
@@ -2339,41 +2222,41 @@ Overfull \hbox (15.43666pt too wide) in paragraph at lines 366--366
 f\n",val_silver);[] 
  []
 
-[66]) (./body/chapter07_sed.tex
+[62]) (./body/chapter07_sed.tex
 File: graph/sed_workflow.pdf Graphic file (type pdf)
 <use graph/sed_workflow.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [67]
+ [63]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [68]
-[69]) [70] [71]
+ [64]
+[65]) [66] [67]
 File: graph/for.pdf Graphic file (type pdf)
 <use graph/for.pdf>
- [72] (./src/shell01.sh)
+ [68] (./src/shell01.sh)
 File: graph/do-1.pdf Graphic file (type pdf)
 <use graph/do-1.pdf>
- [73]
+ [69]
 File: graph/while.pdf Graphic file (type pdf)
 <use graph/while.pdf>
- (./src/shell03.sh [74]) [75]
-(./src/shell04.sh [76]
+ (./src/shell03.sh [70]) [71]
+(./src/shell04.sh [72]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [77])
+ [73])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [78])
-[79]
+ [74])
+[75]
 \openout2 = `body/chapter09MySQL.aux'.
 
- (./body/chapter09MySQL.tex [80
+ (./body/chapter09MySQL.tex [76
 
 
 
-] [81] [82]
+] [77] [78]
 第五章
 
 Overfull \hbox (68.00528pt too wide) in paragraph at lines 43--43
@@ -2381,7 +2264,7 @@ Overfull \hbox (68.00528pt too wide) in paragraph at lines 43--43
 4815, default 121634815):[] 
  []
 
-[83
+[79
 
 ]
 Overfull \hbox (363.70332pt too wide) in paragraph at lines 75--75
@@ -2389,7 +2272,7 @@ Overfull \hbox (363.70332pt too wide) in paragraph at lines 75--75
 ime,noikeep,nobarrier,allocsize=8M,attr2,largeio,inode64,swalloc  0  0 
  []
 
-[84]
+[80]
 Overfull \hbox (36.24068pt too wide) in paragraph at lines 114--114
  []\TU/CourierNew(0)/m/n/10.95 A0305010:~ # tar -xf mysql-advanced-5.5.32-linux
 2.6-x86_64.tar.gz[] 
@@ -2431,7 +2314,7 @@ Overfull \hbox (29.66959pt too wide) in paragraph at lines 138--138
 /data/mysqldata4[] 
  []
 
-[85]
+[81]
 Overfull \hbox (2.2946pt too wide) in paragraph at lines 181--181
 []\TU/CourierNew(0)/m/n/10.95 A0305010:~ # echo "net.ipv4.tcp_tw_recycle=1" >>/
 etc/sysctl.conf[] 
@@ -2443,10 +2326,10 @@ Overfull \hbox (28.57886pt too wide) in paragraph at lines 182--182
  >>/etc/sysctl.conf[] 
  []
 
-[86]
+[82]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [87]
+ [83]
 Overfull \hbox (42.81177pt too wide) in paragraph at lines 286--286
  []\TU/CourierNew(0)/m/n/10.95 #***********************************************
 *****************#[] 
@@ -2458,7 +2341,7 @@ Overfull \hbox (36.24069pt too wide) in paragraph at lines 294--294
 ****************#[] 
  []
 
-[88]
+[84]
 Overfull \hbox (693.34743pt too wide) in paragraph at lines 305--305
  []\TU/CourierNew(0)/m/n/10.95 export PS1="\n\e[1;37m[\e[m\e[1;36mMySQL$INSTANC
 E_NO\e[m \$(date \"+%Y-%m-%d %H:%M:%S\") \e[1;31m\u@\e[m\e[1;31m\h\e[m \e[4m\$(
@@ -2498,19 +2381,19 @@ Overfull \hbox (23.09854pt too wide) in paragraph at lines 327--327
  |grep -v grep"[] 
  []
 
-[89] [90] [91] [92] [93]
+[85] [86] [87] [88] [89]
 Overfull \hbox (37.82054pt too wide) in paragraph at lines 627--627
 []\TU/CourierNew(0)/m/n/10 mysql> update users set password=(select md5("654321
 ")) where name="master"; 
  []
 
-[94]
+[90]
 Overfull \hbox (22.0078pt too wide) in paragraph at lines 659--659
 []\TU/CourierNew(0)/m/n/10.95 [root@iLiuc ~]# mysqldump -u root -p password db_
 name > db_name.sql 
  []
 
-[95] [96]
+[91] [92]
 Overfull \hbox (37.82054pt too wide) in paragraph at lines 792--792
 []\TU/CourierNew(0)/m/n/10 ALTER TABLE player ADD INDEX weekcredit_faction_inde
 x (weekcredit, faction);[] 
@@ -2529,16 +2412,16 @@ Overfull \hbox (43.82152pt too wide) in paragraph at lines 798--798
 ' where ip='192.168.1.1';[] 
  []
 
-[97] [98]
+[93] [94]
 第六章
 File: img/mysql_replication_works.png Graphic file (type bmp)
 <img/mysql_replication_works.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[99
+[95
 
-] [100]
+] [96]
 Overfull \hbox (2.51567pt too wide) in paragraph at lines 909--911
 []\TU/SimSun(0)/m/n/10.95 确 认 主 库 \TU/TimesNewRoman(0)/m/n/10.95 MySQL \TU/SimS
 un(0)/m/n/10.95 程 序 目 录 下 有 \TU/TimesNewRoman(0)/m/n/10.95 lib/plugin/semisync_
@@ -2576,7 +2459,7 @@ Overfull \hbox (101.95134pt too wide) in paragraph at lines 932--932
 SONAME 'semisync_slave.so'; 
  []
 
-[101] [102
+[97] [98
 
 ]
 第七章
@@ -2592,29 +2475,29 @@ Overfull \hbox (120.5738pt too wide) in paragraph at lines 990--990
 02'@'%' identified by 'replpass';[] 
  []
 
-[103]
+[99]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [104]
+ [100]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [101]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [102]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [103]
+[104]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [105]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [106]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [107]
-[108]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [109]
 Overfull \hbox (114.00276pt too wide) in paragraph at lines 1288--1288
 []\TU/CourierNew(0)/m/n/10.95 8: vlan0@bond0: <BROADCAST,MULTICAST,UP,LOWER_UP>
  mtu 1500 qdisc noqueue state UP[] 
  []
 
-[110]
+[106]
 Overfull \hbox (114.00276pt too wide) in paragraph at lines 1313--1313
 []\TU/CourierNew(0)/m/n/10.95 8: vlan0@bond0: <BROADCAST,MULTICAST,UP,LOWER_UP>
  mtu 1500 qdisc noqueue state UP[] 
@@ -2623,7 +2506,7 @@ Overfull \hbox (114.00276pt too wide) in paragraph at lines 1313--1313
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [111]
+ [107]
 Overfull \hbox (324.27692pt too wide) in paragraph at lines 1339--1339
 []\TU/CourierNew(0)/m/n/10.95 Server version: 5.5.32-enterprise-commercial-adva
 nced-log MySQL Enterprise Server - Advanced Edition (Commercial)[] 
@@ -2638,7 +2521,7 @@ Overfull \hbox (94.28954pt too wide) in paragraph at lines 1341--1341
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [112]
+ [108]
 Overfull \hbox (186.28418pt too wide) in paragraph at lines 1379--1379
 []\TU/CourierNew(0)/m/n/10.95 tcp        0      0 0.0.0.0:3313            0.0.0
 .0:*               LISTEN      10896/mysqld[] 
@@ -2722,7 +2605,7 @@ Overfull \hbox (114.00276pt too wide) in paragraph at lines 1408--1408
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [113]
+ [109]
 Overfull \hbox (324.27692pt too wide) in paragraph at lines 1421--1421
 []\TU/CourierNew(0)/m/n/10.95 Server version: 5.5.32-enterprise-commercial-adva
 nced-log MySQL Enterprise Server - Advanced Edition (Commercial)[] 
@@ -2737,7 +2620,7 @@ Overfull \hbox (94.28954pt too wide) in paragraph at lines 1423--1423
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [114]
+ [110]
 Overfull \hbox (54.86314pt too wide) in paragraph at lines 1472--1472
 []\TU/CourierNew(0)/m/n/10.95 ERROR 2003 (HY000): Can't connect to MySQL server
  on '172.16.25.7' (113)[] 
@@ -2752,7 +2635,7 @@ er during query[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [115]
+ [111]
 Overfull \hbox (114.00276pt too wide) in paragraph at lines 1518--1518
 []\TU/CourierNew(0)/m/n/10.95 8: vlan0@bond0: <BROADCAST,MULTICAST,UP,LOWER_UP>
  mtu 1500 qdisc noqueue state UP[] 
@@ -2773,10 +2656,10 @@ Overfull \hbox (186.28433pt too wide) in paragraph at lines 1528--1528
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [116]
+ [112]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [117]
+ [113]
 Overfull \hbox (41.72104pt too wide) in paragraph at lines 1589--1589
 []\TU/CourierNew(0)/m/n/10.95 slow_query_log_file=/home/mysql/data/mysqldata8/s
 lowlog/slow-query.log[] 
@@ -2785,7 +2668,7 @@ lowlog/slow-query.log[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [118]
+ [114]
 Overfull \hbox (15.43675pt too wide) in paragraph at lines 1634--1634
 []\TU/CourierNew(0)/m/n/10.95 innodb_log_group_home_dir = /home/mysql/data/mysq
 ldata8/innodb_log[] 
@@ -2794,10 +2677,10 @@ ldata8/innodb_log[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [119]
+ [115]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [120]
+ [116]
 Overfull \hbox (41.72104pt too wide) in paragraph at lines 1737--1737
 []\TU/CourierNew(0)/m/n/10.95 slow_query_log_file=/home/mysql/data/mysqldata8/s
 lowlog/slow-query.log[] 
@@ -2806,7 +2689,7 @@ lowlog/slow-query.log[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [121]
+ [117]
 Overfull \hbox (15.43675pt too wide) in paragraph at lines 1780--1780
 []\TU/CourierNew(0)/m/n/10.95 innodb_log_group_home_dir = /home/mysql/data/mysq
 ldata8/innodb_log[] 
@@ -2815,15 +2698,15 @@ ldata8/innodb_log[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [122]
+ [118]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [123]
-[124]
+ [119]
+[120]
 第八章
-[125
+[121
 
-] [126
+] [122
 
 ]
 第九章
@@ -2834,19 +2717,19 @@ Overfull \hbox (52.00185pt too wide) in paragraph at lines 1856--1859
 (0)/m/n/10.95 https://code.google.com/p/mysql-
  []
 
-[127]) [128]
+[123]) [124]
 \openout2 = `body/chapter10SomeServices.aux'.
 
- (./body/chapter10SomeServices.tex [129
+ (./body/chapter10SomeServices.tex [125
 
 
 
-] [130]
-(./body/chapter10_dhcp.tex [131] [132
+] [126]
+(./body/services/dhcp.tex [127] [128
 
 ]
 第十章
-[133]) (./body/chapter10_dns.tex [134]
+[129]) (./body/services/dns.tex [130]
 第十一章
 
 Overfull \hbox (83.4492pt too wide) in paragraph at lines 40--42
@@ -2868,7 +2751,7 @@ Overfull \hbox (153.42914pt too wide) in paragraph at lines 51--51
  192.168.20.135 is Slave DNS Server IP[] 
  []
 
-[135
+[131
 
 ]
 Overfull \hbox (15.81998pt too wide) in paragraph at lines 72--74
@@ -2877,7 +2760,7 @@ c1912.zones \TU/SimSun(0)/m/n/10.95 文 件 中 设 置 了 两 个 区 域 文 
 ewRoman(0)/m/n/10.95 forward.lavenliu
  []
 
-[136]
+[132]
 Overfull \hbox (74.57639pt too wide) in paragraph at lines 146--146
 []\TU/CourierNew(0)/m/n/10.95 [root@master01 ~]# named-checkzone lavenliu.com /
 var/named/forward.lavenliu[] 
@@ -2889,15 +2772,15 @@ Overfull \hbox (74.57639pt too wide) in paragraph at lines 149--149
 var/named/reverse.lavenliu[] 
  []
 
-[137]) (./body/chapter10_ftp.tex [138]
+[133]) (./body/services/ftp.tex [134]
 第十二章
-) (./body/chapter10_nfs.tex [139
+) (./body/services/nfs.tex [135
 
-] [140
+] [136
 
 ]
 第十三章
-) (./body/chapter10_kickstart.tex [141] [142
+) (./body/services/kickstart.tex [137] [138
 
 ]
 第十四章
@@ -2909,31 +2792,31 @@ File: img/pxe01.png Graphic file (type bmp)
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 33.
 
-[143]
+[139]
 Overfull \hbox (43.82152pt too wide) in paragraph at lines 80--80
 []\TU/CourierNew(0)/m/n/10 append initrd=initrd.img ramdisk_size=8192 ks=http:/
 /192.168.0.254/ks/ks.conf[] 
  []
 
-[144]
+[140]
 Overfull \hbox (43.82152pt too wide) in paragraph at lines 102--102
 []\TU/CourierNew(0)/m/n/10 append initrd=initrd.img ramdisk_size=8192 ks=http:/
 /192.168.0.254/ks/ks.conf[] 
  []
 
-) [145] [146
+) [141] [142
 
 ]
 第十五章
-(./body/chapter10_apache.tex [147] [148
+(./body/services/apache.tex [143] [144
 
 ]
 第十六章
-) (./body/chapter10_nginx.tex [149] [150
+) (./body/services/nginx.tex [145] [146
 
 ]
 第十七章
-[151]
+[147]
 Overfull \hbox (2.29428pt too wide) in paragraph at lines 63--63
 []\TU/CourierNew(0)/m/n/10.95 --user=<user>           \TU/FangSong(0)/m/n/10.95
  指 定 用 户 身 份 \TU/CourierNew(0)/m/n/10.95 , \TU/FangSong(0)/m/n/10.95 如 果 没 有 指 
@@ -2967,7 +2850,7 @@ Overfull \hbox (166.5707pt too wide) in paragraph at lines 100--100
 果 当 前 平 台 没 有 更 有 效 的 方 法 ， 它 是 编 译 时 默 认 的 方 法 。 你 可 以 使 用 配 置 参 数 [] 
  []
 
-[152]
+[148]
 Overfull \hbox (15.4365pt too wide) in paragraph at lines 101--101
 [] \TU/FangSong(0)/m/n/10.95 – \TU/CourierNew(0)/m/n/10.95 with-poll_module  \T
 U/FangSong(0)/m/n/10.95 和   – \TU/CourierNew(0)/m/n/10.95 without-poll_module  
@@ -3036,7 +2919,7 @@ ime_local] "$request" '[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [153]
+ [149]
 Overfull \hbox (146.85747pt too wide) in paragraph at lines 153--153
 []\TU/CourierNew(0)/m/n/10.95 #pass  \TU/FangSong(0)/m/n/10.95 路 径 匹 配   能 够 匹 
 配 路 径 中 带 “ \TU/CourierNew(0)/m/n/10.95 / \TU/FangSong(0)/m/n/10.95 ” 的   不 过 需
@@ -3053,7 +2936,7 @@ g on 127.0.0.1:9000[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [154]
+ [150]
 Overfull \hbox (81.14735pt too wide) in paragraph at lines 193--193
 []\TU/CourierNew(0)/m/n/10.95 # another virtual host using mix of IP-, name-, a
 nd port-based configuration[] 
@@ -3068,8 +2951,8 @@ EDIUM:+LOW:+SSLv2:+EXP;[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [155]
-[156]
+ [151]
+[152]
 File: graph/reverse_squid.pdf Graphic file (type pdf)
 <use graph/reverse_squid.pdf>
 File: graph/reverse_nginx.pdf Graphic file (type pdf)
@@ -3080,7 +2963,7 @@ Overfull \hbox (5.91257pt too wide) in paragraph at lines 310--318
  其 它 的 均 衡 器 \TU/TimesNewRoman(0)/m/n/10.95 ( lvs/haprox-
  []
 
-[157]) (./body/chapter10_lamp.tex [158]
+[153]) (./body/services/lamp.tex [154]
 第十八章
 
 Overfull \hbox (29.18967pt too wide) in paragraph at lines 53--53
@@ -3088,7 +2971,7 @@ Overfull \hbox (29.18967pt too wide) in paragraph at lines 53--53
 =/usr/local/libxml2[] 
  []
 
-[159
+[155
 
 ]
 Overfull \hbox (47.1926pt too wide) in paragraph at lines 66--66
@@ -3102,7 +2985,7 @@ Overfull \hbox (11.18674pt too wide) in paragraph at lines 79--79
 sr/local/openssl[] 
  []
 
-[160]
+[156]
 Overfull \hbox (19.81761pt too wide) in paragraph at lines 120--120
 []  \TU/CourierNew(0)/m/n/10 [root@lamp mysql] # cp share/mysql/mysql.server /e
 tc/rc.d/init.d/mysqld[] 
@@ -3114,55 +2997,55 @@ Overfull \hbox (25.81859pt too wide) in paragraph at lines 148--148
 bin/apachectl start' \[] 
  []
 
-[161] [162]) [163] [164
+[157] [158]) [159] [160
 
 ]
 第十九章
-[165] [166]
+[161] [162]
 Overfull \hbox (2.29459pt too wide) in paragraph at lines 162--162
 []\TU/CourierNew(0)/m/n/10.95 INGRESS priority mappings: 0:0  1:0  2:0  3:0  4:
 0  5:0  6:0 7:0[] 
  []
 
-[167]
+[163]
 Overfull \hbox (2.29428pt too wide) in paragraph at lines 203--203
 []\TU/CourierNew(0)/m/n/10.95 VLAN_ID='210'                       ## \TU/FangSo
 ng(0)/m/n/10.95 上 联 核 心 交 换 机 端 口 的 \TU/CourierNew(0)/m/n/10.95 Vlan \TU/FangSo
 ng(0)/m/n/10.95 号 [] 
  []
 
-[168]
+[164]
 第二十章
-[169
+[165
 
 ]
 Underfull \vbox (badness 3240) has occurred while \output is active []
 
- [170]
-[171]) [172]
+ [166]
+[167]) [168]
 \openout2 = `body/chapter11HighAvailable.aux'.
 
- (./body/chapter11HighAvailable.tex [173
+ (./body/chapter11HighAvailable.tex [169
 
 
 
-] [174] [175] [176
+] [170] [171] [172
 
 ]
 第二十一章
-(./body/chapter11_keepalived.tex [177] [178
+(./body/chapter11_keepalived.tex [173] [174
 
 ]
 第二十二章
-) (./body/chapter11_lvs_keepalived.tex [179] [180
+) (./body/chapter11_lvs_keepalived.tex [175] [176
 
 ]
 第二十三章
-[181] [182]) (./body/chapter11_heartbeat.tex
+[177] [178]) (./body/chapter11_heartbeat.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [183]
-[184]
+ [179]
+[180]
 第二十四章
 File: img/heartbeat.png Graphic file (type bmp)
 <img/heartbeat.png>
@@ -3172,7 +3055,7 @@ Overfull \hbox (2.29463pt too wide) in paragraph at lines 31--31
 resource-agents 
  []
 
-[185
+[181
 
 ]
 Overfull \hbox (87.71797pt too wide) in paragraph at lines 91--91
@@ -3181,7 +3064,7 @@ Overfull \hbox (87.71797pt too wide) in paragraph at lines 91--91
 TU/FangSong(0)/m/n/10.95 ’ 。 \TU/CourierNew(0)/m/n/10.95 ##[] 
  []
 
-[186]
+[182]
 Overfull \hbox (140.28645pt too wide) in paragraph at lines 97--97
 []\TU/CourierNew(0)/m/n/10.95 ##  \TU/FangSong(0)/m/n/10.95 一 些 服 务 器 花 更 长 的 时
  间 来 启 动 。 该 计 时 器 定 义 了 证 实 服 务 器 宕 机 之 前 所 等 待 的 额 外 时 间 。 \TU/CourierNew(0)/
@@ -3206,7 +3089,7 @@ Overfull \hbox (15.43666pt too wide) in paragraph at lines 145--145
 rruns:0 carrier:0[] 
  []
 
-[187]
+[183]
 Overfull \hbox (2.29451pt too wide) in paragraph at lines 147--147
 []          \TU/CourierNew(0)/m/n/10.95 RX bytes:3095677 (2.9 MiB)  TX bytes:22
 53820 (2.1 MiB)[] 
@@ -3242,7 +3125,7 @@ Overfull \hbox (2.29451pt too wide) in paragraph at lines 169--169
 52373 (5.1 MiB)[] 
  []
 
-[188]
+[184]
 Overfull \hbox (225.71088pt too wide) in paragraph at lines 194--194
 []\TU/CourierNew(0)/m/n/10.95 Apr 14 11:43:48 master.liucc.com heartbeat: [1392
 8]: info: Heartbeat shutdown in progress. (13928) 
@@ -3410,7 +3293,7 @@ Overfull \hbox (324.27692pt too wide) in paragraph at lines 241--241
  Releasing resource group: master.liucc.com 192.168.56.222 httpd 
  []
 
-[189]
+[185]
 Overfull \hbox (114.00275pt too wide) in paragraph at lines 242--242
 []\TU/CourierNew(0)/m/n/10.95 ResourceManager[13654]: 2015/04/14_13:52:20 info:
  Running /etc/init.d/httpd  stop[] 
@@ -3458,39 +3341,39 @@ Overfull \hbox (350.56114pt too wide) in paragraph at lines 251--251
 ]: info: Other node completed standby takeover of foreign resources.[] 
  []
 
-) (./body/chapter11_nginx_keepalived.tex [190]
+) (./body/chapter11_nginx_keepalived.tex [186]
 第二十五章
-) (./body/chapter11_haproxy.tex [191
+) (./body/chapter11_haproxy.tex [187
 
-] [192
+] [188
 
 ]
 第二十六章
-)) [193]
+)) [189]
 \openout2 = `body/chapterMonitor.aux'.
 
- (./body/chapterMonitor.tex [194
+ (./body/chapterMonitor.tex [190
 
 
 
-] [195] [196] (./body/01_zabbix.tex
-[197] [198
+] [191] [192]
+(./body/monitors/zabbix.tex [193] [194
 
 ]
 第二十七章
-) (./body/02_prometheus.tex [199] [200
+) (./body/monitors/prometheus.tex [195] [196
 
 ]
 第二十八章
-)) [201]
+)) [197]
 \openout2 = `body/chapter12Automatic.aux'.
 
- (./body/chapter12Automatic.tex [202
+ (./body/chapter12Automatic.tex [198
 
 
 
-] [203] [204]
-(./body/chapter12_pxe.tex [205] [206
+] [199] [200]
+(./body/automatic/pxe.tex [201] [202
 
 ]
 第二十九章
@@ -3504,7 +3387,7 @@ Overfull \hbox (0.68958pt too wide) in paragraph at lines 7--15
 
 File: img/pxe01.png Graphic file (type bmp)
 <img/pxe01.png>
-[207] [208] [209]
+[203] [204] [205]
 Overfull \hbox (15.43669pt too wide) in paragraph at lines 122--122
 []\TU/CourierNew(0)/m/n/10.95 # description: tftp service is provided primarily
  for booting or \[] 
@@ -3516,11 +3399,11 @@ Overfull \hbox (2.29454pt too wide) in paragraph at lines 123--123
  this only on \[] 
  []
 
-[210]
+[206]
 Underfull \vbox (badness 1205) has occurred while \output is active []
 
- [211])
-(./body/chapter12_cobbler.tex [212]
+ [207])
+(./body/automatic/cobbler.tex [208]
 第三十章
 
 Overfull \hbox (15.43637pt too wide) in paragraph at lines 15--15
@@ -3540,7 +3423,7 @@ Overfull \hbox (278.27942pt too wide) in paragraph at lines 38--38
 ickstart=/var/lib/cobbler/kickstarts/CentOS-6.5.x86_64.ks[] 
  []
 
-[213
+[209
 
 ]
 Overfull \hbox (41.72083pt too wide) in paragraph at lines 43--43
@@ -3548,7 +3431,7 @@ Overfull \hbox (41.72083pt too wide) in paragraph at lines 43--43
 /www/cobbler/ks_mirror/CentOS-6.5-x86_64 \TU/FangSong(0)/m/n/10.95 目 录 下 。 [] 
  []
 
-) (./body/chapter12_omnitty.tex [214]
+) (./body/automatic/omnitty.tex [210]
 第三十一章
 
 Overfull \hbox (357.1322pt too wide) in paragraph at lines 23--23
@@ -3556,102 +3439,102 @@ Overfull \hbox (357.1322pt too wide) in paragraph at lines 23--23
 brote.so.0: cannot open shared object file: No such file or directory[] 
  []
 
-[215
+[211
 
-]) (./body/chapter12_ansible.tex [216]
+]) (./body/automatic/fabric.tex [212]
 第三十二章
+) (./body/automatic/ansible.tex [213
+
+] [214
+
+]
+第三十三章
 File: graph/network01.pdf Graphic file (type pdf)
 <use graph/network01.pdf>
-[217
-
-] [218] [219] [220]
+[215] [216] [217] [218]
 Overfull \hbox (28.57886pt too wide) in paragraph at lines 229--229
 []\TU/CourierNew(0)/m/n/10.95 # ansible my1 -m file -a "src=/etc/hosts dest=/tm
 p/hosts state=link" 
  []
 
-[221] [222] [223] [224]
+[219] [220] [221] [222]
 File: graph/ansible-0.pdf Graphic file (type pdf)
 <use graph/ansible-0.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [225]
-[226]
+ [223]
+[224]
 Overfull \hbox (41.72102pt too wide) in paragraph at lines 482--482
 []  \TU/CourierNew(0)/m/n/10.95 template: src=zypper.repo.j2 dest=/etc/zypper/r
 epos.d/suse11sp2.repo[] 
  []
 
-[227] [228]) (./body/chapter12_fabric.tex [229] [230
-
-]
-第三十三章
-) (./body/chapter12_saltstack.tex [231] [232
+[225] [226]) (./body/automatic/saltstack.tex [227] [228
 
 ]
 第三十四章
 File: graph/saltstack_communication.pdf Graphic file (type pdf)
 <use graph/saltstack_communication.pdf>
-[233] [234] [235] [236] [237]
+[229] [230] [231] [232] [233]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [238]
+ [234]
 Overfull \hbox (330.84796pt too wide) in paragraph at lines 339--339
 []    \TU/CourierNew(0)/m/n/10.95 - name: cd /usr/local/src && tar -xf jdk-8u65
 -linux-x64.tar.gz && mv jdk1.8.0_65 jdk && chown -R root:root jdk[] 
  []
 
-) (./body/chapter12_puppet.tex
+) (./body/automatic/puppet.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [239]
-[240]
+ [235]
+[236]
 第三十五章
-)) [241
+)) [237
 
 ]
 \openout2 = `body/chapter13Git.aux'.
 
- (./body/chapter13Git.tex [242
+ (./body/chapter13Git.tex [238
 
 
 
 ]
 第三十六章
-[243] [244])
+[239] [240])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [245]
-[246]
+ [241]
+[242]
 \openout2 = `body/chapter14Virtualization.aux'.
 
- (./body/chapter14Virtualization.tex [247
+ (./body/chapter14Virtualization.tex [243
 
 
 
-] [248] (./body/chapter14_kvm.tex [249] [250
+] [244] (./body/chapter14_kvm.tex [245] [246
 
 ]
 第三十七章
 File: graph/libvirt_support.pdf Graphic file (type pdf)
 <use graph/libvirt_support.pdf>
-[251]
+[247]
 File: graph/libvirt_node_hypervisor_domain.pdf Graphic file (type pdf)
 <use graph/libvirt_node_hypervisor_domain.pdf>
- [252]
+ [248]
 Overfull \hbox (153.42917pt too wide) in paragraph at lines 95--95
 []\TU/CourierNew(0)/m/n/10.95 # rpm -ivh http://mirrors.ustc.edu.cn/fedora/epel
 //6/x86_64/epel-release-6-8.noarch.rpm 
  []
 
-[253]
+[249]
 Overfull \hbox (173.14235pt too wide) in paragraph at lines 159--159
 []\TU/CourierNew(0)/m/n/10.95 Formatting '/opt/taoqi.qcow2', fmt=qcow2 size=536
 8709120 encryption=off cluster_size=65536[] 
  []
 
-[254]
+[250]
 Overfull \hbox (68.00511pt too wide) in paragraph at lines 236--236
 []\TU/CourierNew(0)/m/n/10.95 tcp    0      0 0.0.0.0:5900     0.0.0.0:*      L
 ISTEN      20249/qemu-kvm[] 
@@ -3663,7 +3546,7 @@ Overfull \hbox (68.00511pt too wide) in paragraph at lines 237--237
 ISTEN      20268/qemu-kvm[] 
  []
 
-[255]
+[251]
 Overfull \hbox (74.57639pt too wide) in paragraph at lines 283--283
 []\TU/CourierNew(0)/m/n/10.95 # sed -i "s#<uuid>.*</uuid>#<uuid>`uuidgen`</uuid
 >#g" /opt/lavenliu_new.xml[] 
@@ -3682,7 +3565,7 @@ Overfull \hbox (61.43385pt too wide) in paragraph at lines 296--296
 #  \TU/FangSong(0)/m/n/10.95 已 经 创 建 成 功 ， 但 未 启 动 [] 
  []
 
-[256]
+[252]
 Overfull \hbox (2.29457pt too wide) in paragraph at lines 316--316
 []\TU/CourierNew(0)/m/n/10.95 ERROR    Domain with devices to clone must be pau
 sed or shutoff. 
@@ -3700,7 +3583,7 @@ Overfull \hbox (15.43675pt too wide) in paragraph at lines 341--341
 avenliu_clone.raw[] 
  []
 
-[257] [258]
+[253] [254]
 Overfull \hbox (74.57626pt too wide) in paragraph at lines 444--444
 []\TU/CourierNew(0)/m/n/10.95 # qemu-img snapshot [-l | -a snapshot | -c snapsh
 ot | -d snapshot] filename 
@@ -3712,7 +3595,7 @@ Overfull \hbox (48.2921pt too wide) in paragraph at lines 464--464
 eration not supported)[] 
  []
 
-[259]
+[255]
 Overfull \hbox (54.86284pt too wide) in paragraph at lines 496--496
 []\TU/CourierNew(0)/m/n/10.95 ID        TAG                 VM SIZE            
     DATE       VM CLOCK[] 
@@ -3748,7 +3631,7 @@ Overfull \hbox (54.86299pt too wide) in paragraph at lines 534--534
 12:45:27   00:00:00.000[] 
  []
 
-[260]
+[256]
 Overfull \hbox (81.14735pt too wide) in paragraph at lines 551--551
 []          \TU/CourierNew(0)/m/n/10.95 inet addr:192.168.19.134  Bcast:192.168
 .19.255  Mask:255.255.255.0[] 
@@ -3815,7 +3698,7 @@ Overfull \hbox (140.28685pt too wide) in paragraph at lines 585--585
 0.95 MAC \TU/FangSong(0)/m/n/10.95 地 址 [] 
  []
 
-[261]
+[257]
 Overfull \hbox (2.29454pt too wide) in paragraph at lines 589--589
 []          \TU/CourierNew(0)/m/n/10.95 TX packets:156 errors:0 dropped:0 overr
 uns:0 carrier:0[] 
@@ -3834,16 +3717,16 @@ Overfull \hbox (8.8656pt too wide) in paragraph at lines 597--597
 runs:0 carrier:0[] 
  []
 
-[262] [263] [264]
+[258] [259] [260]
 Overfull \hbox (48.29204pt too wide) in paragraph at lines 775--775
 []      \TU/CourierNew(0)/m/n/10.95 fprintf(stderr, "Failed to get information 
 for Domain %d\n", id);[] 
  []
 
-[265] [266]
+[261] [262]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [267]
+ [263]
 Overfull \hbox (28.57883pt too wide) in paragraph at lines 901--901
 []    \TU/CourierNew(0)/m/n/10.95 print "Domain id is %d; Name is %s" % (myDom.
 ID(), myDom.name())[] 
@@ -3852,8 +3735,8 @@ ID(), myDom.name())[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [268])
-(./body/chapter14_docker.tex [269] [270
+ [264])
+(./body/chapter14_docker.tex [265] [266
 
 ]
 第三十八章
@@ -3861,60 +3744,60 @@ File: graph/container01.pdf Graphic file (type pdf)
 <use graph/container01.pdf>
 File: graph/virtualization01.pdf Graphic file (type pdf)
 <use graph/virtualization01.pdf>
-[271]
+[267]
 File: graph/os-arch-mps.pdf Graphic file (type pdf)
 <use graph/os-arch-mps.pdf>
-) (./body/chapter14_openstack.tex [272] [273] [274
+) (./body/chapter14_openstack.tex [268] [269] [270
 
 ]
 第三十九章
-) (./body/chapter14_PublicCloud.tex [275] [276
+) (./body/chapter14_PublicCloud.tex [271] [272
 
 ]
 第四十章
-)) [277]
+)) [273]
 \openout2 = `body/chapter15Network.aux'.
 
- (./body/chapter15Network.tex [278
+ (./body/chapter15Network.tex [274
 
 
 
-] [279] [280] [281] [282
+] [275] [276] [277] [278
 
 ]
 第四十一章
 File: graph/osi-1.pdf Graphic file (type pdf)
 <use graph/osi-1.pdf>
-[283] [284]
+[279] [280]
 第四十二章
 File: graph/gnu-linux-0.pdf Graphic file (type pdf)
 <use graph/gnu-linux-0.pdf>
-) [285
+) [281
 
-] [286]
+] [282]
 \openout2 = `body/chapter16Source.aux'.
 
- (./body/chapter16Source.tex [287
+ (./body/chapter16Source.tex [283
 
 
 
-] [288]
+] [284]
 附录 A
-[289
+[285
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [290]
+ [286]
 Overfull \hbox (146.85806pt too wide) in paragraph at lines 111--111
 []\TU/CourierNew(0)/m/n/10.95 Libvirt: box ht 4*h wid 25*dw "Libvirt" "(Libvirt
  API)" with .n at last [].s - (0,3*h)[] 
  []
 
-[291]
+[287]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [292]
+ [288]
 Overfull \hbox (68.0053pt too wide) in paragraph at lines 194--194
 []\TU/CourierNew(0)/m/n/10.95 arrow from Hypervisoroutline.Virtualtype.A.s to X
 XX.VMwareoutline.VMware.n[] 
@@ -3938,7 +3821,7 @@ Overfull \hbox (68.0053pt too wide) in paragraph at lines 197--197
 XX.Hypervoutline.Hyperv.n[] 
  []
 
-[293]
+[289]
 Overfull \hbox (2.29459pt too wide) in paragraph at lines 221--221
 []\TU/CourierNew(0)/m/n/10.95 box ht last [].ht+0.45 wid last [].wid+0.3 at las
 t [] + (0,0.05)[] 
@@ -3950,7 +3833,7 @@ Overfull \hbox (2.29459pt too wide) in paragraph at lines 244--244
 t [] + (0,0.05)[] 
  []
 
-[294]
+[290]
 Overfull \hbox (81.14738pt too wide) in paragraph at lines 264--264
 []\TU/CourierNew(0)/m/n/10.95 Port4505: [ port(2,1,"Publish Port",4505) ] with 
 .se at Master.s - (0.25,0);[] 
@@ -4010,7 +3893,7 @@ Overfull \hbox (87.71848pt too wide) in paragraph at lines 302--302
 "LogStash" "192.168.20.139";[] 
  []
 
-[295]
+[291]
 Overfull \hbox (192.85553pt too wide) in paragraph at lines 306--306
 []\TU/CourierNew(0)/m/n/10.95 Elastic: box wid 1.15 ht 0.75 rad 0.02 "Search &"
  "Storage" "ElasticSearch" "192.168.20.139";[] 
@@ -4058,7 +3941,7 @@ Overfull \hbox (15.4367pt too wide) in paragraph at lines 339--339
 A.e,A.ne> to B ->[] 
  []
 
-[296]
+[292]
 Overfull \hbox (2.29462pt too wide) in paragraph at lines 355--355
 []\TU/CourierNew(0)/m/n/10.95 A: box ht 0.8 rad 0.08 "Line 1" "Line 2" "Line 3"
  "Line 4" "..."[] 
@@ -4100,17 +3983,17 @@ Overfull \hbox (15.4367pt too wide) in paragraph at lines 365--365
 A.e,A.ne> to B ->[] 
  []
 
+[293]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [294]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [295]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [296]
 [297]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [298]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [299]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [300]
-[301]
 Overfull \hbox (22.00777pt too wide) in paragraph at lines 577--577
 []    \TU/CourierNew(0)/m/n/10.95 box dashed wid 0.4 ht 0.13 rad 0.05 "OS" with
  .s at last box .s[] 
@@ -4122,12 +4005,12 @@ Overfull \hbox (15.43672pt too wide) in paragraph at lines 609--609
 h/to/filename.eps 
  []
 
-[302]) [303] (./mybook.bbl [304
+[298]) [299] (./mybook.bbl [300
 
 
 ])
 No file mybook.ind.
-[305]
+[301]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 137.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
  (./mybook.aux (./body/chapter01SystemIntro.aux)
@@ -4140,7 +4023,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 137.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 137.
 Package rerunfilecheck Info: File `mybook.out' has not changed.
-(rerunfilecheck)             Checksum: 494C1FA890050C170803F895088FBA50.
+(rerunfilecheck)             Checksum: 58D54072BD9BD83856DBF847139A7BA1.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -4154,12 +4037,12 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 137.
  ) 
 Here is how much of TeX's memory you used:
- 40395 strings out of 492909
- 841061 string characters out of 6136299
- 1128962 words of memory out of 5000000
- 43608 multiletter control sequences out of 15000+600000
+ 40409 strings out of 492909
+ 840517 string characters out of 6136299
+ 1128683 words of memory out of 5000000
+ 43597 multiletter control sequences out of 15000+600000
  538000 words of font info for 120 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  55i,16n,96p,836b,1947s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on mybook.pdf (317 pages).
+Output written on mybook.pdf (313 pages).
