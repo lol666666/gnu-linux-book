@@ -1,0 +1,40 @@
+
+\section{top命令的使用}
+\label{sec:topCmd}
+
+top\index{top}命令可动态显示服务器的进程信息，用户可以通过按键来刷新当
+前状态。别的不多说，给个例子看看：
+
+\begin{verbatim}
+Tasks: 202 total,   2 running, 199 sleeping,   0 stopped,   1 zombie
+Cpu(s):  7.9%us,  1.9%sy,  0.0%ni, 89.5%id,  0.7%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:   6003152k total,  1909420k used,  4093732k free,    73688k buffers
+Swap:  6180860k total,        0k used,  6180860k free,   893544k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                   
+ 3852 richard   20   0 1329m 127m  31m S   22  2.2   2:11.41 vlc                                                                 
+ 2891 richard    9 -11  418m 6988 4660 S    6  0.1   0:37.86 pulseaudio 
+ 2880 richard   20   0 1669m  90m  35m S    5  1.6   1:35.32 gnome-shell
+ 2452 root      20   0  303m  74m  61m S    4  1.3   1:23.90 Xorg
+ 3051 richard   20   0  872m 200m  52m S    1  3.4   1:32.25 firefox
+   10 root      20   0     0    0    0 S    0  0.0   0:00.57 rcuos/2
+   77 root      20   0     0    0    0 R    0  0.0   0:01.30 kworker/3:1
+  909 root     -51   0     0    0    0 S    0  0.0   0:10.11 irq/48-iwlwifi
+ 3025 richard   20   0  581m  19m  11m S    0  0.3   0:01.72 gnome-terminal
+ 3942 richard   20   0 99.6m  15m 5028 S    0  0.3   0:02.35 python
+ 4025 richard   20   0 17460 1408  980 R    0  0.0   0:00.04 top
+    1 root      20   0 24740 2620 1352 S    0  0.0   0:00.88 init
+    2 root      20   0     0    0    0 S    0  0.0   0:00.00 kthreadd
+    3 root      20   0     0    0    0 S    0  0.0   0:00.08 ksoftirqd/0
+    5 root       0 -20     0    0    0 S    0  0.0   0:00.00 kworker/0:0H                                                                            
+    6 root      20   0     0    0    0 S    0  0.0   0:01.68 kworker/u16:0
+    7 root      20   0     0    0    0 S    0  0.0   0:01.60 rcu_sched
+    8 root      20   0     0    0    0 S    0  0.0   0:01.24 rcuos/0
+    9 root      20   0     0    0    0 S    0  0.0   0:00.45 rcuos/1
+   11 root      20   0     0    0    0 S    0  0.0   0:00.28 rcuos/3
+   12 root      20   0     0    0    0 S    0  0.0   0:00.00 rcuos/4
+   13 root      20   0     0    0    0 S    0  0.0   0:00.00 rcuos/5
+   14 root      20   0     0    0    0 S    0  0.0   0:00.00 rcuos/6
+   15 root      20   0     0    0    0 S    0  0.0   0:00.00 rcuos/7
+   16 root      20   0     0    0    0 S    0  0.0   0:00.00 rcu_bh
+\end{verbatim}

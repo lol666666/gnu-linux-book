@@ -2,26 +2,23 @@
 \addvspace {10.0pt}
 \contentsline {table}{\numberline {2-1}{\ignorespaces 颜色表\cite {computersystem}\relax }}{16}{table.caption.7}% 
 \contentsline {table}{\numberline {2-2}{\ignorespaces yum常用命令选项\relax }}{20}{table.caption.9}% 
-\contentsline {table}{\numberline {2-3}{\ignorespaces zypper安装源操作选项\relax }}{23}{table.caption.10}% 
-\contentsline {table}{\numberline {2-4}{\ignorespaces zypper工具查选选项\relax }}{23}{table.caption.11}% 
-\contentsline {table}{\numberline {2-5}{\ignorespaces zypper软件管理选项\relax }}{25}{table.caption.12}% 
-\contentsline {table}{\numberline {2-6}{\ignorespaces grep常用选项\relax }}{27}{table.caption.13}% 
-\contentsline {table}{\numberline {2-7}{\ignorespaces free常用选项\relax }}{30}{table.caption.14}% 
-\contentsline {table}{\numberline {2-8}{\ignorespaces tar通用选项\relax }}{31}{table.caption.15}% 
-\contentsline {table}{\numberline {2-9}{\ignorespaces tar压缩选项\relax }}{31}{table.caption.16}% 
-\contentsline {table}{\numberline {2-10}{\ignorespaces tar解压缩选项\relax }}{31}{table.caption.17}% 
-\contentsline {table}{\numberline {2-11}{\ignorespaces cut常用选项\relax }}{33}{table.caption.18}% 
-\contentsline {table}{\numberline {2-12}{\ignorespaces sort常用选项\relax }}{34}{table.caption.19}% 
-\contentsline {table}{\numberline {2-13}{\ignorespaces tcpdump常用选项\relax }}{37}{table.caption.20}% 
-\contentsline {table}{\numberline {2-14}{\ignorespaces iptables实验环境\relax }}{42}{table.caption.21}% 
-\contentsline {table}{\numberline {2-15}{\ignorespaces sar常用选项\relax }}{48}{table.caption.23}% 
+\contentsline {table}{\numberline {2-3}{\ignorespaces grep常用选项\relax }}{21}{table.caption.10}% 
+\contentsline {table}{\numberline {2-4}{\ignorespaces free常用选项\relax }}{25}{table.caption.11}% 
+\contentsline {table}{\numberline {2-5}{\ignorespaces tar通用选项\relax }}{26}{table.caption.12}% 
+\contentsline {table}{\numberline {2-6}{\ignorespaces tar压缩选项\relax }}{26}{table.caption.13}% 
+\contentsline {table}{\numberline {2-7}{\ignorespaces tar解压缩选项\relax }}{26}{table.caption.14}% 
+\contentsline {table}{\numberline {2-8}{\ignorespaces cut常用选项\relax }}{27}{table.caption.15}% 
+\contentsline {table}{\numberline {2-9}{\ignorespaces sort常用选项\relax }}{28}{table.caption.16}% 
+\contentsline {table}{\numberline {2-10}{\ignorespaces tcpdump常用选项\relax }}{32}{table.caption.17}% 
+\contentsline {table}{\numberline {2-11}{\ignorespaces iptables实验环境\relax }}{36}{table.caption.18}% 
+\contentsline {table}{\numberline {2-12}{\ignorespaces sar常用选项\relax }}{42}{table.caption.20}% 
 \addvspace {10.0pt}
-\contentsline {table}{\numberline {3-1}{\ignorespaces vim进入插入模式指令\relax }}{52}{table.caption.24}% 
-\contentsline {table}{\numberline {3-2}{\ignorespaces vim方向控制键\relax }}{52}{table.caption.25}% 
-\contentsline {table}{\numberline {3-3}{\ignorespaces vim撤销指令按键\relax }}{52}{table.caption.26}% 
-\contentsline {table}{\numberline {3-4}{\ignorespaces vim删除指令按键\relax }}{53}{table.caption.27}% 
+\contentsline {table}{\numberline {3-1}{\ignorespaces vim进入插入模式指令\relax }}{48}{table.caption.21}% 
+\contentsline {table}{\numberline {3-2}{\ignorespaces vim方向控制键\relax }}{48}{table.caption.22}% 
+\contentsline {table}{\numberline {3-3}{\ignorespaces vim撤销指令按键\relax }}{48}{table.caption.23}% 
+\contentsline {table}{\numberline {3-4}{\ignorespaces vim删除指令按键\relax }}{49}{table.caption.24}% 
 \addvspace {10.0pt}
-\contentsline {table}{\numberline {4-1}{\ignorespaces 特殊变量的含义\relax }}{71}{table.caption.35}% 
+\contentsline {table}{\numberline {4-1}{\ignorespaces 特殊变量的含义\relax }}{67}{table.caption.32}% 
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
@@ -29,7 +26,7 @@
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {table}{\numberline {11-1}{\ignorespaces DNS演示环境机器一览\relax }}{135}{table.caption.41}% 
+\contentsline {table}{\numberline {11-1}{\ignorespaces DNS演示环境机器一览\relax }}{131}{table.caption.38}% 
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
@@ -41,7 +38,7 @@
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {table}{\numberline {22-1}{\ignorespaces KeepAlived演示环境机器列表\relax }}{179}{table.caption.45}% 
+\contentsline {table}{\numberline {22-1}{\ignorespaces KeepAlived演示环境机器列表\relax }}{175}{table.caption.42}% 
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
@@ -49,19 +46,19 @@
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {table}{\numberline {29-1}{\ignorespaces PXE目录结构\relax }}{211}{table.caption.48}% 
-\addvspace {10.0pt}
-\addvspace {10.0pt}
-\addvspace {10.0pt}
-\contentsline {table}{\numberline {32-1}{\ignorespaces Ansible测试环境\relax }}{218}{table.caption.50}% 
-\addvspace {10.0pt}
-\addvspace {10.0pt}
-\contentsline {table}{\numberline {34-1}{\ignorespaces SaltStack测试环境机器列表\relax }}{234}{table.caption.53}% 
+\contentsline {table}{\numberline {29-1}{\ignorespaces PXE目录结构\relax }}{207}{table.caption.45}% 
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {table}{\numberline {38-1}{\ignorespaces Docker演示环境机器一览\relax }}{272}{table.caption.75}% 
+\contentsline {table}{\numberline {33-1}{\ignorespaces Ansible测试环境\relax }}{216}{table.caption.47}% 
+\addvspace {10.0pt}
+\contentsline {table}{\numberline {34-1}{\ignorespaces SaltStack测试环境机器列表\relax }}{230}{table.caption.50}% 
+\addvspace {10.0pt}
+\addvspace {10.0pt}
+\addvspace {10.0pt}
+\addvspace {10.0pt}
+\contentsline {table}{\numberline {38-1}{\ignorespaces Docker演示环境机器一览\relax }}{268}{table.caption.72}% 
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
