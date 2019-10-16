@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.10.8)  11 OCT 2019 17:35
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.10.8)  16 OCT 2019 18:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3033,15 +3033,15 @@ Underfull \vbox (badness 3240) has occurred while \output is active []
 
 ]
 第二十一章
-(./body/chapter11_keepalived.tex [173] [174
+(./body/cluster/keepalived.tex [173] [174
 
 ]
 第二十二章
-) (./body/chapter11_lvs_keepalived.tex [175] [176
+) (./body/cluster/lvs.tex [175] [176
 
 ]
 第二十三章
-[177] [178]) (./body/chapter11_heartbeat.tex
+[177] [178]) (./body/cluster/heartbeat.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [179]
@@ -3341,9 +3341,9 @@ Overfull \hbox (350.56114pt too wide) in paragraph at lines 251--251
 ]: info: Other node completed standby takeover of foreign resources.[] 
  []
 
-) (./body/chapter11_nginx_keepalived.tex [186]
+) (./body/cluster/nginx.tex [186]
 第二十五章
-) (./body/chapter11_haproxy.tex [187
+) (./body/cluster/haproxy.tex [187
 
 ] [188
 
@@ -3513,7 +3513,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-] [244] (./body/chapter14_kvm.tex [245] [246
+] [244]
+(./body/virtualization/kvm.tex [245] [246
 
 ]
 第三十七章
@@ -3736,22 +3737,22 @@ ID(), myDom.name())[]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [264])
-(./body/chapter14_docker.tex [265] [266
+(./body/virtualization/openstack.tex [265] [266
 
 ]
 第三十八章
+) (./body/virtualization/docker.tex [267] [268
+
+]
+第三十九章
 File: graph/container01.pdf Graphic file (type pdf)
 <use graph/container01.pdf>
 File: graph/virtualization01.pdf Graphic file (type pdf)
 <use graph/virtualization01.pdf>
-[267]
+[269]
 File: graph/os-arch-mps.pdf Graphic file (type pdf)
 <use graph/os-arch-mps.pdf>
-) (./body/chapter14_openstack.tex [268] [269] [270
-
-]
-第三十九章
-) (./body/chapter14_PublicCloud.tex [271] [272
+) (./body/virtualization/cloud.tex [270] [271] [272
 
 ]
 第四十章
@@ -4023,7 +4024,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 137.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 137.
 Package rerunfilecheck Info: File `mybook.out' has not changed.
-(rerunfilecheck)             Checksum: 58D54072BD9BD83856DBF847139A7BA1.
+(rerunfilecheck)             Checksum: B2C0B75D7D8C79062700E103969C7A38.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -4038,7 +4039,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 137.
  ) 
 Here is how much of TeX's memory you used:
  40409 strings out of 492909
- 840517 string characters out of 6136299
+ 840382 string characters out of 6136299
  1128683 words of memory out of 5000000
  43597 multiletter control sequences out of 15000+600000
  538000 words of font info for 120 fonts, out of 8000000 for 9000

@@ -64,10 +64,10 @@
 \contentsline {figure}{\numberline {37.1}{\ignorespaces Libvirt支持的虚拟化类型\relax }}{248}{figure.caption.57}% 
 \contentsline {figure}{\numberline {37.2}{\ignorespaces 节点、域与Hypervisor之间的关系\relax }}{248}{figure.caption.58}% 
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {38.1}{\ignorespaces 容器架构模型\relax }}{267}{figure.caption.70}% 
-\contentsline {figure}{\numberline {38.2}{\ignorespaces 虚拟化架构模型\relax }}{268}{figure.caption.71}% 
-\contentsline {figure}{\numberline {38.3}{\ignorespaces 系统架构\relax }}{269}{figure.caption.73}% 
 \addvspace {10.0pt}
+\contentsline {figure}{\numberline {39.1}{\ignorespaces 容器架构模型\relax }}{269}{figure.caption.70}% 
+\contentsline {figure}{\numberline {39.2}{\ignorespaces 虚拟化架构模型\relax }}{270}{figure.caption.71}% 
+\contentsline {figure}{\numberline {39.3}{\ignorespaces 系统架构\relax }}{271}{figure.caption.73}% 
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \contentsline {figure}{\numberline {41.1}{\ignorespaces OSI七层模型\relax }}{279}{figure.caption.74}% 
