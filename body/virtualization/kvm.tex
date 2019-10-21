@@ -52,7 +52,7 @@ libvirt的应用程序接口已被广泛地用在基于虚拟化和云计算的�
 \subsection{libvirt中的一些术语}
 \label{sec:libvirtTerm}
 
-1. 节点（Node）：一台物理机；上面可能运行多个虚拟客户机，Hypervisor和Domain都运行在节点之上。
+1. 节点（Node）：一台物理机\footnote{也有可能是虚拟机，在虚拟机里再开启虚拟化完全没必要。}；上面可能运行多个虚拟客户机，Hypervisor和Domain都运行在节点之上。
 
 2. Hypervisor：也称虚拟机监视器（VMM），如KVM、Xen、VMware、Hyper-V等，是虚拟化中的一个底层软件层，它可以虚拟化一个节点让其运行多个虚拟客户机（不同的客户机有可能运行不同的操作系统）。
 
@@ -73,8 +73,7 @@ libvirt的应用程序接口已被广泛地用在基于虚拟化和云计算的�
 # grep -E --color '(vmx|svm)' /proc/cpuinfo
 \end{verbatim}
 
-如果有红色的字符输出，说明系统支持虚拟化，然后接下来的一些操作才是有意
-义的。
+如果有红色的字符输出，说明系统支持虚拟化，那么后面的一些操作才是有意义的。
 
 \section{安装前的准备工作}
 \label{sec:kvmPrepare}
@@ -188,7 +187,8 @@ format指镜像的格式，常用的格式为raw和qcow2，如果不声明，默
 \subsection{安装虚拟机}
 \label{sec:installVM}
 
-接下来就进行虚拟机的安装，分别演示raw格式与qcow2格式的虚拟机镜像文件系统的安装。两者的系统安装基本上是一样的，不同的只是\verb|--disk|选项要指定不同的镜像文件格式而已。
+接下来就进行虚拟机的安装，分别演示raw格式与qcow2格式的虚拟机镜像文件系统的安装。
+两者的系统安装基本上是一样的，不同的只是\verb|--disk|选项要指定不同的镜像文件格式而已。
 
 \subsubsection{安装raw格式的虚拟机系统}
 \label{sec:installRawVM}
@@ -215,13 +215,15 @@ format指镜像的格式，常用的格式为raw和qcow2，如果不声明，默
 \label{sec:installQcow2VM}
 
 \begin{verbatim}
-# virt-install --virt-type kvm --name taoqi --ram 512 \
-   --cdrom=/opt/CentOS-6.5-x86_64-bin-DVD1.iso \
-   --disk path=/opt/taoqi.qcow2,format=qcow2 \
-   --network network=default \
-   --graphics vnc,listen=0.0.0.0 \
-   --noautoconsole --os-type=linux \
-   --os-variant=rhel6
+# virt-install --virt-type kvm \
+--name taoqi \
+--ram 512 \
+--cdrom=/opt/CentOS-6.5-x86_64-bin-DVD1.iso \
+--disk path=/opt/taoqi.qcow2,format=qcow2 \
+--network network=default \
+--graphics vnc,listen=0.0.0.0 \
+--noautoconsole --os-type=linux \
+--os-variant=rhel7
 \end{verbatim}
 
 上述命令行参数的一些说明：
@@ -422,7 +424,8 @@ lavenliu.raw # 要被转换的镜像文件
 new.qcow2 # 转换后的镜像文件
 \end{verbatim}
 
-然后直接使用vim修改lavenliu.xml文件后，reboot虚拟机后，其磁盘格式仍然是raw格式。彻底更改使用"virsh edit new"。在生产环境中使用virsh edit xxx来修改设置。
+然后直接使用vim修改lavenliu.xml文件后，reboot虚拟机后，其磁盘格式仍然是raw格式。
+彻底更改使用"virsh edit new"。在生产环境中使用virsh edit xxx来修改设置。
 
 \subsection{虚拟机迁移}
 \label{sec:moveVM}
@@ -473,7 +476,8 @@ Could not create snapshot '1st_snapshot': -95 (Operation not supported)
 # qemu-img snapshot -c 1st_snapshot /opt/taoqi.qcow2
 \end{verbatim}
 
-如果没有提示，说明创建成功。在UNIX世界中，没有消息就是好消息。接下来我们可以登录到taoqi这台虚拟机里，创建一个测试文件，如在/root目录下创建一个名为taoqi.iso的文件，操作如下：
+如果没有提示，说明创建成功。接下来我们可以登录到taoqi这台虚拟机里，
+创建一个测试文件，如在/root目录下创建一个名为taoqi.iso的文件，操作如下：
 
 \begin{verbatim}
 # dd if=/dev/zero of=/root/taoqi.iso bs=1M count=256
@@ -501,7 +505,8 @@ ID        TAG                 VM SIZE                DATE       VM CLOCK
 \subsubsection{恢复指定快照}
 \label{sec:resumeSpecificVmSnapShost}
 
-这时我们恢复到第一个快照，我们在做完第一个快照后，创建了一个/root/test.iso的文件，那么当我们恢复到第一个快照时，在/root目录下应该是没有test.iso文件的，是不是这样的呢？接下来看操作：
+这时我们恢复到第一个快照，我们在做完第一个快照后，创建了一个/root/test.iso的文件，
+那么当我们恢复到第一个快照时，在/root目录下应该是没有test.iso文件的，是不是这样的呢？接下来看操作：
 
 \begin{verbatim}
 # virsh destroy taoqi
@@ -509,7 +514,8 @@ ID        TAG                 VM SIZE                DATE       VM CLOCK
 # virsh start taoqi
 \end{verbatim}
 
-登录到taoqi这台虚拟机进行查看，发现/root/test.iso文件没有了（肯定没有改文件，因为在创建1st\_snapshot时，还没有创建/root/test.iso文件的，所以恢复到1st\_snaphost快照时是看不到创建快照后的文件）。
+登录到taoqi这台虚拟机进行查看，发现/root/test.iso文件没有了（肯定没有改文件，因为在创建1st\_snapshot时，
+还没有创建/root/test.iso文件的，所以恢复到1st\_snaphost快照时是看不到创建快照后的文件）。
 
 恢复2nd\_snapshot快照，
 
@@ -620,7 +626,10 @@ virbr0			8000.525400f02934	yes			virbr0-nic
 														vnet1
 \end{verbatim}
 
-当我们要在局域网中访问宿主机上的虚拟机时，这时使用桥接网络将显得很有必要。接下来在kvm02.lavenlilu.com主机上创建kvm-bridge虚拟机并使用桥接的方式，可以让局域网中的其他机器可以访问到它（如从kvm01.lavenliu.com主机可以访问kvm02上的kvm-bridge虚拟机）。操作如下，然后在宿主机上增加网桥设备br1，
+当我们要在局域网中访问宿主机上的虚拟机时，这时使用桥接网络将显得很有必要。
+接下来在kvm02.lavenlilu.com主机上创建kvm-bridge虚拟机并使用桥接的方式，
+可以让局域网中的其他机器可以访问到它（如从kvm01.lavenliu.com主机可以访问kvm02上的kvm-bridge虚拟机）。
+操作如下，然后在宿主机上增加网桥设备br1，
 
 \begin{verbatim}
 # virsh iface-bridge eth1 br1
@@ -689,7 +698,8 @@ br1			8000.000c2948b730		  yes		              eth1
 														              vnet0
 \end{verbatim}
 
-可以在我们的Windows机器上进行ping测试，是否可以连通我们的kvm-bridge虚拟机（这里的虚拟机IP地址为192.168.20.117），
+可以在我们的Windows机器上进行ping测试，
+是否可以连通我们的kvm-bridge虚拟机（这里的虚拟机IP地址为192.168.20.117），
 
 \begin{verbatim}
 ping 192.168.20.117
@@ -818,7 +828,8 @@ Domain ID: 5
 \subsection{Python API示例}
 \label{sec:libvirtPythonAPI}
 
-许多种语言都提供了libvirt的绑定。Python作为一种在Linux上比较流行的编程语言，它也提供了libvirt API的绑定。在使用Python调用libvirt API之前，需要安装libvirt-python软件包，如果没有安装则执行如下命令进行安装：
+Python可以说是现在非常火的编程语言，用在了很多领域。Libvir API 也提供了 Python 语言的绑定。
+在使用Python调用Libvirt API之前，需要安装libvirt-python软件包，如果没有安装则执行如下命令进行安装：
 
 \begin{verbatim}
 # yum install -y libvirt-python
@@ -828,11 +839,8 @@ Domain ID: 5
 \label{sec:displayDomainInfo}
 
 \begin{verbatim}
+# -*- coding: utf-8 -*-
 #!/usr/bin/env python
-# coding: utf-8
-
-# Get domain info via libvirt python API
-# Tested with python2.6 and libvirt-python-0.10.2 on KVM host.
 
 import libvirt
 import sys
