@@ -10,6 +10,7 @@
 \usepackage[labelfont=bf,labelsep=quad]{caption}
 \renewcommand\thetable{\arabic{chapter}-\arabic{table}}
 \usepackage{longtable,tabularx,booktabs}
+\usepackage{multirow}
 
 \usepackage{listings}
 \usepackage{xcolor}
@@ -90,13 +91,6 @@ contents={\includegraphics[width=\paperwidth,height=\paperheight]{img/bg.jpg}}
 \textsc{\LARGE \bfseries 天道酬勤\quad{}编著}\\[0.4cm]
 %\hrulefill \\[1cm]
 
-%\begin{figure}[h]
-%\begin{center}
-%\includegraphics[width=0.80\textwidth]{graph/mylogo.pdf}
-%\includegraphics[width=0.80\textwidth]{img/bg.jpg}
-%\end{center}
-%\end{figure}
-
 \vfill
 
 {\large \today}
@@ -110,15 +104,17 @@ contents={\includegraphics[width=\paperwidth,height=\paperheight]{img/bg.jpg}}
 \listoffigures
 \listoftables
 
+% 第一部分
 \include{body/chapter01SystemIntro}
+
+% 第二部分
 \include{body/chapter02BasicCommand}
+
+% 第三部分
 \include{body/chapter03Vim}
-%\include{body/chapter04RegularExpression}
-%\include{body/chapter05Awk}
-%\include{body/chapter06Sed}
-%chapter04,chapter05与chapter06已合并到chapter07
+
+% 第四部分
 \include{body/chapter07Shell}
-%\include{body/chapter08Makefile}
 \include{body/chapter09MySQL}
 \include{body/chapter10SomeServices}
 \include{body/chapter11HighAvailable}

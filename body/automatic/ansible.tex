@@ -40,9 +40,9 @@ yum install -y ansible
       \toprule
       主机           & 说明   \\
       \midrule
-      192.168.56.150 & 主控端 \\
-      192.168.56.111 & 被控端 \\
-      192.168.56.112 & 被控端 \\
+      192.168.56.101 & 主控端 \\
+      192.168.56.102 & 被控端 \\
+      192.168.56.103 & 被控端 \\
       \bottomrule
     \end{tabular}
     \caption{Ansible测试环境}
@@ -52,24 +52,24 @@ yum install -y ansible
 在主控端生成SSH密钥对，并把公钥分发到被控端的机器上。
 \begin{verbatim}
 # ssh-keygen -t rsa
-# ssh-copy-id -i /root/.ssh/id_rsa.pub root@192.168.56.111
-# ssh-copy-id -i /root/.ssh/id_rsa.pub root@192.168.56.112
+# ssh-copy-id -i /root/.ssh/id_rsa.pub root@192.168.56.101
+# ssh-copy-id -i /root/.ssh/id_rsa.pub root@192.168.56.101
 \end{verbatim}
 以上配置完毕，我们来简单的使用一下。比如，ping测试一下我们的被控端是否
 存活。
 \begin{verbatim}
 # cat /etc/ansible/hosts
 [my1]
-192.168.56.111
-192.168.56.112
+192.168.56.101
+192.168.56.102
 
 # ansible my1 -m ping 
-192.168.56.111 | success >> {
+192.168.56.101 | success >> {
     "changed": false, 
     "ping": "pong"
 }
 
-192.168.56.112 | success >> {
+192.168.56.102 | success >> {
     "changed": false, 
     "ping": "pong"
 }

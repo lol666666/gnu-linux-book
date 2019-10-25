@@ -4,18 +4,15 @@
 
 Git是一款分布式版本控制系统，有别于CVS和SVN等集中式版本控制系统，Git可
 以让研发团队更加高效地协同工作，从而提高生产率。使用Git，开发人员的工作
-不会因为频繁地遭遇提交冲突而中断，管理人员也无须为数据的备份而担心。
+不会因为频繁地遭遇提交冲突而中断，管理人员也无须为数据的备份而担心，因为它是分布式的。
 
 \section{安装git}
 
 \begin{verbatim}
-# Debian系列
-sudo apt-get install git
-sudo apt-get install git-core
-
-# RHEL系列
-yum install git
+yum install -y git
 \end{verbatim}
+
+通过yum进行安装的git，其版本为1.8.x的，如果我们想使用高版本的git，可以下载源码自行编译。
 
 \section{创建版本库}
 设置用户名及邮件地址，
@@ -44,8 +41,7 @@ git config --global --list
 除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还
 原”。
 
-所以，创建一个版本库非常简单，首先，选择一个合适的地方，创建一个空目
-录：
+创建一个版本库非常简单，首先，选择一个合适的地方，创建一个空目录：
 
 \begin{verbatim}
 $ mkdir learngit
