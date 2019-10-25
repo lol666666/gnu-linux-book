@@ -3,6 +3,7 @@
 \contentsline {section}{\numberline {1.1}Gnu计划}{9}{section.1.1}% 
 \contentsline {subsection}{\numberline {1.1.1}图片欣赏}{10}{subsection.1.1.1}% 
 \contentsline {section}{\numberline {1.2}本书使用的操作系统及环境}{11}{section.1.2}% 
+\contentsline {subsection}{\numberline {1.2.1}系统环境设置}{11}{subsection.1.2.1}% 
 \contentsline {chapter}{\numberline {第二章\hspace {.3em}}常用命令使用}{13}{chapter.2}% 
 \contentsline {section}{\numberline {2.1}命令行下的快捷键}{13}{section.2.1}% 
 \contentsline {subsection}{\numberline {2.1.1}常用快捷键介绍}{13}{subsection.2.1.1}% 
@@ -11,50 +12,52 @@
 \contentsline {subsection}{\numberline {2.3.1}终端颜色}{16}{subsection.2.3.1}% 
 \contentsline {section}{\numberline {2.4}date命令的使用}{18}{section.2.4}% 
 \contentsline {section}{\numberline {2.5}yum命令的使用}{18}{section.2.5}% 
+\contentsline {subsection}{\numberline {2.5.1}一些实例}{20}{subsection.2.5.1}% 
 \contentsline {section}{\numberline {2.6}parted命令的使用}{20}{section.2.6}% 
 \contentsline {section}{\numberline {2.7}mount命令的使用}{20}{section.2.7}% 
 \contentsline {section}{\numberline {2.8}grep命令的使用}{21}{section.2.8}% 
 \contentsline {subsection}{\numberline {2.8.1}常用选项}{21}{subsection.2.8.1}% 
 \contentsline {subsection}{\numberline {2.8.2}一些实例}{21}{subsection.2.8.2}% 
 \contentsline {section}{\numberline {2.9}crontab命令的使用}{22}{section.2.9}% 
-\contentsline {section}{\numberline {2.10}find命令的使用}{22}{section.2.10}% 
-\contentsline {section}{\numberline {2.11}top命令的使用}{24}{section.2.11}% 
-\contentsline {section}{\numberline {2.12}free命令的使用}{25}{section.2.12}% 
-\contentsline {subsection}{\numberline {2.12.1}常用选项}{25}{subsection.2.12.1}% 
-\contentsline {subsection}{\numberline {2.12.2}一些实例}{25}{subsection.2.12.2}% 
-\contentsline {section}{\numberline {2.13}xargs命令的使用}{25}{section.2.13}% 
-\contentsline {section}{\numberline {2.14}tr命令的使用}{25}{section.2.14}% 
-\contentsline {section}{\numberline {2.15}tar命令的使用}{25}{section.2.15}% 
-\contentsline {section}{\numberline {2.16}read命令的使用}{27}{section.2.16}% 
-\contentsline {subsection}{\numberline {2.16.1}常用选项}{27}{subsection.2.16.1}% 
-\contentsline {subsection}{\numberline {2.16.2}一些实例}{27}{subsection.2.16.2}% 
-\contentsline {section}{\numberline {2.17}cut命令的使用}{27}{section.2.17}% 
+\contentsline {section}{\numberline {2.10}crontab具体实例}{23}{section.2.10}% 
+\contentsline {section}{\numberline {2.11}find命令的使用}{23}{section.2.11}% 
+\contentsline {section}{\numberline {2.12}top命令的使用}{24}{section.2.12}% 
+\contentsline {section}{\numberline {2.13}free命令的使用}{25}{section.2.13}% 
+\contentsline {subsection}{\numberline {2.13.1}常用选项}{25}{subsection.2.13.1}% 
+\contentsline {subsection}{\numberline {2.13.2}一些实例}{25}{subsection.2.13.2}% 
+\contentsline {section}{\numberline {2.14}xargs命令的使用}{25}{section.2.14}% 
+\contentsline {section}{\numberline {2.15}tr命令的使用}{25}{section.2.15}% 
+\contentsline {section}{\numberline {2.16}tar命令的使用}{25}{section.2.16}% 
+\contentsline {section}{\numberline {2.17}read命令的使用}{27}{section.2.17}% 
 \contentsline {subsection}{\numberline {2.17.1}常用选项}{27}{subsection.2.17.1}% 
 \contentsline {subsection}{\numberline {2.17.2}一些实例}{27}{subsection.2.17.2}% 
-\contentsline {section}{\numberline {2.18}sort命令的使用}{28}{section.2.18}% 
-\contentsline {subsection}{\numberline {2.18.1}常用选项}{28}{subsection.2.18.1}% 
-\contentsline {subsection}{\numberline {2.18.2}一些实例}{28}{subsection.2.18.2}% 
-\contentsline {section}{\numberline {2.19}lsof命令的使用}{28}{section.2.19}% 
-\contentsline {subsection}{\numberline {2.19.1}恢复删除的文件}{30}{subsection.2.19.1}% 
-\contentsline {section}{\numberline {2.20}netstat命令的使用}{31}{section.2.20}% 
-\contentsline {section}{\numberline {2.21}tcpdump命令的使用}{31}{section.2.21}% 
-\contentsline {section}{\numberline {2.22}traceroute命令的使用}{33}{section.2.22}% 
-\contentsline {section}{\numberline {2.23}wget命令的使用}{33}{section.2.23}% 
-\contentsline {section}{\numberline {2.24}screen命令的使用}{33}{section.2.24}% 
-\contentsline {subsection}{\numberline {2.24.1}screen常用参数}{33}{subsection.2.24.1}% 
-\contentsline {subsection}{\numberline {2.24.2}使用screen}{33}{subsection.2.24.2}% 
-\contentsline {section}{\numberline {2.25}iptables的使用}{33}{section.2.25}% 
-\contentsline {subsection}{\numberline {2.25.1}内网机器通过iptables访问互联网}{36}{subsection.2.25.1}% 
-\contentsline {subsection}{\numberline {2.25.2}iptables之端口转发}{37}{subsection.2.25.2}% 
-\contentsline {section}{\numberline {2.26}qperf命令的使用}{38}{section.2.26}% 
-\contentsline {subsection}{\numberline {2.26.1}参数说明及示例}{39}{subsection.2.26.1}% 
-\contentsline {section}{\numberline {2.27}iperf命令的使用}{39}{section.2.27}% 
-\contentsline {subsection}{\numberline {2.27.1}参数说明及示例}{40}{subsection.2.27.1}% 
-\contentsline {section}{\numberline {2.28}vmstat命令的使用}{40}{section.2.28}% 
-\contentsline {section}{\numberline {2.29}iostat命令的使用}{41}{section.2.29}% 
-\contentsline {section}{\numberline {2.30}sar命令的使用}{41}{section.2.30}% 
-\contentsline {section}{\numberline {2.31}ip命令的使用}{45}{section.2.31}% 
-\contentsline {subsection}{\numberline {2.31.1}显示IP信息}{45}{subsection.2.31.1}% 
+\contentsline {section}{\numberline {2.18}cut命令的使用}{27}{section.2.18}% 
+\contentsline {subsection}{\numberline {2.18.1}常用选项}{27}{subsection.2.18.1}% 
+\contentsline {subsection}{\numberline {2.18.2}一些实例}{27}{subsection.2.18.2}% 
+\contentsline {section}{\numberline {2.19}sort命令的使用}{28}{section.2.19}% 
+\contentsline {subsection}{\numberline {2.19.1}常用选项}{28}{subsection.2.19.1}% 
+\contentsline {subsection}{\numberline {2.19.2}一些实例}{28}{subsection.2.19.2}% 
+\contentsline {section}{\numberline {2.20}lsof命令的使用}{28}{section.2.20}% 
+\contentsline {subsection}{\numberline {2.20.1}恢复删除的文件}{30}{subsection.2.20.1}% 
+\contentsline {section}{\numberline {2.21}netstat命令的使用}{32}{section.2.21}% 
+\contentsline {section}{\numberline {2.22}tcpdump命令的使用}{32}{section.2.22}% 
+\contentsline {section}{\numberline {2.23}traceroute命令的使用}{33}{section.2.23}% 
+\contentsline {section}{\numberline {2.24}wget命令的使用}{33}{section.2.24}% 
+\contentsline {section}{\numberline {2.25}screen命令的使用}{33}{section.2.25}% 
+\contentsline {subsection}{\numberline {2.25.1}screen常用参数}{33}{subsection.2.25.1}% 
+\contentsline {subsection}{\numberline {2.25.2}使用screen}{33}{subsection.2.25.2}% 
+\contentsline {section}{\numberline {2.26}iptables的使用}{33}{section.2.26}% 
+\contentsline {subsection}{\numberline {2.26.1}内网机器通过iptables访问互联网}{36}{subsection.2.26.1}% 
+\contentsline {subsection}{\numberline {2.26.2}iptables之端口转发}{38}{subsection.2.26.2}% 
+\contentsline {section}{\numberline {2.27}qperf命令的使用}{39}{section.2.27}% 
+\contentsline {subsection}{\numberline {2.27.1}参数说明及示例}{39}{subsection.2.27.1}% 
+\contentsline {section}{\numberline {2.28}iperf命令的使用}{40}{section.2.28}% 
+\contentsline {subsection}{\numberline {2.28.1}参数说明及示例}{40}{subsection.2.28.1}% 
+\contentsline {section}{\numberline {2.29}vmstat命令的使用}{41}{section.2.29}% 
+\contentsline {section}{\numberline {2.30}iostat命令的使用}{42}{section.2.30}% 
+\contentsline {section}{\numberline {2.31}sar命令的使用}{42}{section.2.31}% 
+\contentsline {section}{\numberline {2.32}ip命令的使用}{46}{section.2.32}% 
+\contentsline {subsection}{\numberline {2.32.1}显示IP信息}{46}{subsection.2.32.1}% 
 \contentsline {chapter}{\numberline {第三章\hspace {.3em}}vim编辑器}{47}{chapter.3}% 
 \contentsline {section}{\numberline {3.1}vim的几种模式}{47}{section.3.1}% 
 \contentsline {subsection}{\numberline {3.1.1}输入模式}{47}{subsection.3.1.1}% 
@@ -366,12 +369,12 @@
 \contentsline {subsection}{\numberline {37.2.3}安装KVM管理工具}{249}{subsection.37.2.3}% 
 \contentsline {section}{\numberline {37.3}开始部署KVM虚拟机}{249}{section.37.3}% 
 \contentsline {subsection}{\numberline {37.3.1}创建虚拟机镜像}{249}{subsection.37.3.1}% 
-\contentsline {subsubsection}{创建raw格式镜像文件}{249}{subsubsection*.59}% 
-\contentsline {subsubsection}{创建qcow2格式镜像文件}{250}{subsubsection*.60}% 
-\contentsline {subsubsection}{虚拟机镜像文件格式对比}{250}{subsubsection*.61}% 
+\contentsline {subsubsection}{创建raw格式镜像文件}{249}{subsubsection*.61}% 
+\contentsline {subsubsection}{创建qcow2格式镜像文件}{250}{subsubsection*.62}% 
+\contentsline {subsubsection}{虚拟机镜像文件格式对比}{250}{subsubsection*.63}% 
 \contentsline {subsection}{\numberline {37.3.2}安装虚拟机}{250}{subsection.37.3.2}% 
-\contentsline {subsubsection}{安装raw格式的虚拟机系统}{251}{subsubsection*.62}% 
-\contentsline {subsubsection}{安装qcow2格式的虚拟机系统}{251}{subsubsection*.63}% 
+\contentsline {subsubsection}{安装raw格式的虚拟机系统}{251}{subsubsection*.64}% 
+\contentsline {subsubsection}{安装qcow2格式的虚拟机系统}{251}{subsubsection*.65}% 
 \contentsline {section}{\numberline {37.4}KVM虚拟机管理}{251}{section.37.4}% 
 \contentsline {subsection}{\numberline {37.4.1}libvirt的配置和使用}{251}{subsection.37.4.1}% 
 \contentsline {subsection}{\numberline {37.4.2}虚拟机拷贝}{252}{subsection.37.4.2}% 
@@ -380,56 +383,56 @@
 \contentsline {subsection}{\numberline {37.4.5}虚拟机硬盘格式转换}{254}{subsection.37.4.5}% 
 \contentsline {subsection}{\numberline {37.4.6}虚拟机迁移}{255}{subsection.37.4.6}% 
 \contentsline {subsection}{\numberline {37.4.7}创建虚拟机快照}{255}{subsection.37.4.7}% 
-\contentsline {subsubsection}{创建虚拟机快照}{255}{subsubsection*.64}% 
-\contentsline {subsubsection}{查看虚拟机快照}{256}{subsubsection*.65}% 
-\contentsline {subsubsection}{恢复指定快照}{256}{subsubsection*.66}% 
-\contentsline {subsubsection}{删除虚拟机快照}{256}{subsubsection*.67}% 
+\contentsline {subsubsection}{创建虚拟机快照}{255}{subsubsection*.66}% 
+\contentsline {subsubsection}{查看虚拟机快照}{256}{subsubsection*.67}% 
+\contentsline {subsubsection}{恢复指定快照}{256}{subsubsection*.68}% 
+\contentsline {subsubsection}{删除虚拟机快照}{256}{subsubsection*.69}% 
 \contentsline {section}{\numberline {37.5}KVM虚拟机桥接网络}{257}{section.37.5}% 
 \contentsline {section}{\numberline {37.6}Libvirt API}{260}{section.37.6}% 
 \contentsline {subsection}{\numberline {37.6.1}Libvirt API简介}{260}{subsection.37.6.1}% 
 \contentsline {subsection}{\numberline {37.6.2}C API示例}{260}{subsection.37.6.2}% 
-\contentsline {subsubsection}{显示某个域的信息}{261}{subsubsection*.68}% 
+\contentsline {subsubsection}{显示某个域的信息}{261}{subsubsection*.70}% 
 \contentsline {subsection}{\numberline {37.6.3}Python API示例}{262}{subsection.37.6.3}% 
-\contentsline {subsubsection}{查看宿主机正在运行的虚拟机}{262}{subsubsection*.69}% 
-\contentsline {chapter}{\numberline {第三十八章\hspace {.3em}}OpenStack}{267}{chapter.38}% 
-\contentsline {section}{\numberline {38.1}OpenStack简介}{267}{section.38.1}% 
-\contentsline {subsection}{\numberline {38.1.1}OpenStack常用组件介绍}{267}{subsection.38.1.1}% 
-\contentsline {section}{\numberline {38.2}安装前的准备工作}{267}{section.38.2}% 
-\contentsline {chapter}{\numberline {第三十九章\hspace {.3em}}Docker}{269}{chapter.39}% 
-\contentsline {section}{\numberline {39.1}关于Docker}{269}{section.39.1}% 
-\contentsline {section}{\numberline {39.2}容器 VS. 虚拟机}{269}{section.39.2}% 
-\contentsline {section}{\numberline {39.3}Docker简介}{270}{section.39.3}% 
-\contentsline {subsection}{\numberline {39.3.1}Docker与传统虚拟机建构对比}{270}{subsection.39.3.1}% 
-\contentsline {subsection}{\numberline {39.3.2}应用容器虚拟化定位}{270}{subsection.39.3.2}% 
-\contentsline {subsection}{\numberline {39.3.3}Docker有哪些优势}{270}{subsection.39.3.3}% 
-\contentsline {subsection}{\numberline {39.3.4}Docker应用场景}{270}{subsection.39.3.4}% 
-\contentsline {subsection}{\numberline {39.3.5}Docker组成}{270}{subsection.39.3.5}% 
-\contentsline {section}{\numberline {39.4}安装及启动第一台Docker容器}{270}{section.39.4}% 
-\contentsline {section}{\numberline {39.5}测试环境}{270}{section.39.5}% 
-\contentsline {subsection}{\numberline {39.5.1}安装Docker}{270}{subsection.39.5.1}% 
-\contentsline {subsection}{\numberline {39.5.2}运行第一台Docker容器}{271}{subsection.39.5.2}% 
-\contentsline {section}{\numberline {39.6}容器及镜像管理}{271}{section.39.6}% 
-\contentsline {subsection}{\numberline {39.6.1}容器管理}{271}{subsection.39.6.1}% 
-\contentsline {subsection}{\numberline {39.6.2}镜像管理}{271}{subsection.39.6.2}% 
-\contentsline {section}{\numberline {39.7}构建Docker镜像}{271}{section.39.7}% 
-\contentsline {subsection}{\numberline {39.7.1}手工构建}{271}{subsection.39.7.1}% 
-\contentsline {subsection}{\numberline {39.7.2}使用Dockerfile构建}{271}{subsection.39.7.2}% 
-\contentsline {chapter}{\numberline {第四十章\hspace {.3em}}公有云}{273}{chapter.40}% 
-\contentsline {section}{\numberline {40.1}公有云简介}{273}{section.40.1}% 
-\contentsline {part}{第八部分\hspace {1em}网络部分}{275}{part.8}% 
-\contentsline {chapter}{\numberline {第四十一章\hspace {.3em}}TCP/IP}{279}{chapter.41}% 
-\contentsline {section}{\numberline {41.1}OSI网络参考模型}{279}{section.41.1}% 
-\contentsline {subsection}{\numberline {41.1.1}TCP/IP三次握手}{280}{subsection.41.1.1}% 
-\contentsline {subsection}{\numberline {41.1.2}TCP/IP四次挥手}{280}{subsection.41.1.2}% 
-\contentsline {chapter}{\numberline {第四十二章\hspace {.3em}}H3C交换机配置}{281}{chapter.42}% 
-\contentsline {section}{\numberline {42.1}配置telnet方式登录}{281}{section.42.1}% 
-\contentsline {subsection}{\numberline {42.1.1}认证方式为Scheme时的登录配置}{281}{subsection.42.1.1}% 
-\contentsline {section}{\numberline {42.2}以太网接口配置}{281}{section.42.2}% 
-\contentsline {subsection}{\numberline {42.2.1}打开或关闭以太网接口}{281}{subsection.42.2.1}% 
-\contentsline {subsection}{\numberline {42.2.2}以太网端口基本属性配置}{282}{subsection.42.2.2}% 
-\contentsline {section}{\numberline {42.3}以太网接口的配置显示和维护}{282}{section.42.3}% 
-\contentsline {part}{第九部分\hspace {1em}附录部分}{283}{part.9}% 
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}书中的源码}{285}{appendix.A}% 
-\contentsline {section}{\numberline {A.1}第1章插图源码}{285}{section.A.1}% 
-\contentsline {section}{\numberline {A.2}第2章插图源码}{287}{section.A.2}% 
-\contentsline {section}{\numberline {A.3}第14章插图源码}{297}{section.A.3}% 
+\contentsline {subsubsection}{查看宿主机正在运行的虚拟机}{262}{subsubsection*.71}% 
+\contentsline {chapter}{\numberline {第三十八章\hspace {.3em}}OpenStack}{265}{chapter.38}% 
+\contentsline {section}{\numberline {38.1}OpenStack简介}{265}{section.38.1}% 
+\contentsline {subsection}{\numberline {38.1.1}OpenStack常用组件介绍}{265}{subsection.38.1.1}% 
+\contentsline {section}{\numberline {38.2}安装前的准备工作}{265}{section.38.2}% 
+\contentsline {chapter}{\numberline {第三十九章\hspace {.3em}}Docker}{267}{chapter.39}% 
+\contentsline {section}{\numberline {39.1}关于Docker}{267}{section.39.1}% 
+\contentsline {section}{\numberline {39.2}容器 VS. 虚拟机}{267}{section.39.2}% 
+\contentsline {section}{\numberline {39.3}Docker简介}{268}{section.39.3}% 
+\contentsline {subsection}{\numberline {39.3.1}Docker与传统虚拟机建构对比}{268}{subsection.39.3.1}% 
+\contentsline {subsection}{\numberline {39.3.2}应用容器虚拟化定位}{268}{subsection.39.3.2}% 
+\contentsline {subsection}{\numberline {39.3.3}Docker有哪些优势}{268}{subsection.39.3.3}% 
+\contentsline {subsection}{\numberline {39.3.4}Docker应用场景}{268}{subsection.39.3.4}% 
+\contentsline {subsection}{\numberline {39.3.5}Docker组成}{268}{subsection.39.3.5}% 
+\contentsline {section}{\numberline {39.4}安装及启动第一台Docker容器}{268}{section.39.4}% 
+\contentsline {section}{\numberline {39.5}测试环境}{268}{section.39.5}% 
+\contentsline {subsection}{\numberline {39.5.1}安装Docker}{268}{subsection.39.5.1}% 
+\contentsline {subsection}{\numberline {39.5.2}运行第一台Docker容器}{269}{subsection.39.5.2}% 
+\contentsline {section}{\numberline {39.6}容器及镜像管理}{269}{section.39.6}% 
+\contentsline {subsection}{\numberline {39.6.1}容器管理}{269}{subsection.39.6.1}% 
+\contentsline {subsection}{\numberline {39.6.2}镜像管理}{269}{subsection.39.6.2}% 
+\contentsline {section}{\numberline {39.7}构建Docker镜像}{269}{section.39.7}% 
+\contentsline {subsection}{\numberline {39.7.1}手工构建}{269}{subsection.39.7.1}% 
+\contentsline {subsection}{\numberline {39.7.2}使用Dockerfile构建}{269}{subsection.39.7.2}% 
+\contentsline {chapter}{\numberline {第四十章\hspace {.3em}}公有云}{271}{chapter.40}% 
+\contentsline {section}{\numberline {40.1}公有云简介}{271}{section.40.1}% 
+\contentsline {part}{第八部分\hspace {1em}网络部分}{273}{part.8}% 
+\contentsline {chapter}{\numberline {第四十一章\hspace {.3em}}TCP/IP}{277}{chapter.41}% 
+\contentsline {section}{\numberline {41.1}OSI网络参考模型}{277}{section.41.1}% 
+\contentsline {subsection}{\numberline {41.1.1}TCP/IP三次握手}{278}{subsection.41.1.1}% 
+\contentsline {subsection}{\numberline {41.1.2}TCP/IP四次挥手}{278}{subsection.41.1.2}% 
+\contentsline {chapter}{\numberline {第四十二章\hspace {.3em}}H3C交换机配置}{279}{chapter.42}% 
+\contentsline {section}{\numberline {42.1}配置telnet方式登录}{279}{section.42.1}% 
+\contentsline {subsection}{\numberline {42.1.1}认证方式为Scheme时的登录配置}{279}{subsection.42.1.1}% 
+\contentsline {section}{\numberline {42.2}以太网接口配置}{279}{section.42.2}% 
+\contentsline {subsection}{\numberline {42.2.1}打开或关闭以太网接口}{279}{subsection.42.2.1}% 
+\contentsline {subsection}{\numberline {42.2.2}以太网端口基本属性配置}{280}{subsection.42.2.2}% 
+\contentsline {section}{\numberline {42.3}以太网接口的配置显示和维护}{280}{section.42.3}% 
+\contentsline {part}{第九部分\hspace {1em}附录部分}{281}{part.9}% 
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}书中的源码}{283}{appendix.A}% 
+\contentsline {section}{\numberline {A.1}第1章插图源码}{283}{section.A.1}% 
+\contentsline {section}{\numberline {A.2}第2章插图源码}{285}{section.A.2}% 
+\contentsline {section}{\numberline {A.3}第14章插图源码}{295}{section.A.3}% 

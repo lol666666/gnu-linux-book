@@ -38,11 +38,11 @@ gpgcheck=0
 几点说明：
 
 \begin{quote}
-    1. [rhel-debuginfo] 中括号里的内容可以随意 \\
-    2. name这一行可有可无 \\
-    3. baseurl这行要指定我们的资源在哪里 \\
-    4. file://说明我们使用什么协议，也可以是ftp://等 \\
-    5. /iso/Server指明我们的源在/iso/Server目录下
+    1. [rhel-debuginfo] 中括号里的内容可以随意写 \\
+    2. name 这一行可有可无 \\
+    3. baseurl 这行要指定我们的资源在哪里 \\
+    4. file:// 说明我们使用什么协议，也可以是ftp://等 \\
+    5. /iso/Server 指明我们的源在 /iso/Server 目录下
 \end{quote}
 
 配置好之后，如何使用呢？直接看操作吧：
@@ -99,6 +99,7 @@ zsh-html.i386                    4.2.6-3.el5          rhel-debuginfo
       install        & 安装软件包的命令 \\
       groupinstall   & 安装软件包组 \\
       erase          & 移除一个或多个软件包 \\
+      whatprovides   & 查询一个命令属于哪个安装包 \\
       \bottomrule
     \end{tabular}
 \end{table}

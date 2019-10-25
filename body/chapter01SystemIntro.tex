@@ -77,5 +77,38 @@ GNU通用公共许可证（GNU General Public License，GPL）。这个就是被
 \label{sec:thisOS}
 
 本书的所有操作是在作者笔记本上的虚拟机上演示，虚拟机操作系统
-为CentOS7u6 64位。
+为CentOS7u6 64位，使用三台虚拟机，每台虚拟机两块网卡，一块是NAT\footnote{或者使用桥接的模式也行}模式的网卡，
+主要为了虚拟机可以上网；另一块网卡是Internal模式，用来虚拟机之间通信。
 
+\begin{table}[htbp]
+  \centering
+    \caption{本书所使用的机器一览}
+    \label{tab:allMachines}
+    \begin{tabular}{llr}
+      \toprule
+      主机名     & IP地址 & 说明 \\
+      \midrule
+      node01.lavenliu.cn  & 192.168.56.101 &  主DNS \\
+      node02.lavenliu.cn  & 192.168.56.102 &  辅DNS \\
+      node03.lavenliu.cn  & 192.168.56.103 &  客户端 \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{系统环境设置}
+\label{sec:osSetup}
+
+\begin{itemize}
+  \item 主机名设置，使用 FQDN 形式的域名；
+  \item NTP对时，确保每个节点的时间是一致的；
+  \item SSH免密码登陆设置；
+\end{itemize}
+
+具体操作如下：
+
+\begin{verbatim}
+[root@node01 ~]# hostnamectl set-hostname node01.lavenliu.cn
+[root@node02 ~]# hostnamectl set-hostname node02.lavenliu.cn
+[root@node03 ~]# hostnamectl set-hostname node03.lavenliu.cn
+# 以下是通用设置
+\end{verbatim}
