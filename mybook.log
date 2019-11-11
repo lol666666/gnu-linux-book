@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.10.8)  22 OCT 2019 16:48
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.10.8)  28 OCT 2019 18:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1463,17 +1463,7 @@ File: img/stallman.jpg Graphic file (type bmp)
 <img/stallman.jpg>
 File: img/lw.png Graphic file (type bmp)
 <img/lw.png>
- [10]) [11]
-\openout2 = `body/chapter02BasicCommand.aux'.
-
- (./body/chapter02BasicCommand.tex [12
-
-
-
-]
-第二章
-(./body/commands/shortcuts.tex [13] [14]) (./body/commands/man.tex)
-(./body/commands/echo.tex [15]
+ [10]
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -1497,7 +1487,17 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=DFLT;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
- [16]
+) [11]
+\openout2 = `body/chapter02BasicCommand.aux'.
+
+ (./body/chapter02BasicCommand.tex [12
+
+
+
+]
+第二章
+(./body/commands/shortcuts.tex [13] [14]) (./body/commands/man.tex)
+(./body/commands/echo.tex [15] [16]
 Overfull \hbox (2.29448pt too wide) in paragraph at lines 96--96
 []\TU/CourierNew(0)/m/n/10.95 for i in `seq 0 7` ; do echo -e "\033[30;4${i}m  
     \033[0m"; \[] 
@@ -2022,37 +2022,37 @@ File: graph/kvm_network.pdf Graphic file (type pdf)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [39]
-Overfull \hbox (2.29462pt too wide) in paragraph at lines 118--118
+Overfull \hbox (2.29462pt too wide) in paragraph at lines 116--116
 []\TU/CourierNew(0)/m/n/10.95 # wget https://iperf.fr/download/iperf_2.0.2/iper
 f_2.0.2-4_amd64[] 
  []
 
 [40]
-Overfull \hbox (9.95633pt too wide) in paragraph at lines 144--144
+Overfull \hbox (9.95633pt too wide) in paragraph at lines 142--142
  []\TU/CourierNew(0)/m/n/10.95 A0305010:~ # iperf --udp --client 172.16.25.39 -
 -interval 1 \[] 
  []
 
 
-Overfull \hbox (94.28926pt too wide) in paragraph at lines 171--171
+Overfull \hbox (94.28926pt too wide) in paragraph at lines 169--169
 []\TU/CourierNew(0)/m/n/10.95 procs -----------memory---------- ---swap-- -----
 io---- --system-- ----cpu----[] 
  []
 
 
-Overfull \hbox (94.2893pt too wide) in paragraph at lines 172--172
+Overfull \hbox (94.2893pt too wide) in paragraph at lines 170--170
 []\TU/CourierNew(0)/m/n/10.95 r b   swpd free buff cache          si so      bi
  bo      in cs    us sy id wa[] 
  []
 
 
-Overfull \hbox (81.14714pt too wide) in paragraph at lines 173--173
+Overfull \hbox (81.14714pt too wide) in paragraph at lines 171--171
 []\TU/CourierNew(0)/m/n/10.95 0 0   100152 2436 97200 289740       0 1       34
  45       99 33    0 0 99 0[] 
  []
 
 [41] [42] [43]
-Overfull \hbox (81.14723pt too wide) in paragraph at lines 343--343
+Overfull \hbox (81.14723pt too wide) in paragraph at lines 341--341
 []\TU/CourierNew(0)/m/n/10.95 11:06:43 device \TU/FangSong(0)/m/n/10.95 　 \TU/C
 ourierNew(0)/m/n/10.95 %busy \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)/
 m/n/10.95 avque \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)/m/n/10.95 r+w
@@ -2061,7 +2061,7 @@ g(0)/m/n/10.95 　 　 \TU/CourierNew(0)/m/n/10.95 avwait avserv (-d)[]
  []
 
 
-Overfull \hbox (28.57863pt too wide) in paragraph at lines 344--344
+Overfull \hbox (28.57863pt too wide) in paragraph at lines 342--342
 []\TU/CourierNew(0)/m/n/10.95 11:07:13 wd-0 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU
 /CourierNew(0)/m/n/10.95 1.47 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)
 /m/n/10.95 2.75 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)/m/n/10.95 4.6
@@ -2070,7 +2070,7 @@ g(0)/m/n/10.95 　 　  \TU/CourierNew(0)/m/n/10.95 5.50 3.14[]
  []
 
 
-Overfull \hbox (35.1497pt too wide) in paragraph at lines 345--345
+Overfull \hbox (35.1497pt too wide) in paragraph at lines 343--343
 []\TU/CourierNew(0)/m/n/10.95 11:07:43 wd-0 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU
 /CourierNew(0)/m/n/10.95 0.43 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)
 /m/n/10.95 18.77 \TU/FangSong(0)/m/n/10.95 　 　  \TU/CourierNew(0)/m/n/10.95 3.0
@@ -2079,7 +2079,7 @@ Overfull \hbox (35.1497pt too wide) in paragraph at lines 345--345
  []
 
 
-Overfull \hbox (28.57861pt too wide) in paragraph at lines 346--346
+Overfull \hbox (28.57861pt too wide) in paragraph at lines 344--344
 []\TU/CourierNew(0)/m/n/10.95 11:08:13 wd-0 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU
 /CourierNew(0)/m/n/10.95 0.77 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)
 /m/n/10.95 2.78 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)/m/n/10.95 2.7
@@ -2088,7 +2088,7 @@ Overfull \hbox (28.57861pt too wide) in paragraph at lines 346--346
  []
 
 
-Overfull \hbox (35.14972pt too wide) in paragraph at lines 347--347
+Overfull \hbox (35.14972pt too wide) in paragraph at lines 345--345
 []\TU/CourierNew(0)/m/n/10.95 11:08:43 wd-0 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU
 /CourierNew(0)/m/n/10.95 1.10 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)
 /m/n/10.95 11.18 \TU/FangSong(0)/m/n/10.95 　 　  \TU/CourierNew(0)/m/n/10.95 4.1
@@ -2097,7 +2097,7 @@ g(0)/m/n/10.95 　 　  \TU/CourierNew(0)/m/n/10.95 27.32 2.68[]
  []
 
 
-Overfull \hbox (41.72078pt too wide) in paragraph at lines 348--348
+Overfull \hbox (41.72078pt too wide) in paragraph at lines 346--346
 []\TU/CourierNew(0)/m/n/10.95 11:09:13 wd-0 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU
 /CourierNew(0)/m/n/10.95 1.97 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)
 /m/n/10.95 21.78 \TU/FangSong(0)/m/n/10.95 　 　  \TU/CourierNew(0)/m/n/10.95 5.8
@@ -2106,7 +2106,7 @@ g(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)/m/n/10.95 69.66 3.35[]
  []
 
 
-Overfull \hbox (35.1497pt too wide) in paragraph at lines 349--349
+Overfull \hbox (35.1497pt too wide) in paragraph at lines 347--347
 []\TU/CourierNew(0)/m/n/10.95 Average wd-0 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/
 CourierNew(0)/m/n/10.95 1.15 \TU/FangSong(0)/m/n/10.95 　 　 　 \TU/CourierNew(0)/
 m/n/10.95 12.11 \TU/FangSong(0)/m/n/10.95 　 　  \TU/CourierNew(0)/m/n/10.95 4.09
@@ -2115,7 +2115,7 @@ m/n/10.95 12.11 \TU/FangSong(0)/m/n/10.95 　 　  \TU/CourierNew(0)/m/n/10.95 4
  []
 
 
-Overfull \hbox (87.71841pt too wide) in paragraph at lines 374--374
+Overfull \hbox (87.71841pt too wide) in paragraph at lines 372--372
 []\TU/CourierNew(0)/m/n/10.95 14:54:59 bread/s lread/s %rcache bwrit/s lwrit/s 
 %wcache pread/s pwrit/s (-b)[] 
  []
@@ -4024,8 +4024,8 @@ h/to/filename.eps
 ])
 No file mybook.ind.
 [299]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 138.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
  (./mybook.aux (./body/chapter01SystemIntro.aux)
 (./body/chapter02BasicCommand.aux) (./body/chapter03Vim.aux)
 (./body/chapter07Shell.aux) (./body/chapter09MySQL.aux)
@@ -4033,10 +4033,10 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
 (./body/chapterMonitor.aux) (./body/chapter12Automatic.aux)
 (./body/chapter13Git.aux) (./body/chapter14Virtualization.aux)
 (./body/chapter15Network.aux) (./body/chapter16Source.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 138.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 133.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
 Package rerunfilecheck Info: File `mybook.out' has not changed.
-(rerunfilecheck)             Checksum: E7825366348D96435F180E129FD7D76B.
+(rerunfilecheck)             Checksum: A2A62F7531DFB270913351A833F550A7.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -4047,13 +4047,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 138.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 133.
  ) 
 Here is how much of TeX's memory you used:
- 40468 strings out of 492909
- 841245 string characters out of 6136299
- 1129780 words of memory out of 5000000
- 43651 multiletter control sequences out of 15000+600000
+ 40469 strings out of 492909
+ 841259 string characters out of 6136299
+ 1130576 words of memory out of 5000000
+ 43652 multiletter control sequences out of 15000+600000
  538000 words of font info for 120 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  55i,16n,96p,836b,1947s stack positions out of 5000i,500n,10000p,200000b,80000s

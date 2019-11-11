@@ -251,6 +251,12 @@
 \contentsline {chapter}{\numberline {第二十七章\hspace {.3em}}Zabbix}{195}{chapter.27}% 
 \contentsline {section}{\numberline {27.1}Zabbix简介}{195}{section.27.1}% 
 \contentsline {section}{\numberline {27.2}Zabbix监控方案介绍}{195}{section.27.2}% 
+\contentsline {section}{\numberline {27.3}Zabbix模板制作}{195}{section.27.3}% 
+\contentsline {section}{\numberline {27.4}Zabbix监控常见的服务}{195}{section.27.4}% 
+\contentsline {subsection}{\numberline {27.4.1}监控TCP连接状态}{195}{subsection.27.4.1}% 
+\contentsline {subsection}{\numberline {27.4.2}监控Java项目}{195}{subsection.27.4.2}% 
+\contentsline {subsection}{\numberline {27.4.3}API接口监控}{195}{subsection.27.4.3}% 
+\contentsline {subsection}{\numberline {27.4.4}监控Java项目}{195}{subsection.27.4.4}% 
 \contentsline {chapter}{\numberline {第二十八章\hspace {.3em}}Prometheus}{197}{chapter.28}% 
 \contentsline {part}{第六部分\hspace {1em}自动化运维篇}{199}{part.6}% 
 \contentsline {chapter}{\numberline {第二十九章\hspace {.3em}}PXE批量系统安装}{203}{chapter.29}% 
@@ -369,12 +375,12 @@
 \contentsline {subsection}{\numberline {37.2.3}安装KVM管理工具}{249}{subsection.37.2.3}% 
 \contentsline {section}{\numberline {37.3}开始部署KVM虚拟机}{249}{section.37.3}% 
 \contentsline {subsection}{\numberline {37.3.1}创建虚拟机镜像}{249}{subsection.37.3.1}% 
-\contentsline {subsubsection}{创建raw格式镜像文件}{249}{subsubsection*.61}% 
-\contentsline {subsubsection}{创建qcow2格式镜像文件}{250}{subsubsection*.62}% 
-\contentsline {subsubsection}{虚拟机镜像文件格式对比}{250}{subsubsection*.63}% 
+\contentsline {subsubsection}{创建raw格式镜像文件}{249}{subsubsection*.60}% 
+\contentsline {subsubsection}{创建qcow2格式镜像文件}{250}{subsubsection*.61}% 
+\contentsline {subsubsection}{虚拟机镜像文件格式对比}{250}{subsubsection*.62}% 
 \contentsline {subsection}{\numberline {37.3.2}安装虚拟机}{250}{subsection.37.3.2}% 
-\contentsline {subsubsection}{安装raw格式的虚拟机系统}{251}{subsubsection*.64}% 
-\contentsline {subsubsection}{安装qcow2格式的虚拟机系统}{251}{subsubsection*.65}% 
+\contentsline {subsubsection}{安装raw格式的虚拟机系统}{251}{subsubsection*.63}% 
+\contentsline {subsubsection}{安装qcow2格式的虚拟机系统}{251}{subsubsection*.64}% 
 \contentsline {section}{\numberline {37.4}KVM虚拟机管理}{251}{section.37.4}% 
 \contentsline {subsection}{\numberline {37.4.1}libvirt的配置和使用}{251}{subsection.37.4.1}% 
 \contentsline {subsection}{\numberline {37.4.2}虚拟机拷贝}{252}{subsection.37.4.2}% 
@@ -383,17 +389,17 @@
 \contentsline {subsection}{\numberline {37.4.5}虚拟机硬盘格式转换}{254}{subsection.37.4.5}% 
 \contentsline {subsection}{\numberline {37.4.6}虚拟机迁移}{255}{subsection.37.4.6}% 
 \contentsline {subsection}{\numberline {37.4.7}创建虚拟机快照}{255}{subsection.37.4.7}% 
-\contentsline {subsubsection}{创建虚拟机快照}{255}{subsubsection*.66}% 
-\contentsline {subsubsection}{查看虚拟机快照}{256}{subsubsection*.67}% 
-\contentsline {subsubsection}{恢复指定快照}{256}{subsubsection*.68}% 
-\contentsline {subsubsection}{删除虚拟机快照}{256}{subsubsection*.69}% 
+\contentsline {subsubsection}{创建虚拟机快照}{255}{subsubsection*.65}% 
+\contentsline {subsubsection}{查看虚拟机快照}{256}{subsubsection*.66}% 
+\contentsline {subsubsection}{恢复指定快照}{256}{subsubsection*.67}% 
+\contentsline {subsubsection}{删除虚拟机快照}{256}{subsubsection*.68}% 
 \contentsline {section}{\numberline {37.5}KVM虚拟机桥接网络}{257}{section.37.5}% 
 \contentsline {section}{\numberline {37.6}Libvirt API}{260}{section.37.6}% 
 \contentsline {subsection}{\numberline {37.6.1}Libvirt API简介}{260}{subsection.37.6.1}% 
 \contentsline {subsection}{\numberline {37.6.2}C API示例}{260}{subsection.37.6.2}% 
-\contentsline {subsubsection}{显示某个域的信息}{261}{subsubsection*.70}% 
+\contentsline {subsubsection}{显示某个域的信息}{261}{subsubsection*.69}% 
 \contentsline {subsection}{\numberline {37.6.3}Python API示例}{262}{subsection.37.6.3}% 
-\contentsline {subsubsection}{查看宿主机正在运行的虚拟机}{262}{subsubsection*.71}% 
+\contentsline {subsubsection}{查看宿主机正在运行的虚拟机}{262}{subsubsection*.70}% 
 \contentsline {chapter}{\numberline {第三十八章\hspace {.3em}}OpenStack}{265}{chapter.38}% 
 \contentsline {section}{\numberline {38.1}OpenStack简介}{265}{section.38.1}% 
 \contentsline {subsection}{\numberline {38.1.1}OpenStack常用组件介绍}{265}{subsection.38.1.1}% 
