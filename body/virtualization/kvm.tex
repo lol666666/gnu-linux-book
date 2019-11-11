@@ -51,7 +51,6 @@ libvirt的应用程序接口已被广泛地用在基于虚拟化和云计算的�
 
 \subsection{libvirt中的一些术语}
 \label{sec:libvirtTerm}
-
 1. 节点（Node）：一台物理机\footnote{也有可能是虚拟机，在虚拟机里再开启虚拟化完全没必要。}；上面可能运行多个虚拟客户机，Hypervisor和Domain都运行在节点之上。
 
 2. Hypervisor：也称虚拟机监视器（VMM），如KVM、Xen、VMware、Hyper-V等，是虚拟化中的一个底层软件层，它可以虚拟化一个节点让其运行多个虚拟客户机（不同的客户机有可能运行不同的操作系统）。
@@ -200,13 +199,15 @@ format指镜像的格式，常用的格式为raw和qcow2，如果不声明，默
 作如下：
 
 \begin{verbatim}
-# virt-install --virt-type kvm --name lavenliu --ram 512 \
-   --cdrom=/opt/CentOS-6.5-x86_64-bin-DVD1.iso \
-   --disk path=/opt/lavenliu.raw \
-   --network network=default \
-   --graphics vnc,listen=0.0.0.0 \
-   --noautoconsole --os-type=linux \
-   --os-variant=rhel6
+# virt-install --virt-type kvm \
+--name lavenliu \
+--ram 512 \
+--cdrom=/opt/CentOS-6.5-x86_64-bin-DVD1.iso \
+--disk path=/opt/lavenliu.raw \
+--network network=default \
+--graphics vnc,listen=0.0.0.0 \
+--noautoconsole --os-type=linux \
+--os-variant=rhel6
 \end{verbatim}
 
 上述命令行参数的一些说明：
@@ -292,18 +293,18 @@ dump某台虚拟机的XML配置文件到新的XML配置文件
 
 \begin{verbatim}
 # virsh list --all
- Id    Name                           		State
+ Id    Name                           	State
 ----------------------------------------------------
  16    lavenliu                       	running
  -     lavenliu_new                   	shut off  # 已经创建成功，但未启动
- -     taoqi                          		shut off
+ -     taoqi                          	shut off
 \end{verbatim}
 
 接下来启动lavenliu\_new虚拟机，是否可以启动，
 
 \begin{verbatim}
 # virsh list 
- Id    Name                           		State
+ Id    Name                           	State
 ----------------------------------------------------
  16    lavenliu                       	running
  17    lavenliu_new                   	running
@@ -350,12 +351,12 @@ drwxr-xr-x. 2 root root       4096 Nov 22  2013 rh
 
 \begin{verbatim}
 # virsh list --all
- Id    Name                          State
-----------------------------------------------------
+ Id    Name                    State
+----------------------------------------------
  18    lavenliu_new            running
- -        lavenliu                     shut off
- -        lavenliu_clone          shut off
- -        taoqi                          shut off
+ -     lavenliu                shut off
+ -     lavenliu_clone          shut off
+ -     taoqi                   shut off
 \end{verbatim}
 
 接下来启动刚克隆的lavenliu\_clone虚拟机，
@@ -371,10 +372,10 @@ Domain lavenliu_clone started
 # virsh list --all
  Id     Name                       State
 ----------------------------------------------------
- 18    lavenliu_new          running
- 19    lavenliu_clone        running  # 启动成功
- -        lavenliu                   shut off
- -        taoqi                        shut off
+ 18    lavenliu_new                running
+ 19    lavenliu_clone              running  # 启动成功
+ -     lavenliu                    shut off
+ -     taoqi                       shut off
 \end{verbatim}
 
 
@@ -498,8 +499,8 @@ Could not create snapshot '1st_snapshot': -95 (Operation not supported)
 # qemu-img snapshot -l /opt/taoqi.qcow2 
 Snapshot list:
 ID        TAG                 VM SIZE                DATE       VM CLOCK
-1         1st_snapshot             0 2016-04-26 20:48:58   00:00:00.000
-2         2nd_snapshot           0 2016-04-26 20:49:52   00:00:00.000
+1         1st_snapshot        0 2016-04-26 20:48:58   00:00:00.000
+2         2nd_snapshot        0 2016-04-26 20:49:52   00:00:00.000
 \end{verbatim}
 
 \subsubsection{恢复指定快照}
@@ -609,11 +610,11 @@ vnet1    Link encap:Ethernet  HWaddr FE:54:00:18:DF:60  # taoqi这台虚拟机�
 
 \begin{verbatim}
 # arp
-Address			HWtype  HWaddress			Flags Mask	Iface
-192.168.20.1		ether   00:50:56:c0:00:01	C 				eth1
-192.168.122.141	ether   52:54:00:cc:94:60	C				virbr0
-192.168.19.2		ether   00:50:56:ea:9c:68	C				eth0
-192.168.122.41	ether   52:54:00:18:df:60	C				virbr0
+Address         HWtype  HWaddress         Flags Mask Iface
+192.168.20.1		ether   00:50:56:c0:00:01	C          eth1
+192.168.122.141	ether   52:54:00:cc:94:60	C          virbr0
+192.168.19.2		ether   00:50:56:ea:9c:68	C          eth0
+192.168.122.41	ether   52:54:00:18:df:60	C          virbr0
 \end{verbatim}
 
 使用brctl命令查看：
