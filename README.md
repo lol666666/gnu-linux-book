@@ -9,5 +9,14 @@
 5. 常用的容器技术。如：`Docker`；
 6. 常用的监控技术。如：`Zabbix`、`Prometheus` 等。
 
-作者从2014年就开始着手此项目，一直没有停止。发现一个人的时间及精力是有限的，因此把这个项目开源出来，欢迎大家加入此开源项目，贡献自己的一份力量，为整个技术圈做一些贡献，帮助那些需要帮助的小伙伴。
+
+该开源电子书项目地址为：https://github.com/lavenliu/gnu-linux-book.git。
+
+使用的写作工具为：
+LaTeX 环境
+TeXLive 套件（Windows 版本或 Linux 版本）
+MacTeX 套件（macOS 版本）
+如何编译？
+$ xelatex mybook.tex
+之后会生成 mybook.pdf 文档，你会发现整个文档非常的小，三百多页的文档只有 2MB 左右，因为它是纯文本生成的文档。
 
