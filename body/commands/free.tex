@@ -1,18 +1,10 @@
 \section{free命令的使用}
 \label{sec:freeCmd}
 
-\begin{verbatim}
-buffer：缓存磁盘上的数据
-cached：缓存的是将要写往磁盘中的数据
-
-buffer=used-buffer-cached
-cached=free+buffer+cached
-\end{verbatim}
-
 \subsection{常用选项}
 \label{subsec:freeOptions}
 
-下面介绍几个常用的cut命令的选项，
+free 命令是查看系统内存的使用情况的。下面介绍几个常用的选项，
 
 \begin{table}[htbp]
   \centering
@@ -22,9 +14,8 @@ cached=free+buffer+cached
       \toprule
       选项     & 说明 \\
       \midrule
-      -c        & 按照字符进行分割 \\
-      -d        & 指定分割字段的分隔符，默认是tab \\
-      -f        & 指定要显示的列 \\
+      -m        & 以 MB 为单位显示当前系统的内存使用情况 \\
+      -g        & 以 GB 为单位显示当前系统的内存使用情况 \\
       \bottomrule
     \end{tabular}
 \end{table}
